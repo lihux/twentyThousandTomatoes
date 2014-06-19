@@ -15,7 +15,6 @@
 		77F178471952BBA70083F923 /* TTTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F178461952BBA70083F923 /* TTTAppDelegate.m */; };
 		77F1784A1952BBA70083F923 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77F178481952BBA70083F923 /* Main_iPhone.storyboard */; };
 		77F1784D1952BBA70083F923 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77F1784B1952BBA70083F923 /* Main_iPad.storyboard */; };
-		77F178501952BBA70083F923 /* TTTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F1784F1952BBA70083F923 /* TTTViewController.m */; };
 		77F178521952BBA70083F923 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77F178511952BBA70083F923 /* Images.xcassets */; };
 		77F178591952BBA70083F923 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77F178581952BBA70083F923 /* XCTest.framework */; };
 		77F1785A1952BBA70083F923 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77F178361952BBA70083F923 /* Foundation.framework */; };
@@ -47,8 +46,6 @@
 		77F178461952BBA70083F923 /* TTTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTTAppDelegate.m; sourceTree = "<group>"; };
 		77F178491952BBA70083F923 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		77F1784C1952BBA70083F923 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		77F1784E1952BBA70083F923 /* TTTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTTViewController.h; sourceTree = "<group>"; };
-		77F1784F1952BBA70083F923 /* TTTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTTViewController.m; sourceTree = "<group>"; };
 		77F178511952BBA70083F923 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		77F178571952BBA70083F923 /* TwentyThousandTomatoesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwentyThousandTomatoesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77F178581952BBA70083F923 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -114,12 +111,12 @@
 		77F1783C1952BBA70083F923 /* TwentyThousandTomatoes */ = {
 			isa = PBXGroup;
 			children = (
+				77F1786E1952EA150083F923 /* UI */,
+				77F1786F1952EA330083F923 /* DataSources */,
 				77F178451952BBA70083F923 /* TTTAppDelegate.h */,
 				77F178461952BBA70083F923 /* TTTAppDelegate.m */,
 				77F178481952BBA70083F923 /* Main_iPhone.storyboard */,
 				77F1784B1952BBA70083F923 /* Main_iPad.storyboard */,
-				77F1784E1952BBA70083F923 /* TTTViewController.h */,
-				77F1784F1952BBA70083F923 /* TTTViewController.m */,
 				77F178511952BBA70083F923 /* Images.xcassets */,
 				77F1783D1952BBA70083F923 /* Supporting Files */,
 			);
@@ -153,6 +150,20 @@
 				77F178611952BBA70083F923 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		77F1786E1952EA150083F923 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		77F1786F1952EA330083F923 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = DataSources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,7 +265,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77F178501952BBA70083F923 /* TTTViewController.m in Sources */,
 				77F178431952BBA70083F923 /* main.m in Sources */,
 				77F178471952BBA70083F923 /* TTTAppDelegate.m in Sources */,
 			);
