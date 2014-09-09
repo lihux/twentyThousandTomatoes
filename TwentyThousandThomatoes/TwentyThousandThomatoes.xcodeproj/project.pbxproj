@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		6D6FEED219BE82AE003C0535 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6FEED119BE82AE003C0535 /* main.m */; };
 		6D6FEED519BE82AE003C0535 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6FEED419BE82AE003C0535 /* AppDelegate.m */; };
-		6D6FEED819BE82AE003C0535 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6FEED719BE82AE003C0535 /* FirstViewController.m */; };
-		6D6FEEDB19BE82AE003C0535 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6FEEDA19BE82AE003C0535 /* SecondViewController.m */; };
 		6D6FEEDE19BE82AE003C0535 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D6FEEDC19BE82AE003C0535 /* Main.storyboard */; };
 		6D6FEEE019BE82AE003C0535 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D6FEEDF19BE82AE003C0535 /* Images.xcassets */; };
 		6D6FEEEC19BE82AE003C0535 /* TwentyThousandThomatoesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6FEEEB19BE82AE003C0535 /* TwentyThousandThomatoesTests.m */; };
@@ -32,10 +30,6 @@
 		6D6FEED119BE82AE003C0535 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6D6FEED319BE82AE003C0535 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6D6FEED419BE82AE003C0535 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6D6FEED619BE82AE003C0535 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		6D6FEED719BE82AE003C0535 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		6D6FEED919BE82AE003C0535 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		6D6FEEDA19BE82AE003C0535 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		6D6FEEDD19BE82AE003C0535 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6D6FEEDF19BE82AE003C0535 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6D6FEEE519BE82AE003C0535 /* TwentyThousandThomatoesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwentyThousandThomatoesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,12 +76,9 @@
 		6D6FEECE19BE82AE003C0535 /* TwentyThousandThomatoes */ = {
 			isa = PBXGroup;
 			children = (
-				6D6FEED319BE82AE003C0535 /* AppDelegate.h */,
-				6D6FEED419BE82AE003C0535 /* AppDelegate.m */,
-				6D6FEED619BE82AE003C0535 /* FirstViewController.h */,
-				6D6FEED719BE82AE003C0535 /* FirstViewController.m */,
-				6D6FEED919BE82AE003C0535 /* SecondViewController.h */,
-				6D6FEEDA19BE82AE003C0535 /* SecondViewController.m */,
+				6D6FEEFA19BE8A1D003C0535 /* General */,
+				6D6FEEF919BE8A12003C0535 /* DataSource */,
+				6D6FEEF819BE8A0B003C0535 /* UI */,
 				6D6FEEDC19BE82AE003C0535 /* Main.storyboard */,
 				6D6FEEDF19BE82AE003C0535 /* Images.xcassets */,
 				6D6FEECF19BE82AE003C0535 /* Supporting Files */,
@@ -119,6 +110,61 @@
 				6D6FEEEA19BE82AE003C0535 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6D6FEEF819BE8A0B003C0535 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				6D6FEEFE19BE8A98003C0535 /* General Views */,
+				6D6FEEFD19BE8A6E003C0535 /* Charts */,
+				6D6FEEFC19BE8A63003C0535 /* Dreams */,
+				6D6FEEFB19BE8A58003C0535 /* Tomatoes */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		6D6FEEF919BE8A12003C0535 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = DataSource;
+			sourceTree = "<group>";
+		};
+		6D6FEEFA19BE8A1D003C0535 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				6D6FEED319BE82AE003C0535 /* AppDelegate.h */,
+				6D6FEED419BE82AE003C0535 /* AppDelegate.m */,
+			);
+			name = General;
+			sourceTree = "<group>";
+		};
+		6D6FEEFB19BE8A58003C0535 /* Tomatoes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Tomatoes;
+			sourceTree = "<group>";
+		};
+		6D6FEEFC19BE8A63003C0535 /* Dreams */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Dreams;
+			sourceTree = "<group>";
+		};
+		6D6FEEFD19BE8A6E003C0535 /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Charts;
+			sourceTree = "<group>";
+		};
+		6D6FEEFE19BE8A98003C0535 /* General Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "General Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,9 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D6FEEDB19BE82AE003C0535 /* SecondViewController.m in Sources */,
 				6D6FEED519BE82AE003C0535 /* AppDelegate.m in Sources */,
-				6D6FEED819BE82AE003C0535 /* FirstViewController.m in Sources */,
 				6D6FEED219BE82AE003C0535 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,6 +457,7 @@
 				6D6FEEF119BE82AE003C0535 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6D6FEEF219BE82AE003C0535 /* Build configuration list for PBXNativeTarget "TwentyThousandThomatoesTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +466,7 @@
 				6D6FEEF419BE82AE003C0535 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
