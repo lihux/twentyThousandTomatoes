@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6220.17" systemVersion="13E28" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="TTGoal" isAbstract="YES" syncable="YES">
+        <attribute name="attribute" optional="YES" syncable="YES"/>
+        <attribute name="attribute1" optional="YES" syncable="YES"/>
+        <attribute name="attribute2" optional="YES" syncable="YES"/>
+        <attribute name="attribute3" optional="YES" syncable="YES"/>
+        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="detailDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="earnedTomatoCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="finishTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="startTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="timeIntervalInDays" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="totalTomatoCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="TTI" syncable="YES">
+        <attribute name="age" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="birthday" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="earnedTomatoes" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="headImage" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="school" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="lifeGoals" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TTLifeGoal" inverseName="owner" inverseEntity="TTLifeGoal" syncable="YES"/>
+        <relationship name="yearRings" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TTYearRing" inverseName="owner" inverseEntity="TTYearRing" syncable="YES"/>
+    </entity>
+    <entity name="TTLifeGoal" parentEntity="TTGoal" syncable="YES">
+        <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TTI" inverseName="lifeGoals" inverseEntity="TTI" syncable="YES"/>
+        <relationship name="subGoals" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TTLongTermGoal" inverseName="parentGoal" inverseEntity="TTLongTermGoal" syncable="YES"/>
+    </entity>
+    <entity name="TTLongTermGoal" parentEntity="TTGoal" syncable="YES">
+        <relationship name="parentGoal" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TTLifeGoal" inverseName="subGoals" inverseEntity="TTLifeGoal" syncable="YES"/>
+        <relationship name="subGoals" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TTMidleTermGoal" inverseName="parentGoal" inverseEntity="TTMidleTermGoal" syncable="YES"/>
+    </entity>
+    <entity name="TTMidleTermGoal" parentEntity="TTGoal" syncable="YES">
+        <relationship name="parentGoal" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TTLongTermGoal" inverseName="subGoals" inverseEntity="TTLongTermGoal" syncable="YES"/>
+        <relationship name="subGoals" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TTShortTermGoal" inverseName="parentGoal" inverseEntity="TTShortTermGoal" syncable="YES"/>
+    </entity>
+    <entity name="TTShortTermGoal" parentEntity="TTGoal" syncable="YES">
+        <relationship name="parentGoal" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TTMidleTermGoal" inverseName="subGoals" inverseEntity="TTMidleTermGoal" syncable="YES"/>
+    </entity>
+    <entity name="TTTomato" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="startTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="timeDurationsInMinutes" optional="YES" attributeType="Integer 32" defaultValueString="30" syncable="YES"/>
+    </entity>
+    <entity name="TTYearRing" syncable="YES">
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ringNumber" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="year" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="yearAchivements" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="yearDescritpion" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="yearPhoto" optional="YES" attributeType="Binary" syncable="YES"/>
+        <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TTI" inverseName="yearRings" inverseEntity="TTI" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="TTI" positionX="-180" positionY="-18" width="128" height="163"/>
+        <element name="TTGoal" positionX="142" positionY="288" width="128" height="223"/>
+        <element name="TTLifeGoal" positionX="-9" positionY="72" width="128" height="73"/>
+        <element name="TTLongTermGoal" positionX="153" positionY="116" width="128" height="73"/>
+        <element name="TTMidleTermGoal" positionX="315" positionY="161" width="128" height="73"/>
+        <element name="TTShortTermGoal" positionX="477" positionY="198" width="128" height="58"/>
+        <element name="TTTomato" positionX="198" positionY="243" width="128" height="90"/>
+        <element name="TTYearRing" positionX="207" positionY="252" width="128" height="148"/>
+    </elements>
+</model>

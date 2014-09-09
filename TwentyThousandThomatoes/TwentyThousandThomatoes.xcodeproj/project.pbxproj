@@ -16,6 +16,8 @@
 		6DFDB81819BEE58000183FB4 /* TTTomatoMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFDB81719BEE58000183FB4 /* TTTomatoMasterViewController.m */; };
 		6DFDB81C19BEE74A00183FB4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFDB81B19BEE74A00183FB4 /* AppDelegate.m */; };
 		6DFDB82019BEE94300183FB4 /* UIViewController+GetInstanceFromStoryBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFDB81F19BEE94300183FB4 /* UIViewController+GetInstanceFromStoryBoard.m */; };
+		6DFDB82419BEF26600183FB4 /* TTDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFDB82319BEF26600183FB4 /* TTDataManager.m */; };
+		6DFDB82819BEF4D800183FB4 /* TTTomatoes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6DFDB82619BEF4D800183FB4 /* TTTomatoes.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,9 @@
 		6DFDB81B19BEE74A00183FB4 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6DFDB81E19BEE94300183FB4 /* UIViewController+GetInstanceFromStoryBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+GetInstanceFromStoryBoard.h"; sourceTree = "<group>"; };
 		6DFDB81F19BEE94300183FB4 /* UIViewController+GetInstanceFromStoryBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+GetInstanceFromStoryBoard.m"; sourceTree = "<group>"; };
+		6DFDB82219BEF26600183FB4 /* TTDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTDataManager.h; sourceTree = "<group>"; };
+		6DFDB82319BEF26600183FB4 /* TTDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTDataManager.m; sourceTree = "<group>"; };
+		6DFDB82719BEF4D800183FB4 /* TTTomatoes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TTTomatoes.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,8 +93,8 @@
 		6D6FEECE19BE82AE003C0535 /* TwentyThousandThomatoes */ = {
 			isa = PBXGroup;
 			children = (
+				6DFDB82119BEF20600183FB4 /* DataSource */,
 				6DFDB81919BEE74A00183FB4 /* General */,
-				6D6FEEF919BE8A12003C0535 /* DataSource */,
 				6D6FEEF819BE8A0B003C0535 /* UI */,
 				6D6FEEDC19BE82AE003C0535 /* Main.storyboard */,
 				6D6FEEDF19BE82AE003C0535 /* Images.xcassets */,
@@ -134,13 +139,6 @@
 			name = UI;
 			sourceTree = "<group>";
 		};
-		6D6FEEF919BE8A12003C0535 /* DataSource */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = DataSource;
-			sourceTree = "<group>";
-		};
 		6DFDB80D19BEE56000183FB4 /* Achivements */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +175,24 @@
 				6DFDB81F19BEE94300183FB4 /* UIViewController+GetInstanceFromStoryBoard.m */,
 			);
 			path = General;
+			sourceTree = "<group>";
+		};
+		6DFDB82119BEF20600183FB4 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				6DFDB82519BEF49E00183FB4 /* Data Models */,
+				6DFDB82219BEF26600183FB4 /* TTDataManager.h */,
+				6DFDB82319BEF26600183FB4 /* TTDataManager.m */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		6DFDB82519BEF49E00183FB4 /* Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				6DFDB82619BEF4D800183FB4 /* TTTomatoes.xcdatamodeld */,
+			);
+			path = "Data Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +297,8 @@
 			files = (
 				6DFDB81419BEE56800183FB4 /* TTDreamMasterViewController.m in Sources */,
 				6DFDB82019BEE94300183FB4 /* UIViewController+GetInstanceFromStoryBoard.m in Sources */,
+				6DFDB82419BEF26600183FB4 /* TTDataManager.m in Sources */,
+				6DFDB82819BEF4D800183FB4 /* TTTomatoes.xcdatamodeld in Sources */,
 				6DFDB81819BEE58000183FB4 /* TTTomatoMasterViewController.m in Sources */,
 				6D6FEED219BE82AE003C0535 /* main.m in Sources */,
 				6DFDB81019BEE56000183FB4 /* TTAchivementMasterViewController.m in Sources */,
@@ -485,6 +503,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6DFDB82619BEF4D800183FB4 /* TTTomatoes.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6DFDB82719BEF4D800183FB4 /* TTTomatoes.xcdatamodel */,
+			);
+			currentVersion = 6DFDB82719BEF4D800183FB4 /* TTTomatoes.xcdatamodel */;
+			path = TTTomatoes.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 6D6FEEC419BE82AE003C0535 /* Project object */;
 }
