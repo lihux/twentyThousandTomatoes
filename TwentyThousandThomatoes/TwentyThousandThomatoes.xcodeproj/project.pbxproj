@@ -8,10 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		6D6FEED219BE82AE003C0535 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6FEED119BE82AE003C0535 /* main.m */; };
-		6D6FEED519BE82AE003C0535 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6FEED419BE82AE003C0535 /* AppDelegate.m */; };
 		6D6FEEDE19BE82AE003C0535 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D6FEEDC19BE82AE003C0535 /* Main.storyboard */; };
 		6D6FEEE019BE82AE003C0535 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D6FEEDF19BE82AE003C0535 /* Images.xcassets */; };
 		6D6FEEEC19BE82AE003C0535 /* TwentyThousandThomatoesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6FEEEB19BE82AE003C0535 /* TwentyThousandThomatoesTests.m */; };
+		6DFDB81019BEE56000183FB4 /* TTAchivementMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFDB80F19BEE56000183FB4 /* TTAchivementMasterViewController.m */; };
+		6DFDB81419BEE56800183FB4 /* TTDreamMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFDB81319BEE56800183FB4 /* TTDreamMasterViewController.m */; };
+		6DFDB81819BEE58000183FB4 /* TTTomatoMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFDB81719BEE58000183FB4 /* TTTomatoMasterViewController.m */; };
+		6DFDB81C19BEE74A00183FB4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFDB81B19BEE74A00183FB4 /* AppDelegate.m */; };
+		6DFDB82019BEE94300183FB4 /* UIViewController+GetInstanceFromStoryBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFDB81F19BEE94300183FB4 /* UIViewController+GetInstanceFromStoryBoard.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,13 +32,21 @@
 		6D6FEECC19BE82AE003C0535 /* TwentyThousandThomatoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwentyThousandThomatoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D6FEED019BE82AE003C0535 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D6FEED119BE82AE003C0535 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6D6FEED319BE82AE003C0535 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		6D6FEED419BE82AE003C0535 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6D6FEEDD19BE82AE003C0535 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6D6FEEDF19BE82AE003C0535 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6D6FEEE519BE82AE003C0535 /* TwentyThousandThomatoesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwentyThousandThomatoesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D6FEEEA19BE82AE003C0535 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D6FEEEB19BE82AE003C0535 /* TwentyThousandThomatoesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwentyThousandThomatoesTests.m; sourceTree = "<group>"; };
+		6DFDB80E19BEE56000183FB4 /* TTAchivementMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTAchivementMasterViewController.h; sourceTree = "<group>"; };
+		6DFDB80F19BEE56000183FB4 /* TTAchivementMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTAchivementMasterViewController.m; sourceTree = "<group>"; };
+		6DFDB81219BEE56800183FB4 /* TTDreamMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTDreamMasterViewController.h; sourceTree = "<group>"; };
+		6DFDB81319BEE56800183FB4 /* TTDreamMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTDreamMasterViewController.m; sourceTree = "<group>"; };
+		6DFDB81619BEE58000183FB4 /* TTTomatoMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTomatoMasterViewController.h; sourceTree = "<group>"; };
+		6DFDB81719BEE58000183FB4 /* TTTomatoMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTomatoMasterViewController.m; sourceTree = "<group>"; };
+		6DFDB81A19BEE74A00183FB4 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6DFDB81B19BEE74A00183FB4 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6DFDB81E19BEE94300183FB4 /* UIViewController+GetInstanceFromStoryBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+GetInstanceFromStoryBoard.h"; sourceTree = "<group>"; };
+		6DFDB81F19BEE94300183FB4 /* UIViewController+GetInstanceFromStoryBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+GetInstanceFromStoryBoard.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +88,7 @@
 		6D6FEECE19BE82AE003C0535 /* TwentyThousandThomatoes */ = {
 			isa = PBXGroup;
 			children = (
-				6D6FEEFA19BE8A1D003C0535 /* General */,
+				6DFDB81919BEE74A00183FB4 /* General */,
 				6D6FEEF919BE8A12003C0535 /* DataSource */,
 				6D6FEEF819BE8A0B003C0535 /* UI */,
 				6D6FEEDC19BE82AE003C0535 /* Main.storyboard */,
@@ -115,10 +127,9 @@
 		6D6FEEF819BE8A0B003C0535 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				6D6FEEFE19BE8A98003C0535 /* General Views */,
-				6D6FEEFD19BE8A6E003C0535 /* Charts */,
-				6D6FEEFC19BE8A63003C0535 /* Dreams */,
-				6D6FEEFB19BE8A58003C0535 /* Tomatoes */,
+				6DFDB81519BEE56C00183FB4 /* Tomatoes */,
+				6DFDB81119BEE56800183FB4 /* Dreams */,
+				6DFDB80D19BEE56000183FB4 /* Achivements */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -130,41 +141,42 @@
 			name = DataSource;
 			sourceTree = "<group>";
 		};
-		6D6FEEFA19BE8A1D003C0535 /* General */ = {
+		6DFDB80D19BEE56000183FB4 /* Achivements */ = {
 			isa = PBXGroup;
 			children = (
-				6D6FEED319BE82AE003C0535 /* AppDelegate.h */,
-				6D6FEED419BE82AE003C0535 /* AppDelegate.m */,
+				6DFDB80E19BEE56000183FB4 /* TTAchivementMasterViewController.h */,
+				6DFDB80F19BEE56000183FB4 /* TTAchivementMasterViewController.m */,
 			);
-			name = General;
+			path = Achivements;
 			sourceTree = "<group>";
 		};
-		6D6FEEFB19BE8A58003C0535 /* Tomatoes */ = {
+		6DFDB81119BEE56800183FB4 /* Dreams */ = {
 			isa = PBXGroup;
 			children = (
+				6DFDB81219BEE56800183FB4 /* TTDreamMasterViewController.h */,
+				6DFDB81319BEE56800183FB4 /* TTDreamMasterViewController.m */,
 			);
-			name = Tomatoes;
+			path = Dreams;
 			sourceTree = "<group>";
 		};
-		6D6FEEFC19BE8A63003C0535 /* Dreams */ = {
+		6DFDB81519BEE56C00183FB4 /* Tomatoes */ = {
 			isa = PBXGroup;
 			children = (
+				6DFDB81619BEE58000183FB4 /* TTTomatoMasterViewController.h */,
+				6DFDB81719BEE58000183FB4 /* TTTomatoMasterViewController.m */,
 			);
-			name = Dreams;
+			path = Tomatoes;
 			sourceTree = "<group>";
 		};
-		6D6FEEFD19BE8A6E003C0535 /* Charts */ = {
+		6DFDB81919BEE74A00183FB4 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				6DFDB81A19BEE74A00183FB4 /* AppDelegate.h */,
+				6DFDB81B19BEE74A00183FB4 /* AppDelegate.m */,
+				6DFDB81E19BEE94300183FB4 /* UIViewController+GetInstanceFromStoryBoard.h */,
+				6DFDB81F19BEE94300183FB4 /* UIViewController+GetInstanceFromStoryBoard.m */,
 			);
-			name = Charts;
-			sourceTree = "<group>";
-		};
-		6D6FEEFE19BE8A98003C0535 /* General Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "General Views";
+			path = General;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,8 +279,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D6FEED519BE82AE003C0535 /* AppDelegate.m in Sources */,
+				6DFDB81419BEE56800183FB4 /* TTDreamMasterViewController.m in Sources */,
+				6DFDB82019BEE94300183FB4 /* UIViewController+GetInstanceFromStoryBoard.m in Sources */,
+				6DFDB81819BEE58000183FB4 /* TTTomatoMasterViewController.m in Sources */,
 				6D6FEED219BE82AE003C0535 /* main.m in Sources */,
+				6DFDB81019BEE56000183FB4 /* TTAchivementMasterViewController.m in Sources */,
+				6DFDB81C19BEE74A00183FB4 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
