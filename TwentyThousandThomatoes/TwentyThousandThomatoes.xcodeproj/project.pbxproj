@@ -19,12 +19,13 @@
 		6DADCF4219C12BA400266708 /* TTGoal.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DADCF4119C12BA400266708 /* TTGoal.m */; };
 		6DADCF4519C12BA400266708 /* TTTomato.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DADCF4419C12BA400266708 /* TTTomato.m */; };
 		6DADCF4819C12BA400266708 /* TTLifeGoal.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DADCF4719C12BA400266708 /* TTLifeGoal.m */; };
+		6DADCF4A19C12ED500266708 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DADCF4919C12ED500266708 /* CoreData.framework */; };
 		6DFDB81019BEE56000183FB4 /* TTAchivementMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFDB80F19BEE56000183FB4 /* TTAchivementMasterViewController.m */; };
 		6DFDB81419BEE56800183FB4 /* TTDreamMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFDB81319BEE56800183FB4 /* TTDreamMasterViewController.m */; };
 		6DFDB81819BEE58000183FB4 /* TTTomatoMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFDB81719BEE58000183FB4 /* TTTomatoMasterViewController.m */; };
 		6DFDB81C19BEE74A00183FB4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFDB81B19BEE74A00183FB4 /* AppDelegate.m */; };
 		6DFDB82019BEE94300183FB4 /* UIViewController+GetInstanceFromStoryBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFDB81F19BEE94300183FB4 /* UIViewController+GetInstanceFromStoryBoard.m */; };
-		6DFDB82419BEF26600183FB4 /* TTDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFDB82319BEF26600183FB4 /* TTDataManager.m */; };
+		6DFDB82419BEF26600183FB4 /* TTDataSourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFDB82319BEF26600183FB4 /* TTDataSourceManager.m */; };
 		6DFDB82819BEF4D800183FB4 /* TTTomatoes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6DFDB82619BEF4D800183FB4 /* TTTomatoes.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		6DADCF4419C12BA400266708 /* TTTomato.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTomato.m; sourceTree = "<group>"; };
 		6DADCF4619C12BA400266708 /* TTLifeGoal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTLifeGoal.h; sourceTree = "<group>"; };
 		6DADCF4719C12BA400266708 /* TTLifeGoal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTLifeGoal.m; sourceTree = "<group>"; };
+		6DADCF4919C12ED500266708 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		6DFDB80E19BEE56000183FB4 /* TTAchivementMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTAchivementMasterViewController.h; sourceTree = "<group>"; };
 		6DFDB80F19BEE56000183FB4 /* TTAchivementMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTAchivementMasterViewController.m; sourceTree = "<group>"; };
 		6DFDB81219BEE56800183FB4 /* TTDreamMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTDreamMasterViewController.h; sourceTree = "<group>"; };
@@ -73,8 +75,8 @@
 		6DFDB81B19BEE74A00183FB4 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6DFDB81E19BEE94300183FB4 /* UIViewController+GetInstanceFromStoryBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+GetInstanceFromStoryBoard.h"; sourceTree = "<group>"; };
 		6DFDB81F19BEE94300183FB4 /* UIViewController+GetInstanceFromStoryBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+GetInstanceFromStoryBoard.m"; sourceTree = "<group>"; };
-		6DFDB82219BEF26600183FB4 /* TTDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTDataManager.h; sourceTree = "<group>"; };
-		6DFDB82319BEF26600183FB4 /* TTDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTDataManager.m; sourceTree = "<group>"; };
+		6DFDB82219BEF26600183FB4 /* TTDataSourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTDataSourceManager.h; sourceTree = "<group>"; };
+		6DFDB82319BEF26600183FB4 /* TTDataSourceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTDataSourceManager.m; sourceTree = "<group>"; };
 		6DFDB82719BEF4D800183FB4 /* TTTomatoes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TTTomatoes.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DADCF4A19C12ED500266708 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +102,7 @@
 		6D6FEEC319BE82AE003C0535 = {
 			isa = PBXGroup;
 			children = (
+				6DADCF4919C12ED500266708 /* CoreData.framework */,
 				6D6FEECE19BE82AE003C0535 /* TwentyThousandThomatoes */,
 				6D6FEEE819BE82AE003C0535 /* TwentyThousandThomatoesTests */,
 				6D6FEECD19BE82AE003C0535 /* Products */,
@@ -205,8 +209,8 @@
 			isa = PBXGroup;
 			children = (
 				6DFDB82519BEF49E00183FB4 /* Data Models */,
-				6DFDB82219BEF26600183FB4 /* TTDataManager.h */,
-				6DFDB82319BEF26600183FB4 /* TTDataManager.m */,
+				6DFDB82219BEF26600183FB4 /* TTDataSourceManager.h */,
+				6DFDB82319BEF26600183FB4 /* TTDataSourceManager.m */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -342,7 +346,7 @@
 				6DADCF4219C12BA400266708 /* TTGoal.m in Sources */,
 				6DADCF3919C12BA400266708 /* TTYearRing.m in Sources */,
 				6DFDB82019BEE94300183FB4 /* UIViewController+GetInstanceFromStoryBoard.m in Sources */,
-				6DFDB82419BEF26600183FB4 /* TTDataManager.m in Sources */,
+				6DFDB82419BEF26600183FB4 /* TTDataSourceManager.m in Sources */,
 				6DFDB82819BEF4D800183FB4 /* TTTomatoes.xcdatamodeld in Sources */,
 				6DADCF3319C12BA300266708 /* TTLongTermGoal.m in Sources */,
 				6DFDB81819BEE58000183FB4 /* TTTomatoMasterViewController.m in Sources */,
