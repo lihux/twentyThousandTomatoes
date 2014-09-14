@@ -21,6 +21,7 @@
 		6DADCF4519C12BA400266708 /* TTTomato.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DADCF4419C12BA400266708 /* TTTomato.m */; };
 		6DADCF4819C12BA400266708 /* TTLifeGoal.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DADCF4719C12BA400266708 /* TTLifeGoal.m */; };
 		6DADCF4A19C12ED500266708 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DADCF4919C12ED500266708 /* CoreData.framework */; };
+		6DB0B02619C549D9004A2192 /* TTDreamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB0B02519C549D9004A2192 /* TTDreamViewController.m */; };
 		6DFDB81019BEE56000183FB4 /* TTAchivementMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFDB80F19BEE56000183FB4 /* TTAchivementMasterViewController.m */; };
 		6DFDB81419BEE56800183FB4 /* TTDreamMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFDB81319BEE56800183FB4 /* TTDreamMasterViewController.m */; };
 		6DFDB81819BEE58000183FB4 /* TTTomatoMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFDB81719BEE58000183FB4 /* TTTomatoMasterViewController.m */; };
@@ -69,6 +70,8 @@
 		6DADCF4619C12BA400266708 /* TTLifeGoal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTLifeGoal.h; sourceTree = "<group>"; };
 		6DADCF4719C12BA400266708 /* TTLifeGoal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTLifeGoal.m; sourceTree = "<group>"; };
 		6DADCF4919C12ED500266708 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		6DB0B02419C549D9004A2192 /* TTDreamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTDreamViewController.h; sourceTree = "<group>"; };
+		6DB0B02519C549D9004A2192 /* TTDreamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTDreamViewController.m; sourceTree = "<group>"; };
 		6DFDB80E19BEE56000183FB4 /* TTAchivementMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTAchivementMasterViewController.h; sourceTree = "<group>"; };
 		6DFDB80F19BEE56000183FB4 /* TTAchivementMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTAchivementMasterViewController.m; sourceTree = "<group>"; };
 		6DFDB81219BEE56800183FB4 /* TTDreamMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTDreamMasterViewController.h; sourceTree = "<group>"; };
@@ -187,6 +190,8 @@
 				6DFDB81319BEE56800183FB4 /* TTDreamMasterViewController.m */,
 				6D3537C619C3E87700570DB4 /* TTWhoAmIViewController.h */,
 				6D3537C719C3E87700570DB4 /* TTWhoAmIViewController.m */,
+				6DB0B02419C549D9004A2192 /* TTDreamViewController.h */,
+				6DB0B02519C549D9004A2192 /* TTDreamViewController.m */,
 			);
 			path = Dreams;
 			sourceTree = "<group>";
@@ -362,6 +367,7 @@
 				6DADCF3C19C12BA400266708 /* TTI.m in Sources */,
 				6DFDB81019BEE56000183FB4 /* TTAchivementMasterViewController.m in Sources */,
 				6DFDB81C19BEE74A00183FB4 /* AppDelegate.m in Sources */,
+				6DB0B02619C549D9004A2192 /* TTDreamViewController.m in Sources */,
 				6DADCF3F19C12BA400266708 /* TTMidleTermGoal.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,6 +14,9 @@
 
 @interface TTDreamMasterViewController ()
 
+@property (weak, nonatomic) IBOutlet UIView *dreamGuideContainerView;
+@property (weak, nonatomic) IBOutlet UIView *dreamContainerView;
+
 @end
 
 @implementation TTDreamMasterViewController
@@ -27,9 +30,10 @@
 - (void)loadMyDreams
 {
     NSArray *myDreams = [[TTDataSourceManager sharedInstance] searchManagedObjectWithEntityName:NSStringFromClass([TTLifeGoal class])];
-    if (myDreams.count) {
-        ;
+    if (!myDreams.count) {
+        self.dreamContainerView.hidden = NO;
     } else {
+        self.dreamGuideContainerView.hidden = NO;
     }
 }
 

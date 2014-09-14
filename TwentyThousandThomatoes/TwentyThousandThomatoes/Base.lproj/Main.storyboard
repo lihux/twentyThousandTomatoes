@@ -58,21 +58,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sds-fp-vJt">
+                            <containerView opaque="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sds-fp-vJt" userLabel="dream Guide Container View">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                 <connections>
-                                    <segue destination="7qU-nj-3xH" kind="embed" id="1yo-dc-YYb"/>
+                                    <segue destination="ZdL-Yj-XRr" kind="embed" id="z8d-CY-bQe"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="v9q-cp-Y4P" userLabel="dream Container View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <connections>
+                                    <segue destination="vSb-A9-EzG" kind="embed" id="ofI-SY-XDf"/>
                                 </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="v9q-cp-Y4P" firstAttribute="top" secondItem="Yzd-11-gDF" secondAttribute="bottom" constant="-20" id="2op-zh-PhZ"/>
+                            <constraint firstItem="v9q-cp-Y4P" firstAttribute="leading" secondItem="xE2-VQ-1pb" secondAttribute="leadingMargin" constant="-16" id="5Pr-3p-bbt"/>
                             <constraint firstItem="Sds-fp-vJt" firstAttribute="width" secondItem="xE2-VQ-1pb" secondAttribute="width" id="VrZ-Df-onQ"/>
+                            <constraint firstItem="Sds-fp-vJt" firstAttribute="leading" secondItem="xE2-VQ-1pb" secondAttribute="leadingMargin" constant="-16" id="Xkz-qk-Tnu"/>
                             <constraint firstItem="Sds-fp-vJt" firstAttribute="height" secondItem="xE2-VQ-1pb" secondAttribute="height" constant="-49" id="YGr-l4-uC5"/>
+                            <constraint firstItem="HoB-R1-mPd" firstAttribute="top" secondItem="v9q-cp-Y4P" secondAttribute="bottom" id="YWi-hW-FsL"/>
                             <constraint firstItem="HoB-R1-mPd" firstAttribute="top" secondItem="Sds-fp-vJt" secondAttribute="bottom" id="ZF0-FA-60u"/>
+                            <constraint firstAttribute="width" secondItem="v9q-cp-Y4P" secondAttribute="width" id="gcK-CK-6qN"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="我的梦想" image="tt_tabbar_dream_unselected" id="tW5-pU-L19"/>
+                    <connections>
+                        <outlet property="dreamContainerView" destination="v9q-cp-Y4P" id="IyJ-6s-VZk"/>
+                        <outlet property="dreamGuideContainerView" destination="Sds-fp-vJt" id="tBl-0m-US1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fKP-3O-Bva" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -111,12 +126,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SE6-I4-08K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1120.5" y="137.5"/>
+            <point key="canvasLocation" x="1144.5" y="-286.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Dream View Controller-->
         <scene sceneID="Tdt-cR-Bhg">
             <objects>
-                <viewController id="vSb-A9-EzG" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TTDreamViewController" id="vSb-A9-EzG" customClass="TTDreamViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SXO-s3-Bke"/>
                         <viewControllerLayoutGuide type="bottom" id="cpK-Ze-sVe"/>
@@ -124,14 +139,14 @@
                     <view key="view" contentMode="scaleToFill" id="qiH-Lf-JYI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7HG-Ty-s6P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1520.5" y="137.5"/>
+            <point key="canvasLocation" x="1156.5" y="453.5"/>
         </scene>
         <!--我的成就-->
         <scene sceneID="O0Y-sO-hwz">
@@ -161,7 +176,7 @@
                         <viewControllerLayoutGuide type="bottom" id="vIZ-5v-kfR"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="1Dc-6r-lwd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
