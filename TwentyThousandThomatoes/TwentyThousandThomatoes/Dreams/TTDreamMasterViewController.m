@@ -8,6 +8,10 @@
 
 #import "TTDreamMasterViewController.h"
 
+#import "TTDataSourceManager.h"
+#import "TTLifeGoal.h"
+#import "TTWhoAmIViewController.h"
+
 @interface TTDreamMasterViewController ()
 
 @end
@@ -17,21 +21,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tabBarItem.selectedImage = [UIImage imageNamed:@"tt_tabbar_dream_selected"];
+    [self loadMyDreams];
+}
+
+- (void)loadMyDreams
+{
+    NSArray *myDreams = [[TTDataSourceManager sharedInstance] searchManagedObjectWithEntityName:NSStringFromClass([TTLifeGoal class])];
+    if (myDreams.count) {
+        ;
+    } else {
+    }
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    id a = segue.destinationViewController;
+    if (a == nil) {
+        ;
+    };
 }
-*/
 
 @end

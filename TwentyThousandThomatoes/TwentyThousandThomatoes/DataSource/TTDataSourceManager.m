@@ -21,7 +21,7 @@
 + (instancetype)sharedInstance
 {
     static TTDataSourceManager *sharedObject;
-    dispatch_once_t onceToken;
+    static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedObject = [[self alloc] init];
         if (sharedObject) {

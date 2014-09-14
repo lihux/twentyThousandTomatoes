@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D3537C819C3E87700570DB4 /* TTWhoAmIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3537C719C3E87700570DB4 /* TTWhoAmIViewController.m */; };
 		6D6FEED219BE82AE003C0535 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6FEED119BE82AE003C0535 /* main.m */; };
 		6D6FEEDE19BE82AE003C0535 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D6FEEDC19BE82AE003C0535 /* Main.storyboard */; };
 		6D6FEEE019BE82AE003C0535 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D6FEEDF19BE82AE003C0535 /* Images.xcassets */; };
@@ -40,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6D3537C619C3E87700570DB4 /* TTWhoAmIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTWhoAmIViewController.h; sourceTree = "<group>"; };
+		6D3537C719C3E87700570DB4 /* TTWhoAmIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTWhoAmIViewController.m; sourceTree = "<group>"; };
+		6D3537C919C4442200570DB4 /* TTTwentythousandTomatoes.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTTwentythousandTomatoes.pch; sourceTree = "<group>"; };
 		6D6FEECC19BE82AE003C0535 /* TwentyThousandThomatoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwentyThousandThomatoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D6FEED019BE82AE003C0535 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D6FEED119BE82AE003C0535 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -181,6 +185,8 @@
 			children = (
 				6DFDB81219BEE56800183FB4 /* TTDreamMasterViewController.h */,
 				6DFDB81319BEE56800183FB4 /* TTDreamMasterViewController.m */,
+				6D3537C619C3E87700570DB4 /* TTWhoAmIViewController.h */,
+				6D3537C719C3E87700570DB4 /* TTWhoAmIViewController.m */,
 			);
 			path = Dreams;
 			sourceTree = "<group>";
@@ -201,6 +207,7 @@
 				6DFDB81B19BEE74A00183FB4 /* AppDelegate.m */,
 				6DFDB81E19BEE94300183FB4 /* UIViewController+GetInstanceFromStoryBoard.h */,
 				6DFDB81F19BEE94300183FB4 /* UIViewController+GetInstanceFromStoryBoard.m */,
+				6D3537C919C4442200570DB4 /* TTTwentythousandTomatoes.pch */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -347,6 +354,7 @@
 				6DADCF3919C12BA400266708 /* TTYearRing.m in Sources */,
 				6DFDB82019BEE94300183FB4 /* UIViewController+GetInstanceFromStoryBoard.m in Sources */,
 				6DFDB82419BEF26600183FB4 /* TTDataSourceManager.m in Sources */,
+				6D3537C819C3E87700570DB4 /* TTWhoAmIViewController.m in Sources */,
 				6DFDB82819BEF4D800183FB4 /* TTTomatoes.xcdatamodeld in Sources */,
 				6DADCF3319C12BA300266708 /* TTLongTermGoal.m in Sources */,
 				6DFDB81819BEE58000183FB4 /* TTTomatoMasterViewController.m in Sources */,
@@ -411,6 +419,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -452,6 +461,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -472,6 +482,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = TwentyThousandThomatoes/General/TTTwentythousandTomatoes.pch;
 				INFOPLIST_FILE = TwentyThousandThomatoes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -484,6 +496,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = TwentyThousandThomatoes/General/TTTwentythousandTomatoes.pch;
 				INFOPLIST_FILE = TwentyThousandThomatoes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

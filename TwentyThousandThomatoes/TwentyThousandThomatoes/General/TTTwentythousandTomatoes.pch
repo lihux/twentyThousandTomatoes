@@ -1,0 +1,23 @@
+//
+//  TTTwentythousandTomatoes.pch
+//  TwentyThousandThomatoes
+//
+//  Created by lihux on 14-9-13.
+//  Copyright (c) 2014年 lihux. All rights reserved.
+//
+
+#ifndef TwentyThousandThomatoes_TTTwentythousandTomatoes_pch
+#define TwentyThousandThomatoes_TTTwentythousandTomatoes_pch
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import "UIViewController+GetInstanceFromStoryBoard.h"
+#endif
+
+
+#endif
