@@ -58,13 +58,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sds-fp-vJt" userLabel="dream Guide Container View">
+                            <containerView hidden="YES" opaque="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sds-fp-vJt" userLabel="dream Guide Container View">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                 <connections>
-                                    <segue destination="ZdL-Yj-XRr" kind="embed" id="z8d-CY-bQe"/>
+                                    <segue destination="gLf-ZX-9Rw" kind="embed" id="9V7-TM-zyN"/>
                                 </connections>
                             </containerView>
-                            <containerView opaque="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="v9q-cp-Y4P" userLabel="dream Container View">
+                            <containerView hidden="YES" opaque="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="v9q-cp-Y4P" userLabel="dream Container View">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                 <connections>
                                     <segue destination="vSb-A9-EzG" kind="embed" id="ofI-SY-XDf"/>
@@ -105,28 +105,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="633-Rv-40E">
-                                <rect key="frame" x="59" y="100" width="100" height="100"/>
-                                <color key="backgroundColor" red="0.047058823530000002" green="0.75294117650000003" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="who am i ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEg-yj-cHd">
+                                <rect key="frame" x="83" y="293" width="209" height="81"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="uYz-Xv-fB4"/>
-                                    <constraint firstAttribute="height" constant="100" id="w1S-Pp-DEU"/>
+                                    <constraint firstAttribute="width" constant="209" id="6oA-5q-8h5"/>
+                                    <constraint firstAttribute="height" constant="81" id="QPw-hd-148"/>
                                 </constraints>
-                            </view>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fkk-8R-qbm">
+                                <rect key="frame" x="109" y="97" width="156" height="188"/>
+                                <state key="normal" image="ttt_dream_default_user">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="633-Rv-40E" firstAttribute="top" secondItem="1E0-H3-m4U" secondAttribute="bottom" constant="80" id="Arx-Gg-QMg"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="633-Rv-40E" secondAttribute="trailing" constant="200" id="QEa-Yz-np6"/>
-                            <constraint firstItem="633-Rv-40E" firstAttribute="leading" secondItem="tma-XG-SMN" secondAttribute="leadingMargin" constant="43" id="axd-c9-sy4"/>
+                            <constraint firstItem="fkk-8R-qbm" firstAttribute="top" secondItem="1E0-H3-m4U" secondAttribute="bottom" constant="97" id="Loc-AQ-te3"/>
+                            <constraint firstItem="XEg-yj-cHd" firstAttribute="top" secondItem="fkk-8R-qbm" secondAttribute="bottom" constant="8" id="O50-5N-X8s"/>
+                            <constraint firstAttribute="centerX" secondItem="XEg-yj-cHd" secondAttribute="centerX" id="VJ9-Gr-Z7m"/>
+                            <constraint firstAttribute="centerX" secondItem="fkk-8R-qbm" secondAttribute="centerX" id="YRN-J4-lOY"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="9id-fd-ICJ"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SE6-I4-08K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1144.5" y="-286.5"/>
+            <point key="canvasLocation" x="1731.5" y="-286.5"/>
         </scene>
         <!--Dream View Controller-->
         <scene sceneID="Tdt-cR-Bhg">
@@ -139,7 +149,7 @@
                     <view key="view" contentMode="scaleToFill" id="qiH-Lf-JYI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
@@ -185,10 +195,29 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gsA-89-1Kj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rtQ-Bi-WCg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="gLf-ZX-9Rw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SeX-px-37w">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZdL-Yj-XRr" kind="relationship" relationship="rootViewController" id="JB3-AD-Ojp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="btN-fo-zAX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1144.5" y="-287"/>
+        </scene>
     </scenes>
     <resources>
         <image name="tt_tabbar_dream_unselected" width="30" height="30"/>
         <image name="tt_tabbar_statics_unselected" width="28" height="28"/>
         <image name="tt_tabbar_tomato_unselected" width="28" height="28"/>
+        <image name="ttt_dream_default_user" width="156" height="188"/>
     </resources>
 </document>

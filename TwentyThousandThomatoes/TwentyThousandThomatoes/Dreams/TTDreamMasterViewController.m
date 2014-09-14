@@ -30,7 +30,7 @@
 - (void)loadMyDreams
 {
     NSArray *myDreams = [[TTDataSourceManager sharedInstance] searchManagedObjectWithEntityName:NSStringFromClass([TTLifeGoal class])];
-    if (!myDreams.count) {
+    if (myDreams.count) {
         self.dreamContainerView.hidden = NO;
     } else {
         self.dreamGuideContainerView.hidden = NO;
