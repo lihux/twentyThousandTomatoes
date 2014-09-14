@@ -93,18 +93,27 @@
             </objects>
             <point key="canvasLocation" x="633.5" y="137.5"/>
         </scene>
-        <!--Who AmI View Controller-->
+        <!--我是谁-->
         <scene sceneID="Gas-ln-gpZ">
             <objects>
-                <viewController storyboardIdentifier="TTWhoAmIViewController" id="ZdL-Yj-XRr" customClass="TTWhoAmIViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TTWhoAmIViewController" title="我是谁" id="ZdL-Yj-XRr" customClass="TTWhoAmIViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1E0-H3-m4U"/>
                         <viewControllerLayoutGuide type="bottom" id="2pL-2f-5oo"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tma-XG-SMN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fkk-8R-qbm">
+                                <rect key="frame" x="109" y="97" width="156" height="188"/>
+                                <state key="normal" image="ttt_dream_default_user">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="v26-dR-kbc" kind="show" id="eu5-y0-UXZ"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="who am i ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEg-yj-cHd">
                                 <rect key="frame" x="83" y="293" width="209" height="81"/>
                                 <constraints>
@@ -115,28 +124,77 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fkk-8R-qbm">
-                                <rect key="frame" x="109" y="97" width="156" height="188"/>
-                                <state key="normal" image="ttt_dream_default_user">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="fkk-8R-qbm" firstAttribute="top" secondItem="1E0-H3-m4U" secondAttribute="bottom" constant="97" id="Loc-AQ-te3"/>
-                            <constraint firstItem="XEg-yj-cHd" firstAttribute="top" secondItem="fkk-8R-qbm" secondAttribute="bottom" constant="8" id="O50-5N-X8s"/>
+                            <constraint firstItem="fkk-8R-qbm" firstAttribute="top" secondItem="1E0-H3-m4U" secondAttribute="bottom" constant="97" id="Loc-AQ-te3">
+                                <variation key="heightClass=compact" constant="-15"/>
+                            </constraint>
+                            <constraint firstItem="XEg-yj-cHd" firstAttribute="top" secondItem="fkk-8R-qbm" secondAttribute="bottom" constant="8" id="O50-5N-X8s">
+                                <variation key="heightClass=compact" constant="-35"/>
+                            </constraint>
                             <constraint firstAttribute="centerX" secondItem="XEg-yj-cHd" secondAttribute="centerX" id="VJ9-Gr-Z7m"/>
                             <constraint firstAttribute="centerX" secondItem="fkk-8R-qbm" secondAttribute="centerX" id="YRN-J4-lOY"/>
+                            <constraint firstItem="2pL-2f-5oo" firstAttribute="top" relation="greaterThanOrEqual" secondItem="XEg-yj-cHd" secondAttribute="bottom" id="pXE-FC-BeX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="9id-fd-ICJ"/>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" title="我是谁" id="9id-fd-ICJ"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SE6-I4-08K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1731.5" y="-286.5"/>
+        </scene>
+        <!--我-->
+        <scene sceneID="CtF-q9-kOT">
+            <objects>
+                <viewController storyboardIdentifier="TTIViewController" title="我" id="v26-dR-kbc" customClass="TTIViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="avV-o4-V0m"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Gu-jr-RCL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="n6K-Ei-9On">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y5V-bY-23A">
+                                <rect key="frame" x="109" y="7" width="156" height="188"/>
+                                <state key="normal" image="ttt_dream_default_user">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bpQ-lE-otG">
+                                <rect key="frame" x="48" y="329" width="240" height="128"/>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点击修改头像" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TME-gF-7r3">
+                                <rect key="frame" x="96" y="175" width="182" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="182" id="EfM-2j-zVN"/>
+                                    <constraint firstAttribute="height" constant="36" id="KeX-Yn-B9m"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="TME-gF-7r3" secondAttribute="centerX" id="1HM-VI-4zg"/>
+                            <constraint firstItem="TME-gF-7r3" firstAttribute="top" secondItem="Y5V-bY-23A" secondAttribute="bottom" constant="-20" id="Mry-ft-R1n"/>
+                            <constraint firstAttribute="centerX" secondItem="Y5V-bY-23A" secondAttribute="centerX" id="Zu8-aK-seW"/>
+                            <constraint firstItem="Y5V-bY-23A" firstAttribute="top" secondItem="avV-o4-V0m" secondAttribute="bottom" constant="7" id="wFe-hy-HU4"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" title="我" id="K4S-B9-ZYp"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="161-aO-jxC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2142.5" y="-286.5"/>
         </scene>
         <!--Dream View Controller-->
         <scene sceneID="Tdt-cR-Bhg">
@@ -198,7 +256,7 @@
         <!--Navigation Controller-->
         <scene sceneID="rtQ-Bi-WCg">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="gLf-ZX-9Rw" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gLf-ZX-9Rw" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SeX-px-37w">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

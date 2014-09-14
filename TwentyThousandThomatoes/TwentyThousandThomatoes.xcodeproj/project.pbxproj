@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D2D692519C58CFF00304CF5 /* TTIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D2D692419C58CFF00304CF5 /* TTIViewController.m */; };
 		6D3537C819C3E87700570DB4 /* TTWhoAmIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3537C719C3E87700570DB4 /* TTWhoAmIViewController.m */; };
 		6D6FEED219BE82AE003C0535 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6FEED119BE82AE003C0535 /* main.m */; };
 		6D6FEEDE19BE82AE003C0535 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D6FEEDC19BE82AE003C0535 /* Main.storyboard */; };
@@ -42,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6D2D692319C58CFF00304CF5 /* TTIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTIViewController.h; sourceTree = "<group>"; };
+		6D2D692419C58CFF00304CF5 /* TTIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTIViewController.m; sourceTree = "<group>"; };
 		6D3537C619C3E87700570DB4 /* TTWhoAmIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTWhoAmIViewController.h; sourceTree = "<group>"; };
 		6D3537C719C3E87700570DB4 /* TTWhoAmIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTWhoAmIViewController.m; sourceTree = "<group>"; };
 		6D3537C919C4442200570DB4 /* TTTwentythousandTomatoes.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTTwentythousandTomatoes.pch; sourceTree = "<group>"; };
@@ -192,6 +195,8 @@
 				6D3537C719C3E87700570DB4 /* TTWhoAmIViewController.m */,
 				6DB0B02419C549D9004A2192 /* TTDreamViewController.h */,
 				6DB0B02519C549D9004A2192 /* TTDreamViewController.m */,
+				6D2D692319C58CFF00304CF5 /* TTIViewController.h */,
+				6D2D692419C58CFF00304CF5 /* TTIViewController.m */,
 			);
 			path = Dreams;
 			sourceTree = "<group>";
@@ -366,6 +371,7 @@
 				6D6FEED219BE82AE003C0535 /* main.m in Sources */,
 				6DADCF3C19C12BA400266708 /* TTI.m in Sources */,
 				6DFDB81019BEE56000183FB4 /* TTAchivementMasterViewController.m in Sources */,
+				6D2D692519C58CFF00304CF5 /* TTIViewController.m in Sources */,
 				6DFDB81C19BEE74A00183FB4 /* AppDelegate.m in Sources */,
 				6DB0B02619C549D9004A2192 /* TTDreamViewController.m in Sources */,
 				6DADCF3F19C12BA400266708 /* TTMidleTermGoal.m in Sources */,
