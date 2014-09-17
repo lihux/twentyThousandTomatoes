@@ -156,12 +156,12 @@
                         <viewControllerLayoutGuide type="bottom" id="8Gu-jr-RCL"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="n6K-Ei-9On">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DzL-mi-7LP" userLabel="midle anchor view">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DzL-mi-7LP" userLabel="midle anchor view">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" red="1" green="0.43921568630000002" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="400" id="Nhy-A1-pz0">
                                         <variation key="heightClass=compact" constant="200"/>
@@ -183,17 +183,129 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3GE-v2-EYe" userLabel="scroll anchor View">
                                 <rect key="frame" x="0.0" y="188" width="375" height="435"/>
-                                <color key="backgroundColor" red="0.10197202620967742" green="0.30367943548387094" blue="0.39311365927419356" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bpQ-lE-otG">
                                 <rect key="frame" x="0.0" y="188" width="375" height="435"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wHt-9u-aw7" userLabel="scroll content View">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="435"/>
-                                        <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7bd-AL-N54">
+                                                <rect key="frame" x="89" y="21" width="196" height="250"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Wd-wK-QHt" userLabel="text container view">
+                                                        <rect key="frame" x="0.0" y="8" width="190" height="30"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f2r-bp-AOe" userLabel="bottom line View">
+                                                                <rect key="frame" x="79" y="25" width="99" height="1"/>
+                                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </view>
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入姓名" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F9C-nW-uJ7">
+                                                                <rect key="frame" x="76" y="0.0" width="100" height="30"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="姓 名" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3DN-aP-5OW">
+                                                                <rect key="frame" x="0.0" y="0.0" width="52" height="30"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cid-to-oQO" userLabel="text container view">
+                                                        <rect key="frame" x="0.0" y="46" width="190" height="30"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="性 别" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDC-tN-5iw">
+                                                                <rect key="frame" x="0.0" y="0.0" width="52" height="30"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Loy-tu-XdG">
+                                                                <rect key="frame" x="135" y="0.0" width="28" height="28"/>
+                                                                <state key="normal" backgroundImage="tt_dream_gender_male_unselected">
+                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <state key="selected" backgroundImage="tt_dream_gender_male_selected"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxe-oa-TSt">
+                                                                <rect key="frame" x="90" y="0.0" width="28" height="28"/>
+                                                                <state key="normal" backgroundImage="tt_dream_gender_female_unselected">
+                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <state key="selected" backgroundImage="tt_dream_gender_female_selected"/>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Ef-Sb-aPt" userLabel="text container view">
+                                                        <rect key="frame" x="3" y="84" width="190" height="30"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vew-GO-PAI" userLabel="bottom line View">
+                                                                <rect key="frame" x="79" y="25" width="99" height="1"/>
+                                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </view>
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="点击输入生日" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oGC-gi-duU">
+                                                                <rect key="frame" x="76" y="0.0" width="100" height="30"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="生 日" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhY-RL-OHj">
+                                                                <rect key="frame" x="0.0" y="0.0" width="52" height="30"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qaq-Pr-Mz1" userLabel="text container view">
+                                                        <rect key="frame" x="0.0" y="122" width="190" height="30"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Llq-G1-UYX" userLabel="bottom line View">
+                                                                <rect key="frame" x="79" y="25" width="99" height="1"/>
+                                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </view>
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入学校" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bfK-q8-8Gh">
+                                                                <rect key="frame" x="76" y="0.0" width="100" height="30"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="学 校" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vsp-BS-piz">
+                                                                <rect key="frame" x="0.0" y="0.0" width="52" height="30"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="250" id="FzR-Ka-NHb"/>
+                                                    <constraint firstAttribute="width" constant="196" id="Go1-J0-ak3"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="7bd-AL-N54" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wHt-9u-aw7" secondAttribute="leading" constant="10" id="JsI-6k-2LJ"/>
+                                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="7bd-AL-N54" secondAttribute="trailing" priority="800" constant="10" id="UJ7-Bl-I9j"/>
+                                            <constraint firstItem="7bd-AL-N54" firstAttribute="top" secondItem="wHt-9u-aw7" secondAttribute="top" constant="21" id="XsN-P3-fRj"/>
+                                            <constraint firstAttribute="centerX" secondItem="7bd-AL-N54" secondAttribute="centerX" id="e2t-KY-Q99"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="JsI-6k-2LJ"/>
+                                                <exclude reference="UJ7-Bl-I9j"/>
+                                            </mask>
+                                        </variation>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="wHt-9u-aw7" secondAttribute="trailing" id="3h6-Z5-2Xx"/>
                                     <constraint firstItem="wHt-9u-aw7" firstAttribute="leading" secondItem="bpQ-lE-otG" secondAttribute="leading" id="4vv-pi-tQF"/>
@@ -236,12 +348,12 @@
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="点击修改头像" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TME-gF-7r3">
                                         <rect key="frame" x="17" y="136" width="149" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="czd-VD-iQ2"/>
                                     <constraint firstAttribute="width" constant="183" id="k9W-AW-DUb"/>
@@ -254,7 +366,8 @@
                                         <exclude reference="uSl-5C-ALs"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=compact">
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="-64" y="222" width="184" height="180"/>
                                     <mask key="constraints">
                                         <include reference="czd-VD-iQ2"/>
                                         <exclude reference="k9W-AW-DUb"/>
@@ -299,11 +412,6 @@
                                 <exclude reference="DzL-mi-7LP"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="msr-CZ-I70"/>
-                                <exclude reference="Er5-wk-ctK"/>
-                                <exclude reference="tuy-XD-vVE"/>
-                                <exclude reference="xr0-Ym-tYG"/>
-                                <exclude reference="MhQ-uC-6Og"/>
                                 <exclude reference="9B3-wq-nIN"/>
                                 <exclude reference="FF6-An-jHY"/>
                                 <exclude reference="Jpc-yq-uiQ"/>
@@ -314,6 +422,11 @@
                                 <exclude reference="M7i-Uw-74J"/>
                                 <exclude reference="GnX-Yj-8ge"/>
                                 <exclude reference="rLw-n0-k53"/>
+                                <exclude reference="msr-CZ-I70"/>
+                                <exclude reference="MhQ-uC-6Og"/>
+                                <exclude reference="Er5-wk-ctK"/>
+                                <exclude reference="tuy-XD-vVE"/>
+                                <exclude reference="xr0-Ym-tYG"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -321,14 +434,6 @@
                                 <include reference="DzL-mi-7LP"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="msr-CZ-I70"/>
-                                <exclude reference="sPx-tW-xOd"/>
-                                <exclude reference="x0h-sA-PSz"/>
-                                <include reference="Er5-wk-ctK"/>
-                                <include reference="tuy-XD-vVE"/>
-                                <include reference="xr0-Ym-tYG"/>
-                                <exclude reference="HZO-63-TAA"/>
-                                <include reference="MhQ-uC-6Og"/>
                                 <include reference="9B3-wq-nIN"/>
                                 <include reference="FF6-An-jHY"/>
                                 <exclude reference="Ioh-Hx-K3G"/>
@@ -348,17 +453,25 @@
                                 <exclude reference="nRp-SC-gBz"/>
                                 <exclude reference="ob8-HN-6PX"/>
                                 <include reference="rLw-n0-k53"/>
+                                <include reference="msr-CZ-I70"/>
+                                <exclude reference="sPx-tW-xOd"/>
+                                <exclude reference="x0h-sA-PSz"/>
+                                <exclude reference="HZO-63-TAA"/>
+                                <include reference="MhQ-uC-6Og"/>
+                                <include reference="Er5-wk-ctK"/>
+                                <include reference="tuy-XD-vVE"/>
+                                <include reference="xr0-Ym-tYG"/>
                             </mask>
                         </variation>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" title="我" id="K4S-B9-ZYp"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="667" height="375"/>
+                    <size key="freeformSize" width="375" height="667"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="161-aO-jxC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2142.5" y="-287.25"/>
+            <point key="canvasLocation" x="2280.5" y="-506.5"/>
         </scene>
         <!--Dream View Controller-->
         <scene sceneID="Tdt-cR-Bhg">
@@ -437,6 +550,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="tt_dream_gender_female_selected" width="28" height="28"/>
+        <image name="tt_dream_gender_female_unselected" width="28" height="28"/>
+        <image name="tt_dream_gender_male_selected" width="28" height="28"/>
+        <image name="tt_dream_gender_male_unselected" width="28" height="28"/>
         <image name="tt_tabbar_dream_unselected" width="30" height="30"/>
         <image name="tt_tabbar_statics_unselected" width="28" height="28"/>
         <image name="tt_tabbar_tomato_unselected" width="28" height="28"/>
