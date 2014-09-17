@@ -205,6 +205,9 @@
                                                                 <rect key="frame" x="76" y="0.0" width="100" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="textFieldEditingDidEnd:" destination="v26-dR-kbc" eventType="editingDidEnd" id="t4D-hd-4y6"/>
+                                                                </connections>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="姓 名" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3DN-aP-5OW">
                                                                 <rect key="frame" x="0.0" y="0.0" width="52" height="30"/>
@@ -224,12 +227,15 @@
                                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Loy-tu-XdG">
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Loy-tu-XdG">
                                                                 <rect key="frame" x="135" y="0.0" width="28" height="28"/>
                                                                 <state key="normal" backgroundImage="tt_dream_gender_male_unselected">
                                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <state key="selected" backgroundImage="tt_dream_gender_male_selected"/>
+                                                                <connections>
+                                                                    <action selector="didTapOnGenderButton:" destination="v26-dR-kbc" eventType="touchUpInside" id="ks7-8d-XFs"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxe-oa-TSt">
                                                                 <rect key="frame" x="90" y="0.0" width="28" height="28"/>
@@ -237,6 +243,9 @@
                                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <state key="selected" backgroundImage="tt_dream_gender_female_selected"/>
+                                                                <connections>
+                                                                    <action selector="didTapOnGenderButton:" destination="v26-dR-kbc" eventType="touchUpInside" id="3ON-hi-p4J"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -273,6 +282,9 @@
                                                                 <rect key="frame" x="76" y="0.0" width="100" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="textFieldEditingDidEnd:" destination="v26-dR-kbc" eventType="editingDidEnd" id="Dis-uG-TAu"/>
+                                                                </connections>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="学 校" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vsp-BS-piz">
                                                                 <rect key="frame" x="0.0" y="0.0" width="52" height="30"/>
@@ -345,6 +357,9 @@
                                         <state key="normal" image="ttt_dream_default_user">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="SUT-gG-XTq" kind="show" id="Ppg-3W-M5L"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="点击修改头像" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TME-gF-7r3">
                                         <rect key="frame" x="17" y="136" width="149" height="36"/>
@@ -417,16 +432,16 @@
                                 <exclude reference="Jpc-yq-uiQ"/>
                                 <exclude reference="Wzn-sr-3PC"/>
                                 <exclude reference="X3q-mZ-A7g"/>
+                                <exclude reference="Er5-wk-ctK"/>
+                                <exclude reference="tuy-XD-vVE"/>
+                                <exclude reference="xr0-Ym-tYG"/>
+                                <exclude reference="msr-CZ-I70"/>
                                 <exclude reference="rTa-Gc-hpL"/>
                                 <exclude reference="3bF-28-TJE"/>
                                 <exclude reference="M7i-Uw-74J"/>
                                 <exclude reference="GnX-Yj-8ge"/>
                                 <exclude reference="rLw-n0-k53"/>
-                                <exclude reference="msr-CZ-I70"/>
                                 <exclude reference="MhQ-uC-6Og"/>
-                                <exclude reference="Er5-wk-ctK"/>
-                                <exclude reference="tuy-XD-vVE"/>
-                                <exclude reference="xr0-Ym-tYG"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -441,6 +456,12 @@
                                 <exclude reference="RZa-Gk-GGs"/>
                                 <include reference="Wzn-sr-3PC"/>
                                 <include reference="X3q-mZ-A7g"/>
+                                <include reference="Er5-wk-ctK"/>
+                                <include reference="tuy-XD-vVE"/>
+                                <include reference="xr0-Ym-tYG"/>
+                                <include reference="msr-CZ-I70"/>
+                                <exclude reference="sPx-tW-xOd"/>
+                                <exclude reference="x0h-sA-PSz"/>
                                 <exclude reference="ceH-wj-87p"/>
                                 <exclude reference="cyZ-iQ-8vZ"/>
                                 <include reference="rTa-Gc-hpL"/>
@@ -453,14 +474,8 @@
                                 <exclude reference="nRp-SC-gBz"/>
                                 <exclude reference="ob8-HN-6PX"/>
                                 <include reference="rLw-n0-k53"/>
-                                <include reference="msr-CZ-I70"/>
-                                <exclude reference="sPx-tW-xOd"/>
-                                <exclude reference="x0h-sA-PSz"/>
                                 <exclude reference="HZO-63-TAA"/>
                                 <include reference="MhQ-uC-6Og"/>
-                                <include reference="Er5-wk-ctK"/>
-                                <include reference="tuy-XD-vVE"/>
-                                <include reference="xr0-Ym-tYG"/>
                             </mask>
                         </variation>
                     </view>
@@ -468,10 +483,33 @@
                     <navigationItem key="navigationItem" title="我" id="K4S-B9-ZYp"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="userHeadButton" destination="Y5V-bY-23A" id="T9N-JS-TuV"/>
+                        <outletCollection property="genderButtons" destination="vxe-oa-TSt" id="Bb6-jZ-yGA"/>
+                        <outletCollection property="genderButtons" destination="Loy-tu-XdG" id="bme-Pk-Cnq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="161-aO-jxC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2280.5" y="-506.5"/>
+        </scene>
+        <!--相册-->
+        <scene sceneID="JzT-8e-xM0">
+            <objects>
+                <viewController title="相册" id="SUT-gG-XTq" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="may-mS-ftM"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zj4-U1-Xz7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uXK-Tl-KN2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yc1-Tn-GaU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2722.5" y="-506.5"/>
         </scene>
         <!--Dream View Controller-->
         <scene sceneID="Tdt-cR-Bhg">
