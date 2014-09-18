@@ -26,12 +26,26 @@
     [self loadDataFromCoreData];
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [self saveSettingsToCoreData];
+}
+
 - (void)loadDataFromCoreData
 {
     NSArray *iInfos = [[TTDataSourceManager sharedInstance] searchManagedObjectWithEntityName:NSStringFromClass([TTI class])];
     if (iInfos.count > 0) {
         self.me = iInfos[0];
+        [self.userHeadButton setImage:self.me.headImage forState:UIControlStateNormal];
+        [self updateGenderButtonsWithTag:self.me.gender.integerValue];
+    } else {
+        self.me = (TTI *)[[TTDataSourceManager sharedInstance] createManagedObjectWithEntityName:NSStringFromClass([TTI class])];
     }
+}
+
+- (void)saveSettingsToCoreData
+{
+    [[TTDataSourceManager sharedInstance] saveManagedObjectContext];
 }
 
 - (void)updateUIForDataChange
@@ -45,17 +59,29 @@
 
 - (IBAction)textFieldEditingDidEnd:(id)sender
 {
+    UITextField *textField = (UITextField *)sender;
+    if (textField.tag == 0) {
+        self.me.name = textField.text;
+    } else {
+        self.me.school = textField.text;
+    }
 }
 
 - (IBAction)didTapOnGenderButton:(id)sender
 {
     UIButton *selectedButton = (UIButton *)sender;
-    [self.genderButtons enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        UIButton *genderButton = (UIButton *)obj;
-        genderButton.selected = selectedButton.tag == genderButton.tag ? YES : NO;
-    }];
+    [self updateGenderButtonsWithTag:selectedButton.tag];
+    self.me.gender = [NSNumber numberWithInteger:selectedButton.tag];
 }
 
+
+- (void)updateGenderButtonsWithTag:(NSInteger)tag
+{
+    [self.genderButtons enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        UIButton *genderButton = (UIButton *)obj;
+        genderButton.selected = tag == genderButton.tag ? YES : NO;
+    }];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

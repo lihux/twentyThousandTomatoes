@@ -13,10 +13,10 @@
 		6D6FEEDE19BE82AE003C0535 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D6FEEDC19BE82AE003C0535 /* Main.storyboard */; };
 		6D6FEEE019BE82AE003C0535 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D6FEEDF19BE82AE003C0535 /* Images.xcassets */; };
 		6D6FEEEC19BE82AE003C0535 /* TwentyThousandThomatoesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6FEEEB19BE82AE003C0535 /* TwentyThousandThomatoesTests.m */; };
+		6D766FA319C98880006ED70B /* TTI.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D766FA219C98880006ED70B /* TTI.m */; };
 		6DADCF3319C12BA300266708 /* TTLongTermGoal.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DADCF3219C12BA300266708 /* TTLongTermGoal.m */; };
 		6DADCF3619C12BA400266708 /* TTShortTermGoal.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DADCF3519C12BA400266708 /* TTShortTermGoal.m */; };
 		6DADCF3919C12BA400266708 /* TTYearRing.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DADCF3819C12BA400266708 /* TTYearRing.m */; };
-		6DADCF3C19C12BA400266708 /* TTI.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DADCF3B19C12BA400266708 /* TTI.m */; };
 		6DADCF3F19C12BA400266708 /* TTMidleTermGoal.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DADCF3E19C12BA400266708 /* TTMidleTermGoal.m */; };
 		6DADCF4219C12BA400266708 /* TTGoal.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DADCF4119C12BA400266708 /* TTGoal.m */; };
 		6DADCF4519C12BA400266708 /* TTTomato.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DADCF4419C12BA400266708 /* TTTomato.m */; };
@@ -56,14 +56,14 @@
 		6D6FEEE519BE82AE003C0535 /* TwentyThousandThomatoesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwentyThousandThomatoesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D6FEEEA19BE82AE003C0535 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D6FEEEB19BE82AE003C0535 /* TwentyThousandThomatoesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwentyThousandThomatoesTests.m; sourceTree = "<group>"; };
+		6D766FA119C98880006ED70B /* TTI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTI.h; sourceTree = "<group>"; };
+		6D766FA219C98880006ED70B /* TTI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTI.m; sourceTree = "<group>"; };
 		6DADCF3119C12BA300266708 /* TTLongTermGoal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTLongTermGoal.h; sourceTree = "<group>"; };
 		6DADCF3219C12BA300266708 /* TTLongTermGoal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTLongTermGoal.m; sourceTree = "<group>"; };
 		6DADCF3419C12BA400266708 /* TTShortTermGoal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTShortTermGoal.h; sourceTree = "<group>"; };
 		6DADCF3519C12BA400266708 /* TTShortTermGoal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTShortTermGoal.m; sourceTree = "<group>"; };
 		6DADCF3719C12BA400266708 /* TTYearRing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTYearRing.h; sourceTree = "<group>"; };
 		6DADCF3819C12BA400266708 /* TTYearRing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTYearRing.m; sourceTree = "<group>"; };
-		6DADCF3A19C12BA400266708 /* TTI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTI.h; sourceTree = "<group>"; };
-		6DADCF3B19C12BA400266708 /* TTI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTI.m; sourceTree = "<group>"; };
 		6DADCF3D19C12BA400266708 /* TTMidleTermGoal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMidleTermGoal.h; sourceTree = "<group>"; };
 		6DADCF3E19C12BA400266708 /* TTMidleTermGoal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMidleTermGoal.m; sourceTree = "<group>"; };
 		6DADCF4019C12BA400266708 /* TTGoal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTGoal.h; sourceTree = "<group>"; };
@@ -236,6 +236,8 @@
 			isa = PBXGroup;
 			children = (
 				6DFDB82619BEF4D800183FB4 /* TTTomatoes.xcdatamodeld */,
+				6D766FA119C98880006ED70B /* TTI.h */,
+				6D766FA219C98880006ED70B /* TTI.m */,
 				6DADCF4619C12BA400266708 /* TTLifeGoal.h */,
 				6DADCF4719C12BA400266708 /* TTLifeGoal.m */,
 				6DADCF4319C12BA400266708 /* TTTomato.h */,
@@ -244,8 +246,6 @@
 				6DADCF4119C12BA400266708 /* TTGoal.m */,
 				6DADCF3D19C12BA400266708 /* TTMidleTermGoal.h */,
 				6DADCF3E19C12BA400266708 /* TTMidleTermGoal.m */,
-				6DADCF3A19C12BA400266708 /* TTI.h */,
-				6DADCF3B19C12BA400266708 /* TTI.m */,
 				6DADCF3719C12BA400266708 /* TTYearRing.h */,
 				6DADCF3819C12BA400266708 /* TTYearRing.m */,
 				6DADCF3419C12BA400266708 /* TTShortTermGoal.h */,
@@ -362,6 +362,7 @@
 				6DADCF4519C12BA400266708 /* TTTomato.m in Sources */,
 				6DADCF4219C12BA400266708 /* TTGoal.m in Sources */,
 				6DADCF3919C12BA400266708 /* TTYearRing.m in Sources */,
+				6D766FA319C98880006ED70B /* TTI.m in Sources */,
 				6DFDB82019BEE94300183FB4 /* UIViewController+GetInstanceFromStoryBoard.m in Sources */,
 				6DFDB82419BEF26600183FB4 /* TTDataSourceManager.m in Sources */,
 				6D3537C819C3E87700570DB4 /* TTWhoAmIViewController.m in Sources */,
@@ -369,7 +370,6 @@
 				6DADCF3319C12BA300266708 /* TTLongTermGoal.m in Sources */,
 				6DFDB81819BEE58000183FB4 /* TTTomatoMasterViewController.m in Sources */,
 				6D6FEED219BE82AE003C0535 /* main.m in Sources */,
-				6DADCF3C19C12BA400266708 /* TTI.m in Sources */,
 				6DFDB81019BEE56000183FB4 /* TTAchivementMasterViewController.m in Sources */,
 				6D2D692519C58CFF00304CF5 /* TTIViewController.m in Sources */,
 				6DFDB81C19BEE74A00183FB4 /* AppDelegate.m in Sources */,

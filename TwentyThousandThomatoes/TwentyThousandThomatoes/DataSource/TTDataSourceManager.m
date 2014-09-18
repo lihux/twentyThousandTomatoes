@@ -40,6 +40,7 @@
     NSError *error = nil;
     if (![self.persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
         NSLog(@"fail to create core data persistent store, reason: %@", error);
+        NSAssert(NO, @"fail to create core data persistent store, reason: %@", error);
     }
 
     self.managedObjectContext = [[NSManagedObjectContext alloc] init];
