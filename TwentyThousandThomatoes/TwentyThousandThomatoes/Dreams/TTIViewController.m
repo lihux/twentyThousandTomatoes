@@ -46,6 +46,9 @@
         if (self.me.school) {
             self.schoolTextField.text = self.me.school;
         }
+        if (self.userHeadButton.imageView.image) {
+            self.userHeadButton.imageView.image = self.me.headImage;
+        }
     } else {
         self.me = (TTI *)[[TTDataSourceManager sharedInstance] createManagedObjectWithEntityName:NSStringFromClass([TTI class])];
     }
@@ -55,6 +58,9 @@
 {
     self.me.name = self.nameTextField.text;
     self.me.school = self.schoolTextField.text;
+    if (self.userHeadButton.imageView.image) {
+        self.me.headImage = self.userHeadButton.imageView.image;
+    }
     [[TTDataSourceManager sharedInstance] saveManagedObjectContext];
 }
 

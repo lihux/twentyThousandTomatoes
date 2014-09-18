@@ -14,6 +14,8 @@
 		6D6FEEE019BE82AE003C0535 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D6FEEDF19BE82AE003C0535 /* Images.xcassets */; };
 		6D6FEEEC19BE82AE003C0535 /* TwentyThousandThomatoesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6FEEEB19BE82AE003C0535 /* TwentyThousandThomatoesTests.m */; };
 		6D766FA319C98880006ED70B /* TTI.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D766FA219C98880006ED70B /* TTI.m */; };
+		6D97E32319CA868100ED2212 /* TTTomatoes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6D97E32119CA868100ED2212 /* TTTomatoes.xcdatamodeld */; };
+		6D97E32719CA869900ED2212 /* UIImageValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D97E32619CA869900ED2212 /* UIImageValueTransformer.m */; };
 		6DADCF3319C12BA300266708 /* TTLongTermGoal.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DADCF3219C12BA300266708 /* TTLongTermGoal.m */; };
 		6DADCF3619C12BA400266708 /* TTShortTermGoal.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DADCF3519C12BA400266708 /* TTShortTermGoal.m */; };
 		6DADCF3919C12BA400266708 /* TTYearRing.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DADCF3819C12BA400266708 /* TTYearRing.m */; };
@@ -29,7 +31,6 @@
 		6DFDB81C19BEE74A00183FB4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFDB81B19BEE74A00183FB4 /* AppDelegate.m */; };
 		6DFDB82019BEE94300183FB4 /* UIViewController+GetInstanceFromStoryBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFDB81F19BEE94300183FB4 /* UIViewController+GetInstanceFromStoryBoard.m */; };
 		6DFDB82419BEF26600183FB4 /* TTDataSourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFDB82319BEF26600183FB4 /* TTDataSourceManager.m */; };
-		6DFDB82819BEF4D800183FB4 /* TTTomatoes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6DFDB82619BEF4D800183FB4 /* TTTomatoes.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,9 @@
 		6D6FEEEB19BE82AE003C0535 /* TwentyThousandThomatoesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwentyThousandThomatoesTests.m; sourceTree = "<group>"; };
 		6D766FA119C98880006ED70B /* TTI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTI.h; sourceTree = "<group>"; };
 		6D766FA219C98880006ED70B /* TTI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTI.m; sourceTree = "<group>"; };
+		6D97E32219CA868100ED2212 /* TTTomatoes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TTTomatoes.xcdatamodel; sourceTree = "<group>"; };
+		6D97E32519CA869900ED2212 /* UIImageValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageValueTransformer.h; sourceTree = "<group>"; };
+		6D97E32619CA869900ED2212 /* UIImageValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageValueTransformer.m; sourceTree = "<group>"; };
 		6DADCF3119C12BA300266708 /* TTLongTermGoal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTLongTermGoal.h; sourceTree = "<group>"; };
 		6DADCF3219C12BA300266708 /* TTLongTermGoal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTLongTermGoal.m; sourceTree = "<group>"; };
 		6DADCF3419C12BA400266708 /* TTShortTermGoal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTShortTermGoal.h; sourceTree = "<group>"; };
@@ -87,7 +91,6 @@
 		6DFDB81F19BEE94300183FB4 /* UIViewController+GetInstanceFromStoryBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+GetInstanceFromStoryBoard.m"; sourceTree = "<group>"; };
 		6DFDB82219BEF26600183FB4 /* TTDataSourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTDataSourceManager.h; sourceTree = "<group>"; };
 		6DFDB82319BEF26600183FB4 /* TTDataSourceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTDataSourceManager.m; sourceTree = "<group>"; };
-		6DFDB82719BEF4D800183FB4 /* TTTomatoes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TTTomatoes.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +180,15 @@
 			name = UI;
 			sourceTree = "<group>";
 		};
+		6D97E32419CA869900ED2212 /* value transformer */ = {
+			isa = PBXGroup;
+			children = (
+				6D97E32519CA869900ED2212 /* UIImageValueTransformer.h */,
+				6D97E32619CA869900ED2212 /* UIImageValueTransformer.m */,
+			);
+			path = "value transformer";
+			sourceTree = "<group>";
+		};
 		6DFDB80D19BEE56000183FB4 /* Achivements */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,7 +247,8 @@
 		6DFDB82519BEF49E00183FB4 /* Data Models */ = {
 			isa = PBXGroup;
 			children = (
-				6DFDB82619BEF4D800183FB4 /* TTTomatoes.xcdatamodeld */,
+				6D97E32419CA869900ED2212 /* value transformer */,
+				6D97E32119CA868100ED2212 /* TTTomatoes.xcdatamodeld */,
 				6D766FA119C98880006ED70B /* TTI.h */,
 				6D766FA219C98880006ED70B /* TTI.m */,
 				6DADCF4619C12BA400266708 /* TTLifeGoal.h */,
@@ -358,7 +371,9 @@
 			files = (
 				6DFDB81419BEE56800183FB4 /* TTDreamMasterViewController.m in Sources */,
 				6DADCF3619C12BA400266708 /* TTShortTermGoal.m in Sources */,
+				6D97E32719CA869900ED2212 /* UIImageValueTransformer.m in Sources */,
 				6DADCF4819C12BA400266708 /* TTLifeGoal.m in Sources */,
+				6D97E32319CA868100ED2212 /* TTTomatoes.xcdatamodeld in Sources */,
 				6DADCF4519C12BA400266708 /* TTTomato.m in Sources */,
 				6DADCF4219C12BA400266708 /* TTGoal.m in Sources */,
 				6DADCF3919C12BA400266708 /* TTYearRing.m in Sources */,
@@ -366,7 +381,6 @@
 				6DFDB82019BEE94300183FB4 /* UIViewController+GetInstanceFromStoryBoard.m in Sources */,
 				6DFDB82419BEF26600183FB4 /* TTDataSourceManager.m in Sources */,
 				6D3537C819C3E87700570DB4 /* TTWhoAmIViewController.m in Sources */,
-				6DFDB82819BEF4D800183FB4 /* TTTomatoes.xcdatamodeld in Sources */,
 				6DADCF3319C12BA300266708 /* TTLongTermGoal.m in Sources */,
 				6DFDB81819BEE58000183FB4 /* TTTomatoMasterViewController.m in Sources */,
 				6D6FEED219BE82AE003C0535 /* main.m in Sources */,
@@ -583,12 +597,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		6DFDB82619BEF4D800183FB4 /* TTTomatoes.xcdatamodeld */ = {
+		6D97E32119CA868100ED2212 /* TTTomatoes.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				6DFDB82719BEF4D800183FB4 /* TTTomatoes.xcdatamodel */,
+				6D97E32219CA868100ED2212 /* TTTomatoes.xcdatamodel */,
 			);
-			currentVersion = 6DFDB82719BEF4D800183FB4 /* TTTomatoes.xcdatamodel */;
+			currentVersion = 6D97E32219CA868100ED2212 /* TTTomatoes.xcdatamodel */;
 			path = TTTomatoes.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

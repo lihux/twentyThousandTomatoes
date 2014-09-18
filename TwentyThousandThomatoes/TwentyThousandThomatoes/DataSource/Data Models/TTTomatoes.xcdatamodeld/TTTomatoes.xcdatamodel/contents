@@ -16,7 +16,7 @@
         <attribute name="birthday" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="earnedTomatoes" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="gender" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
-        <attribute name="headImage" optional="YES" attributeType="Transformable" valueTransformerName="" storedInTruthFile="YES" syncable="YES"/>
+        <attribute name="headImage" optional="YES" attributeType="Transformable" valueTransformerName="UIImageValueTransformer" storedInTruthFile="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="school" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="lifeGoals" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TTLifeGoal" inverseName="owner" inverseEntity="TTLifeGoal" syncable="YES"/>
@@ -55,7 +55,7 @@
     </entity>
     <elements>
         <element name="TTGoal" positionX="142" positionY="288" width="128" height="180"/>
-        <element name="TTI" positionX="-180" positionY="-18" width="128" height="180"/>
+        <element name="TTI" positionX="-180" positionY="-18" width="128" height="30"/>
         <element name="TTLifeGoal" positionX="-9" positionY="72" width="128" height="75"/>
         <element name="TTLongTermGoal" positionX="153" positionY="116" width="128" height="75"/>
         <element name="TTMidleTermGoal" positionX="315" positionY="161" width="128" height="75"/>

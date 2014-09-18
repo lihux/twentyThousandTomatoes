@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "UIImageValueTransformer.h"
+
 @interface AppDelegate ()
 
 @end
@@ -17,6 +19,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [[UITabBar appearance] setTintColor:[UIColor redColor]];
+    UIImageValueTransformer *imageTransformer = [[UIImageValueTransformer alloc] init];
+    [UIImageValueTransformer setValueTransformer:imageTransformer forName:@"UIImageValueTransformer"];
     return YES;
 }
 
