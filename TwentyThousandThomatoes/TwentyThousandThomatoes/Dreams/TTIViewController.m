@@ -15,6 +15,8 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *userHeadButton;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *genderButtons;
+@property (weak, nonatomic) IBOutlet UITextField *schoolTextField;
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (nonatomic, strong) TTI *me;
 
 @end
@@ -28,6 +30,7 @@
 
 - (void)viewWillDisappear:(BOOL)animated
 {
+    [super viewWillDisappear:animated];
     [self saveSettingsToCoreData];
 }
 
@@ -36,8 +39,13 @@
     NSArray *iInfos = [[TTDataSourceManager sharedInstance] searchManagedObjectWithEntityName:NSStringFromClass([TTI class])];
     if (iInfos.count > 0) {
         self.me = iInfos[0];
-        [self.userHeadButton setImage:self.me.headImage forState:UIControlStateNormal];
         [self updateGenderButtonsWithTag:self.me.gender.integerValue];
+        if (self.me.name) {
+            self.nameTextField.text = self.me.name;
+        }
+        if (self.me.school) {
+            self.schoolTextField.text = self.me.school;
+        }
     } else {
         self.me = (TTI *)[[TTDataSourceManager sharedInstance] createManagedObjectWithEntityName:NSStringFromClass([TTI class])];
     }
@@ -45,6 +53,8 @@
 
 - (void)saveSettingsToCoreData
 {
+    self.me.name = self.nameTextField.text;
+    self.me.school = self.schoolTextField.text;
     [[TTDataSourceManager sharedInstance] saveManagedObjectContext];
 }
 
