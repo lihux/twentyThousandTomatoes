@@ -16,6 +16,8 @@
 		6D766FA319C98880006ED70B /* TTI.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D766FA219C98880006ED70B /* TTI.m */; };
 		6D97E32319CA868100ED2212 /* TTTomatoes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6D97E32119CA868100ED2212 /* TTTomatoes.xcdatamodeld */; };
 		6D97E32719CA869900ED2212 /* UIImageValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D97E32619CA869900ED2212 /* UIImageValueTransformer.m */; };
+		6D97E33019CAB04900ED2212 /* TTPhotoSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D97E32F19CAB04900ED2212 /* TTPhotoSelectViewController.m */; };
+		6D97E33719CAC02000ED2212 /* TTPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D97E33619CAC02000ED2212 /* TTPhotoCollectionViewCell.m */; };
 		6DADCF3319C12BA300266708 /* TTLongTermGoal.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DADCF3219C12BA300266708 /* TTLongTermGoal.m */; };
 		6DADCF3619C12BA400266708 /* TTShortTermGoal.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DADCF3519C12BA400266708 /* TTShortTermGoal.m */; };
 		6DADCF3919C12BA400266708 /* TTYearRing.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DADCF3819C12BA400266708 /* TTYearRing.m */; };
@@ -62,6 +64,10 @@
 		6D97E32219CA868100ED2212 /* TTTomatoes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TTTomatoes.xcdatamodel; sourceTree = "<group>"; };
 		6D97E32519CA869900ED2212 /* UIImageValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageValueTransformer.h; sourceTree = "<group>"; };
 		6D97E32619CA869900ED2212 /* UIImageValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageValueTransformer.m; sourceTree = "<group>"; };
+		6D97E32E19CAB04900ED2212 /* TTPhotoSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTPhotoSelectViewController.h; sourceTree = "<group>"; };
+		6D97E32F19CAB04900ED2212 /* TTPhotoSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTPhotoSelectViewController.m; sourceTree = "<group>"; };
+		6D97E33519CAC02000ED2212 /* TTPhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTPhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		6D97E33619CAC02000ED2212 /* TTPhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTPhotoCollectionViewCell.m; sourceTree = "<group>"; };
 		6DADCF3119C12BA300266708 /* TTLongTermGoal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTLongTermGoal.h; sourceTree = "<group>"; };
 		6DADCF3219C12BA300266708 /* TTLongTermGoal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTLongTermGoal.m; sourceTree = "<group>"; };
 		6DADCF3419C12BA400266708 /* TTShortTermGoal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTShortTermGoal.h; sourceTree = "<group>"; };
@@ -189,6 +195,15 @@
 			path = "value transformer";
 			sourceTree = "<group>";
 		};
+		6D97E33419CAC02000ED2212 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				6D97E33519CAC02000ED2212 /* TTPhotoCollectionViewCell.h */,
+				6D97E33619CAC02000ED2212 /* TTPhotoCollectionViewCell.m */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
 		6DFDB80D19BEE56000183FB4 /* Achivements */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +216,7 @@
 		6DFDB81119BEE56800183FB4 /* Dreams */ = {
 			isa = PBXGroup;
 			children = (
+				6D97E33419CAC02000ED2212 /* views */,
 				6DFDB81219BEE56800183FB4 /* TTDreamMasterViewController.h */,
 				6DFDB81319BEE56800183FB4 /* TTDreamMasterViewController.m */,
 				6D3537C619C3E87700570DB4 /* TTWhoAmIViewController.h */,
@@ -209,6 +225,8 @@
 				6DB0B02519C549D9004A2192 /* TTDreamViewController.m */,
 				6D2D692319C58CFF00304CF5 /* TTIViewController.h */,
 				6D2D692419C58CFF00304CF5 /* TTIViewController.m */,
+				6D97E32E19CAB04900ED2212 /* TTPhotoSelectViewController.h */,
+				6D97E32F19CAB04900ED2212 /* TTPhotoSelectViewController.m */,
 			);
 			path = Dreams;
 			sourceTree = "<group>";
@@ -371,6 +389,7 @@
 			files = (
 				6DFDB81419BEE56800183FB4 /* TTDreamMasterViewController.m in Sources */,
 				6DADCF3619C12BA400266708 /* TTShortTermGoal.m in Sources */,
+				6D97E33019CAB04900ED2212 /* TTPhotoSelectViewController.m in Sources */,
 				6D97E32719CA869900ED2212 /* UIImageValueTransformer.m in Sources */,
 				6DADCF4819C12BA400266708 /* TTLifeGoal.m in Sources */,
 				6D97E32319CA868100ED2212 /* TTTomatoes.xcdatamodeld in Sources */,
@@ -383,6 +402,7 @@
 				6D3537C819C3E87700570DB4 /* TTWhoAmIViewController.m in Sources */,
 				6DADCF3319C12BA300266708 /* TTLongTermGoal.m in Sources */,
 				6DFDB81819BEE58000183FB4 /* TTTomatoMasterViewController.m in Sources */,
+				6D97E33719CAC02000ED2212 /* TTPhotoCollectionViewCell.m in Sources */,
 				6D6FEED219BE82AE003C0535 /* main.m in Sources */,
 				6DFDB81019BEE56000183FB4 /* TTAchivementMasterViewController.m in Sources */,
 				6D2D692519C58CFF00304CF5 /* TTIViewController.m in Sources */,

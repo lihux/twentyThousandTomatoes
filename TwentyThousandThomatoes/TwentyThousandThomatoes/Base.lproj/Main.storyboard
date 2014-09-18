@@ -495,10 +495,10 @@
             </objects>
             <point key="canvasLocation" x="2280.5" y="-506.5"/>
         </scene>
-        <!--相册-->
+        <!--选取照片-->
         <scene sceneID="JzT-8e-xM0">
             <objects>
-                <viewController title="相册" id="SUT-gG-XTq" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TTPhotoPickerViewController" title="选取照片" id="SUT-gG-XTq" customClass="TTPhotoSelectViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="may-mS-ftM"/>
                         <viewControllerLayoutGuide type="bottom" id="Zj4-U1-Xz7"/>
@@ -506,8 +506,59 @@
                     <view key="view" contentMode="scaleToFill" id="uXK-Tl-KN2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ax3-0e-ghs">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ymy-7c-f7S">
+                                    <size key="itemSize" width="80" height="80"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TTPhotoCollectionViewCell" id="O8a-YX-m3G" customClass="TTPhotoCollectionViewCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SQO-C8-S5v">
+                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lXS-gH-8yI" userLabel="photo Image View">
+                                                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                        </imageView>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V4E-qK-r7x">
+                                                            <rect key="frame" x="58" y="0.0" width="20" height="22"/>
+                                                            <state key="normal" image="tt_dream_photo_unselected">
+                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                            <state key="selected" image="tt_dream_photo_selected"/>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <outlet property="imageView" destination="lXS-gH-8yI" id="jci-J4-h3R"/>
+                                            <outlet property="selectedButton" destination="V4E-qK-r7x" id="S3u-pK-UIG"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="SUT-gG-XTq" id="ant-7W-vSe"/>
+                                    <outlet property="delegate" destination="SUT-gG-XTq" id="CUx-8e-cK3"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="Ax3-0e-ghs" id="U3w-tL-lSe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yc1-Tn-GaU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -594,6 +645,8 @@
         <image name="tt_dream_gender_female_unselected" width="28" height="28"/>
         <image name="tt_dream_gender_male_selected" width="28" height="28"/>
         <image name="tt_dream_gender_male_unselected" width="28" height="28"/>
+        <image name="tt_dream_photo_selected" width="20" height="20"/>
+        <image name="tt_dream_photo_unselected" width="20" height="20"/>
         <image name="tt_tabbar_dream_unselected" width="30" height="30"/>
         <image name="tt_tabbar_statics_unselected" width="28" height="28"/>
         <image name="tt_tabbar_tomato_unselected" width="28" height="28"/>
