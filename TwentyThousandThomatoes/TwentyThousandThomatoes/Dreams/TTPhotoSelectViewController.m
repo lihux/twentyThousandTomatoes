@@ -10,14 +10,16 @@
 
 #import <AssetsLibrary/AssetsLibrary.h>
 #import "TTPhotoCollectionViewCell.h"
+#import "TTPhotoEditViewController.h"
 
-@interface TTPhotoSelectViewController () <UICollectionViewDataSource>
+@interface TTPhotoSelectViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @property (nonatomic, strong) NSMutableArray *photos;
 @property (nonatomic, strong) ALAssetsLibrary *assetsLibrary;
 @property (nonatomic, strong) ALAssetsGroup *assetsGroup;
+@property (nonatomic, assign) NSInteger selectedIndex;
 
 @end
 
@@ -26,6 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.photos = [NSMutableArray new];
+    self.selectedIndex = NSIntegerMax;
     [self loadPhotos];
 }
 
@@ -88,5 +91,19 @@
 }
 
 #pragma mark - UICollectionViewDelegate delegate
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.selectedIndex = indexPath.row;
+    [self performSegueWithIdentifier:@"TTPhotoEditViewController" sender:nil];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.destinationViewController isKindOfClass:[TTPhotoEditViewController class]]) {
+        TTPhotoEditViewController *photoEditViewController = (TTPhotoEditViewController *) segue.destinationViewController;
+        ALAsset *selectedAsset = self.photos[self.selectedIndex];
+        photoEditViewController.originImage = [UIImage imageWithCGImage:[[selectedAsset defaultRepresentation] fullResolutionImage]];
+    }
+}
 
 @end

@@ -507,20 +507,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ax3-0e-ghs">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ax3-0e-ghs">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ymy-7c-f7S">
-                                    <size key="itemSize" width="80" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="4" minimumInteritemSpacing="4" id="jUe-Bz-SEm">
+                                    <size key="itemSize" width="100" height="100"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="4" minY="4" maxX="4" maxY="4"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TTPhotoCollectionViewCell" id="O8a-YX-m3G" customClass="TTPhotoCollectionViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SQO-C8-S5v">
@@ -555,14 +556,44 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ax3-0e-ghs" firstAttribute="width" secondItem="uXK-Tl-KN2" secondAttribute="width" id="C1k-fd-xsk"/>
+                            <constraint firstItem="Ax3-0e-ghs" firstAttribute="height" secondItem="uXK-Tl-KN2" secondAttribute="height" id="WxI-NK-hD8"/>
+                            <constraint firstAttribute="centerX" secondItem="Ax3-0e-ghs" secondAttribute="centerX" id="nQS-Ab-sWd"/>
+                            <constraint firstAttribute="centerY" secondItem="Ax3-0e-ghs" secondAttribute="centerY" id="rNi-zX-Cze"/>
+                        </constraints>
                     </view>
+                    <toolbarItems/>
                     <connections>
                         <outlet property="collectionView" destination="Ax3-0e-ghs" id="U3w-tL-lSe"/>
+                        <segue destination="A7L-5K-xKa" kind="show" identifier="TTPhotoEditViewController" id="CQV-Nk-sF1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yc1-Tn-GaU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2722.5" y="-506.5"/>
+        </scene>
+        <!--移动和缩放-->
+        <scene sceneID="lgF-7i-AJm">
+            <objects>
+                <viewController storyboardIdentifier="TTPhotoEditViewController" id="A7L-5K-xKa" customClass="TTPhotoEditViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="u9d-c7-YGy"/>
+                        <viewControllerLayoutGuide type="bottom" id="AIT-kZ-5ae"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hWp-jE-4xk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="移动和缩放" id="fqz-sE-MKH">
+                        <barButtonItem key="backBarButtonItem" title="返回" id="eCy-Dr-cFj"/>
+                        <barButtonItem key="rightBarButtonItem" title="确定" id="jyJ-bx-iPH"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ows-Zz-Weo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3202.5" y="-506.5"/>
         </scene>
         <!--Dream View Controller-->
         <scene sceneID="Tdt-cR-Bhg">
