@@ -10,15 +10,8 @@
 
 @interface TTPhotoCollectionViewCell ()
 
-@property (weak, nonatomic) IBOutlet UIButton *selectedButton;
-
 @end
 
 @implementation TTPhotoCollectionViewCell
-
-- (void)setSelected:(BOOL)selected
-{
-    self.selectedButton.selected = selected;
-}
 
 @end

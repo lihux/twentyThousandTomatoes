@@ -27,6 +27,7 @@
 		6DADCF4819C12BA400266708 /* TTLifeGoal.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DADCF4719C12BA400266708 /* TTLifeGoal.m */; };
 		6DADCF4A19C12ED500266708 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DADCF4919C12ED500266708 /* CoreData.framework */; };
 		6DB0B02619C549D9004A2192 /* TTDreamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB0B02519C549D9004A2192 /* TTDreamViewController.m */; };
+		6DC15D2119D1A1CB008784F9 /* TTImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC15D2019D1A1CB008784F9 /* TTImageScrollView.m */; };
 		6DC40FFA19CBBD52004AD6C9 /* TTPhotoEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC40FF919CBBD52004AD6C9 /* TTPhotoEditViewController.m */; };
 		6DFDB81019BEE56000183FB4 /* TTAchivementMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFDB80F19BEE56000183FB4 /* TTAchivementMasterViewController.m */; };
 		6DFDB81419BEE56800183FB4 /* TTDreamMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFDB81319BEE56800183FB4 /* TTDreamMasterViewController.m */; };
@@ -86,6 +87,8 @@
 		6DADCF4919C12ED500266708 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		6DB0B02419C549D9004A2192 /* TTDreamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTDreamViewController.h; sourceTree = "<group>"; };
 		6DB0B02519C549D9004A2192 /* TTDreamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTDreamViewController.m; sourceTree = "<group>"; };
+		6DC15D1F19D1A1CB008784F9 /* TTImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTImageScrollView.h; sourceTree = "<group>"; };
+		6DC15D2019D1A1CB008784F9 /* TTImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTImageScrollView.m; sourceTree = "<group>"; };
 		6DC40FF819CBBD52004AD6C9 /* TTPhotoEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTPhotoEditViewController.h; sourceTree = "<group>"; };
 		6DC40FF919CBBD52004AD6C9 /* TTPhotoEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTPhotoEditViewController.m; sourceTree = "<group>"; };
 		6DFDB80E19BEE56000183FB4 /* TTAchivementMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTAchivementMasterViewController.h; sourceTree = "<group>"; };
@@ -203,6 +206,8 @@
 			children = (
 				6D97E33519CAC02000ED2212 /* TTPhotoCollectionViewCell.h */,
 				6D97E33619CAC02000ED2212 /* TTPhotoCollectionViewCell.m */,
+				6DC15D1F19D1A1CB008784F9 /* TTImageScrollView.h */,
+				6DC15D2019D1A1CB008784F9 /* TTImageScrollView.m */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -411,6 +416,7 @@
 				6D97E33719CAC02000ED2212 /* TTPhotoCollectionViewCell.m in Sources */,
 				6D6FEED219BE82AE003C0535 /* main.m in Sources */,
 				6DFDB81019BEE56000183FB4 /* TTAchivementMasterViewController.m in Sources */,
+				6DC15D2119D1A1CB008784F9 /* TTImageScrollView.m in Sources */,
 				6D2D692519C58CFF00304CF5 /* TTIViewController.m in Sources */,
 				6DFDB81C19BEE74A00183FB4 /* AppDelegate.m in Sources */,
 				6DB0B02619C549D9004A2192 /* TTDreamViewController.m in Sources */,

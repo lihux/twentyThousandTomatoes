@@ -8,7 +8,9 @@
 
 #import "TTPhotoEditViewController.h"
 
-@interface TTPhotoEditViewController ()
+@interface TTPhotoEditViewController () <UIScrollViewDelegate>
+
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
@@ -16,22 +18,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.imageView.image = self.originImage;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - UIScrollViewDelegate
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
+{
+    return self.imageView;
 }
-*/
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    UIImage *image = self.imageView.image;
+    NSLog(@"image size: 宽：%f, 高:%f，scale: %f\n", image.size.width, image.size.height, self.imageView.contentScaleFactor);
+}
 
 @end

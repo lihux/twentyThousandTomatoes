@@ -530,13 +530,6 @@
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lXS-gH-8yI" userLabel="photo Image View">
                                                             <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                         </imageView>
-                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V4E-qK-r7x">
-                                                            <rect key="frame" x="58" y="0.0" width="20" height="22"/>
-                                                            <state key="normal" image="tt_dream_photo_unselected">
-                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                            </state>
-                                                            <state key="selected" image="tt_dream_photo_selected"/>
-                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </view>
@@ -545,7 +538,6 @@
                                         </view>
                                         <connections>
                                             <outlet property="imageView" destination="lXS-gH-8yI" id="jci-J4-h3R"/>
-                                            <outlet property="selectedButton" destination="V4E-qK-r7x" id="S3u-pK-UIG"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -584,12 +576,64 @@
                     <view key="view" contentMode="scaleToFill" id="hWp-jE-4xk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RjQ-hF-hrE">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HRU-sq-O5P" customClass="TTPhotoImageView">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="HRU-sq-O5P" firstAttribute="leading" secondItem="RjQ-hF-hrE" secondAttribute="leading" id="SnR-U3-RpO"/>
+                                    <constraint firstAttribute="trailing" secondItem="HRU-sq-O5P" secondAttribute="trailing" id="e6z-xo-mk3"/>
+                                    <constraint firstAttribute="bottom" secondItem="HRU-sq-O5P" secondAttribute="bottom" id="nbJ-jQ-tHP"/>
+                                    <constraint firstItem="HRU-sq-O5P" firstAttribute="top" secondItem="RjQ-hF-hrE" secondAttribute="top" id="yQR-gw-8SL"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maximumZoomScale">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="A7L-5K-xKa" id="Spt-OM-heS"/>
+                                </connections>
+                            </scrollView>
+                            <view userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5xJ-pf-sRz" userLabel="mask View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5xJ-pf-sRz" firstAttribute="height" secondItem="hWp-jE-4xk" secondAttribute="height" id="3Qv-Hu-CzW"/>
+                            <constraint firstItem="RjQ-hF-hrE" firstAttribute="width" secondItem="hWp-jE-4xk" secondAttribute="width" id="B8F-DG-rnH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5xJ-pf-sRz" secondAttribute="trailing" constant="-16" id="BeR-EF-nGm"/>
+                            <constraint firstAttribute="centerY" secondItem="RjQ-hF-hrE" secondAttribute="centerY" id="GNC-9s-o7W"/>
+                            <constraint firstItem="5xJ-pf-sRz" firstAttribute="leading" secondItem="hWp-jE-4xk" secondAttribute="leadingMargin" constant="-16" id="HsH-JI-Jjj"/>
+                            <constraint firstItem="5xJ-pf-sRz" firstAttribute="top" secondItem="u9d-c7-YGy" secondAttribute="bottom" constant="-44" id="Q5I-qI-trh"/>
+                            <constraint firstItem="RjQ-hF-hrE" firstAttribute="height" secondItem="hWp-jE-4xk" secondAttribute="height" id="R7C-I8-yTj"/>
+                            <constraint firstAttribute="height" secondItem="HRU-sq-O5P" secondAttribute="height" id="ZVz-A4-tnq"/>
+                            <constraint firstItem="AIT-kZ-5ae" firstAttribute="top" secondItem="5xJ-pf-sRz" secondAttribute="bottom" id="f6h-Hi-NPC"/>
+                            <constraint firstItem="5xJ-pf-sRz" firstAttribute="width" secondItem="hWp-jE-4xk" secondAttribute="width" id="fIF-6J-ckx"/>
+                            <constraint firstAttribute="width" secondItem="HRU-sq-O5P" secondAttribute="width" id="fLH-B7-kHC"/>
+                            <constraint firstAttribute="centerX" secondItem="RjQ-hF-hrE" secondAttribute="centerX" id="jLG-RI-BQR"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="3Qv-Hu-CzW"/>
+                                <exclude reference="fIF-6J-ckx"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="移动和缩放" id="fqz-sE-MKH">
                         <barButtonItem key="backBarButtonItem" title="返回" id="eCy-Dr-cFj"/>
                         <barButtonItem key="rightBarButtonItem" title="确定" id="jyJ-bx-iPH"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="HRU-sq-O5P" id="v3J-nc-nJG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ows-Zz-Weo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -676,8 +720,6 @@
         <image name="tt_dream_gender_female_unselected" width="28" height="28"/>
         <image name="tt_dream_gender_male_selected" width="28" height="28"/>
         <image name="tt_dream_gender_male_unselected" width="28" height="28"/>
-        <image name="tt_dream_photo_selected" width="20" height="20"/>
-        <image name="tt_dream_photo_unselected" width="20" height="20"/>
         <image name="tt_tabbar_dream_unselected" width="30" height="30"/>
         <image name="tt_tabbar_statics_unselected" width="28" height="28"/>
         <image name="tt_tabbar_tomato_unselected" width="28" height="28"/>
