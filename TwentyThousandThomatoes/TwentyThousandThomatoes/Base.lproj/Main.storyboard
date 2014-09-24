@@ -580,11 +580,12 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RjQ-hF-hrE">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HRU-sq-O5P" customClass="TTPhotoImageView">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="667" translatesAutoresizingMaskIntoConstraints="NO" id="HRU-sq-O5P" customClass="TTPhotoImageView">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </imageView>
                                 </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="HRU-sq-O5P" firstAttribute="leading" secondItem="RjQ-hF-hrE" secondAttribute="leading" id="SnR-U3-RpO"/>
                                     <constraint firstAttribute="trailing" secondItem="HRU-sq-O5P" secondAttribute="trailing" id="e6z-xo-mk3"/>
@@ -600,9 +601,28 @@
                                     <outlet property="delegate" destination="A7L-5K-xKa" id="Spt-OM-heS"/>
                                 </connections>
                             </scrollView>
-                            <view userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5xJ-pf-sRz" userLabel="mask View">
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5xJ-pf-sRz" userLabel="mask View" customClass="TTPhotoMaskView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <subviews>
+                                    <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DDP-V5-yfu">
+                                        <rect key="frame" x="87" y="234" width="200" height="200"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="IpC-Br-XkC"/>
+                                            <constraint firstAttribute="height" constant="200" id="Jh7-tQ-B8Q"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="DDP-V5-yfu" secondAttribute="centerY" id="mrq-Cf-Dli"/>
+                                    <constraint firstAttribute="centerX" secondItem="DDP-V5-yfu" secondAttribute="centerX" id="qqf-eu-CFx"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="DDP-V5-yfu"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -624,6 +644,8 @@
                             <mask key="constraints">
                                 <exclude reference="3Qv-Hu-CzW"/>
                                 <exclude reference="fIF-6J-ckx"/>
+                                <exclude reference="ZVz-A4-tnq"/>
+                                <exclude reference="fLH-B7-kHC"/>
                             </mask>
                         </variation>
                     </view>
@@ -633,6 +655,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="HRU-sq-O5P" id="v3J-nc-nJG"/>
+                        <outlet property="maskView" destination="5xJ-pf-sRz" id="i02-ac-xSR"/>
+                        <outlet property="scrollView" destination="RjQ-hF-hrE" id="ve6-V9-qiL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ows-Zz-Weo" userLabel="First Responder" sceneMemberID="firstResponder"/>
