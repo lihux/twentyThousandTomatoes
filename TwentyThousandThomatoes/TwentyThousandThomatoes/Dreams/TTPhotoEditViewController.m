@@ -10,10 +10,11 @@
 
 #import "TTPhotoMaskView.h"
 
-@interface TTPhotoEditViewController () <UIScrollViewDelegate, UIContentContainer>
+@interface TTPhotoEditViewController () <UIScrollViewDelegate, UIContentContainer, TTPhotoMaskViewDelegate>
 
 @property (weak, nonatomic) IBOutlet TTPhotoMaskView *maskView;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (nonatomic, assign) BOOL needAdjustScrollViewZoomScale;
 
 @end
 
@@ -21,32 +22,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
     self.imageView.image = self.originImage;
-    [self customScrollView];
-}
-
-- (void)customScrollView
-{
-    static const CGFloat kBoxWidth = 200;
-    CGSize imageSize = self.originImage.size;
-    CGSize scrollViewSize = self.view.bounds.size;
-    CGFloat minimunZoomScale = imageSize.width > imageSize.height ? kBoxWidth / imageSize.width : kBoxWidth / imageSize.height;
-    CGFloat maximumZoomScale = 5;
-    self.scrollView.minimumZoomScale = minimunZoomScale;
-    self.scrollView.maximumZoomScale = maximumZoomScale;
-    self.scrollView.zoomScale = minimunZoomScale;
-    CGFloat edgeVerticalTemp = 0;
-    CGFloat edgeHorizontalTemp = 0;
-    edgeVerticalTemp = (scrollViewSize.height - kBoxWidth) / 2;
-    edgeHorizontalTemp = (scrollViewSize.width - kBoxWidth) / 2;
-    UIEdgeInsets edgeInsets = UIEdgeInsetsMake(edgeVerticalTemp + 20, edgeHorizontalTemp, edgeVerticalTemp - 20, edgeHorizontalTemp);
-    self.scrollView.contentSize = imageSize;
-    self.scrollView.contentInset = edgeInsets;
+    self.maskView.delegate = self;
+    self.needAdjustScrollViewZoomScale = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -59,17 +37,34 @@
     self.scrollView.delegate = nil;
 }
 
-#pragma mark - UIContentContainer protocol
-- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
+#pragma mark - TTPhotoMaskViewDelegate
+- (void)maskCircleRectChangedTo:(CGRect)rect
 {
-    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
-    NSLog(@"\n  AAAAA:%f, %f, \n   %@",size.width, size.height, coordinator);
+    CGFloat topGap = rect.origin.y;
+    CGFloat leftGap = rect.origin.x;
+    self.scrollView.contentInset = UIEdgeInsetsMake(topGap, leftGap, topGap, leftGap);
+
+    CGFloat maskCircleWidth = rect.size.width;
+    CGSize imageSize = self.originImage.size;
+    self.scrollView.contentSize = imageSize;
+    CGFloat minimunZoomScale = imageSize.width < imageSize.height ? maskCircleWidth / imageSize.width : maskCircleWidth / imageSize.height;
+    CGFloat maximumZoomScale = 5;
+    self.scrollView.minimumZoomScale = minimunZoomScale;
+    self.scrollView.maximumZoomScale = maximumZoomScale;
+    self.scrollView.zoomScale = self.scrollView.zoomScale < minimunZoomScale ? minimunZoomScale : self.scrollView.zoomScale;
+
+    if (self.needAdjustScrollViewZoomScale) {
+        CGFloat temp = self.view.bounds.size.width < self.view.bounds.size.height ? self.view.bounds.size.width : self.view.bounds.size.height;
+        minimunZoomScale = imageSize.width < imageSize.height ? temp / imageSize.width : temp / imageSize.height;
+        self.scrollView.zoomScale = minimunZoomScale;
+        self.needAdjustScrollViewZoomScale = NO;
+    }
 }
 
+#pragma mark - UIContentContainer protocol
 - (void)willTransitionToTraitCollection:(UITraitCollection *)newCollection withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
 {
     [super willTransitionToTraitCollection:newCollection withTransitionCoordinator:coordinator];
-    NSLog(@"\n  BBBBB:UITraitCollection: %@ \n   coordinator:%@\n", newCollection, coordinator);
     [self.maskView setNeedsDisplay];
 }
 

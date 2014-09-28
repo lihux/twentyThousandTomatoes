@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol TTPhotoMaskViewDelegate <NSObject>
+
+- (void)maskCircleRectChangedTo:(CGRect) rect;
+
+@end
+
 @interface TTPhotoMaskView : UIView
+
+@property (nonatomic, weak) id <TTPhotoMaskViewDelegate> delegate;
 
 @end

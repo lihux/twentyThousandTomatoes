@@ -9,19 +9,21 @@
 #import "TTPhotoMaskView.h"
 
 
-static const CGFloat kGap = 80;
+static const CGFloat kWidthGap = 80;
+static const CGFloat kHeightGap = 40;
 @implementation TTPhotoMaskView
 
 -(void)drawRect:(CGRect)rect
 {
     CGFloat width = rect.size.width;
     CGFloat height = rect.size.height;
-    CGFloat circleDiameter = width < height ? (width - kGap) : (height - kGap);
+    CGFloat circleDiameter = width < height ? (width - kWidthGap) : (height - kHeightGap);
     CGContextRef contextRef = UIGraphicsGetCurrentContext();
     CGContextSaveGState(contextRef);
-    CGContextSetRGBFillColor(contextRef, 0, 0, 0, 0.3);
+    CGContextSetRGBFillColor(contextRef, 0, 0, 0, 0.35);
     CGContextSetLineWidth(contextRef, 3);
-    UIBezierPath *bezierPathOval = [UIBezierPath bezierPathWithOvalInRect:CGRectMake((width - circleDiameter) / 2, (height - circleDiameter) / 2, circleDiameter, circleDiameter)];
+    CGRect maskCircleRect = CGRectMake((width - circleDiameter) / 2, (height - circleDiameter) / 2, circleDiameter, circleDiameter);
+    UIBezierPath *bezierPathOval = [UIBezierPath bezierPathWithOvalInRect:maskCircleRect];
     UIBezierPath *bezierPathRect = [UIBezierPath bezierPathWithRect:rect];
     [bezierPathRect appendPath:bezierPathOval];
     bezierPathRect.usesEvenOddFillRule = YES;
@@ -30,6 +32,10 @@ static const CGFloat kGap = 80;
     CGContextSetRGBStrokeColor(contextRef, 255, 255, 255, 1);
     [bezierPathOval stroke];
     CGContextRestoreGState(contextRef);
+    self.layer.contentsGravity = kCAGravityCenter;
+    if ([self.delegate respondsToSelector:@selector(maskCircleRectChangedTo:)]) {
+        [self.delegate maskCircleRectChangedTo:maskCircleRect];
+    }
 }
 
 @end

@@ -574,11 +574,11 @@
                         <viewControllerLayoutGuide type="bottom" id="AIT-kZ-5ae"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hWp-jE-4xk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RjQ-hF-hrE">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="667" translatesAutoresizingMaskIntoConstraints="NO" id="HRU-sq-O5P" customClass="TTPhotoImageView">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -602,43 +602,24 @@
                                 </connections>
                             </scrollView>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5xJ-pf-sRz" userLabel="mask View" customClass="TTPhotoMaskView">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <subviews>
-                                    <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DDP-V5-yfu">
-                                        <rect key="frame" x="87" y="234" width="200" height="200"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="IpC-Br-XkC"/>
-                                            <constraint firstAttribute="height" constant="200" id="Jh7-tQ-B8Q"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="centerY" secondItem="DDP-V5-yfu" secondAttribute="centerY" id="mrq-Cf-Dli"/>
-                                    <constraint firstAttribute="centerX" secondItem="DDP-V5-yfu" secondAttribute="centerX" id="qqf-eu-CFx"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="DDP-V5-yfu"/>
-                                    </mask>
-                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="5xJ-pf-sRz" firstAttribute="height" secondItem="hWp-jE-4xk" secondAttribute="height" id="0t9-mh-TIr"/>
                             <constraint firstItem="5xJ-pf-sRz" firstAttribute="height" secondItem="hWp-jE-4xk" secondAttribute="height" id="3Qv-Hu-CzW"/>
+                            <constraint firstAttribute="centerY" secondItem="5xJ-pf-sRz" secondAttribute="centerY" id="AdJ-UI-0rs"/>
                             <constraint firstItem="RjQ-hF-hrE" firstAttribute="width" secondItem="hWp-jE-4xk" secondAttribute="width" id="B8F-DG-rnH"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="5xJ-pf-sRz" secondAttribute="trailing" constant="-16" id="BeR-EF-nGm"/>
+                            <constraint firstAttribute="centerX" secondItem="5xJ-pf-sRz" secondAttribute="centerX" id="FxJ-Qk-p4D"/>
                             <constraint firstAttribute="centerY" secondItem="RjQ-hF-hrE" secondAttribute="centerY" id="GNC-9s-o7W"/>
-                            <constraint firstItem="5xJ-pf-sRz" firstAttribute="leading" secondItem="hWp-jE-4xk" secondAttribute="leadingMargin" constant="-16" id="HsH-JI-Jjj"/>
-                            <constraint firstItem="5xJ-pf-sRz" firstAttribute="top" secondItem="u9d-c7-YGy" secondAttribute="bottom" constant="-44" id="Q5I-qI-trh"/>
                             <constraint firstItem="RjQ-hF-hrE" firstAttribute="height" secondItem="hWp-jE-4xk" secondAttribute="height" id="R7C-I8-yTj"/>
                             <constraint firstAttribute="height" secondItem="HRU-sq-O5P" secondAttribute="height" id="ZVz-A4-tnq"/>
-                            <constraint firstItem="AIT-kZ-5ae" firstAttribute="top" secondItem="5xJ-pf-sRz" secondAttribute="bottom" id="f6h-Hi-NPC"/>
                             <constraint firstItem="5xJ-pf-sRz" firstAttribute="width" secondItem="hWp-jE-4xk" secondAttribute="width" id="fIF-6J-ckx"/>
                             <constraint firstAttribute="width" secondItem="HRU-sq-O5P" secondAttribute="width" id="fLH-B7-kHC"/>
                             <constraint firstAttribute="centerX" secondItem="RjQ-hF-hrE" secondAttribute="centerX" id="jLG-RI-BQR"/>
+                            <constraint firstItem="5xJ-pf-sRz" firstAttribute="width" secondItem="hWp-jE-4xk" secondAttribute="width" id="jTX-ml-8sm"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -649,6 +630,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" title="移动和缩放" id="fqz-sE-MKH">
                         <barButtonItem key="backBarButtonItem" title="返回" id="eCy-Dr-cFj"/>
                         <barButtonItem key="rightBarButtonItem" title="确定" id="jyJ-bx-iPH"/>
