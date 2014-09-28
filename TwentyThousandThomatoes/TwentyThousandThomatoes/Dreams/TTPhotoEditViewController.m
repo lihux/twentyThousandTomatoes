@@ -9,7 +9,6 @@
 #import "TTPhotoEditViewController.h"
 
 #import "TTPhotoMaskView.h"
-#import <QuartzCore/QuartzCore.h>
 
 @interface TTPhotoEditViewController () <UIScrollViewDelegate, UIContentContainer>
 
@@ -29,36 +28,6 @@
     [super viewWillAppear:animated];
     self.imageView.image = self.originImage;
     [self customScrollView];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    CALayer *maskLayer = self.maskView.layer;
-    maskLayer.contents = (__bridge id)([UIImage imageNamed:@"ttt_dream_default_user"].CGImage);
-    maskLayer.contentsGravity = kCAGravityCenter;
-    maskLayer.contentsScale = 3;
-    maskLayer.shadowOpacity = 0.5;
-    maskLayer.shadowOffset = CGSizeMake(0.5, 0.5);
-    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"opacity"];
-    animation.toValue = @(0);
-    animation.duration = 3;
-//    [maskLayer addAnimation:animation forKey:@"opacity"];
-    
-    
-    CGMutablePathRef path = CGPathCreateMutable();
-    CGPathMoveToPoint(path, NULL, 100, 100);
-    CGPathAddCurveToPoint(path, NULL, 150, 150, 180, 180, 200, 200);
-    CGPathAddCurveToPoint(path, NULL, 180, 180, 250, 250, 300, 300);
-    CAKeyframeAnimation *keyFrameAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
-//    keyFrameAnimation.path = path;
-    keyFrameAnimation.values = @[
-                                 [NSValue valueWithCGPoint:CGPointMake(100, 80)],
-                                 [NSValue valueWithCGPoint:CGPointMake(20, 190)],
-                                 [NSValue valueWithCGPoint:CGPointMake(100, 300)]
-                                 ];
-    keyFrameAnimation.duration = 2.0;
-    [maskLayer addAnimation:keyFrameAnimation forKey:@"position"];
 }
 
 - (void)customScrollView
@@ -101,7 +70,7 @@
 {
     [super willTransitionToTraitCollection:newCollection withTransitionCoordinator:coordinator];
     NSLog(@"\n  BBBBB:UITraitCollection: %@ \n   coordinator:%@\n", newCollection, coordinator);
-//    [self.maskView setNeedsDisplay];
+    [self.maskView setNeedsDisplay];
 }
 
 #pragma mark - UIScrollViewDelegate
