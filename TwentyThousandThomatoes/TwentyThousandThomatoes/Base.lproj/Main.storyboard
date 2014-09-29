@@ -102,50 +102,111 @@
                         <viewControllerLayoutGuide type="bottom" id="2pL-2f-5oo"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tma-XG-SMN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="331"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fkk-8R-qbm" customClass="TTRoundButton">
-                                <rect key="frame" x="109" y="97" width="156" height="156"/>
+                                <rect key="frame" x="255" y="97" width="156" height="145"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="156" id="dEs-gd-ogx"/>
+                                    <constraint firstAttribute="width" constant="156" id="dvS-s3-7W0"/>
+                                </constraints>
                                 <state key="normal" image="ttt_dream_default_user">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="dEs-gd-ogx"/>
+                                        <exclude reference="dvS-s3-7W0"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="dEs-gd-ogx"/>
+                                        <include reference="dvS-s3-7W0"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <segue destination="v26-dR-kbc" kind="show" id="eu5-y0-UXZ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="who am i ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEg-yj-cHd">
-                                <rect key="frame" x="83" y="261" width="209" height="81"/>
+                                <rect key="frame" x="229" y="250" width="209" height="81"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="209" id="6oA-5q-8h5"/>
                                     <constraint firstAttribute="height" constant="81" id="QPw-hd-148"/>
+                                    <constraint firstAttribute="height" constant="81" id="fNm-e0-j00">
+                                        <variation key="heightClass=compact" constant="43"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="209" id="yuS-LX-hYY"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="fNm-e0-j00"/>
+                                        <exclude reference="yuS-LX-hYY"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="6oA-5q-8h5"/>
+                                        <exclude reference="QPw-hd-148"/>
+                                        <include reference="fNm-e0-j00"/>
+                                        <include reference="yuS-LX-hYY"/>
+                                    </mask>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="fkk-8R-qbm" firstAttribute="top" secondItem="1E0-H3-m4U" secondAttribute="bottom" constant="8" id="7Sc-5u-rY8"/>
                             <constraint firstItem="fkk-8R-qbm" firstAttribute="top" secondItem="1E0-H3-m4U" secondAttribute="bottom" constant="97" id="Loc-AQ-te3">
                                 <variation key="heightClass=compact" constant="-15"/>
+                            </constraint>
+                            <constraint firstItem="XEg-yj-cHd" firstAttribute="top" secondItem="fkk-8R-qbm" secondAttribute="bottom" constant="8" id="MBW-fv-oJD">
+                                <variation key="heightClass=compact" constant="5"/>
                             </constraint>
                             <constraint firstItem="XEg-yj-cHd" firstAttribute="top" secondItem="fkk-8R-qbm" secondAttribute="bottom" constant="8" id="O50-5N-X8s">
                                 <variation key="heightClass=compact" constant="-35"/>
                             </constraint>
+                            <constraint firstAttribute="centerX" secondItem="XEg-yj-cHd" secondAttribute="centerX" id="OOY-Hc-eeK"/>
                             <constraint firstAttribute="centerX" secondItem="XEg-yj-cHd" secondAttribute="centerX" id="VJ9-Gr-Z7m"/>
                             <constraint firstAttribute="centerX" secondItem="fkk-8R-qbm" secondAttribute="centerX" id="YRN-J4-lOY"/>
                             <constraint firstItem="2pL-2f-5oo" firstAttribute="top" relation="greaterThanOrEqual" secondItem="XEg-yj-cHd" secondAttribute="bottom" id="pXE-FC-BeX"/>
+                            <constraint firstAttribute="centerX" secondItem="fkk-8R-qbm" secondAttribute="centerX" id="xhd-nQ-Hhh"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="7Sc-5u-rY8"/>
+                                <exclude reference="xhd-nQ-Hhh"/>
+                                <exclude reference="MBW-fv-oJD"/>
+                                <exclude reference="OOY-Hc-eeK"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="7Sc-5u-rY8"/>
+                                <exclude reference="Loc-AQ-te3"/>
+                                <exclude reference="YRN-J4-lOY"/>
+                                <include reference="xhd-nQ-Hhh"/>
+                                <include reference="MBW-fv-oJD"/>
+                                <exclude reference="O50-5N-X8s"/>
+                                <include reference="OOY-Hc-eeK"/>
+                                <exclude reference="VJ9-Gr-Z7m"/>
+                                <exclude reference="pXE-FC-BeX"/>
+                            </mask>
+                        </variation>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" title="我是谁" id="9id-fd-ICJ"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="667"/>
+                    <size key="freeformSize" width="667" height="375"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SE6-I4-08K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1731.5" y="-286.5"/>
+            <point key="canvasLocation" x="1677.5" y="-539.25"/>
         </scene>
         <!--我-->
         <scene sceneID="CtF-q9-kOT">
@@ -156,7 +217,7 @@
                         <viewControllerLayoutGuide type="bottom" id="8Gu-jr-RCL"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="n6K-Ei-9On">
-                        <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                        <rect key="frame" x="0.0" y="44" width="667" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DzL-mi-7LP" userLabel="midle anchor view">
@@ -182,17 +243,17 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3GE-v2-EYe" userLabel="scroll anchor View">
-                                <rect key="frame" x="0.0" y="188" width="375" height="435"/>
+                                <rect key="frame" x="0.0" y="188" width="667" height="435"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bpQ-lE-otG">
-                                <rect key="frame" x="0.0" y="188" width="375" height="435"/>
+                                <rect key="frame" x="0.0" y="188" width="667" height="435"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wHt-9u-aw7" userLabel="scroll content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="435"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="667" height="435"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7bd-AL-N54">
-                                                <rect key="frame" x="89" y="21" width="196" height="250"/>
+                                                <rect key="frame" x="235" y="21" width="196" height="250"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Wd-wK-QHt" userLabel="text container view">
                                                         <rect key="frame" x="0.0" y="8" width="190" height="30"/>
@@ -200,11 +261,17 @@
                                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f2r-bp-AOe" userLabel="bottom line View">
                                                                 <rect key="frame" x="79" y="25" width="99" height="1"/>
                                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <variation key="heightClass=compact" fixedFrame="YES">
+                                                                    <rect key="frame" x="79" y="25" width="99" height="1"/>
+                                                                </variation>
                                                             </view>
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入姓名" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F9C-nW-uJ7">
                                                                 <rect key="frame" x="76" y="0.0" width="100" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <variation key="heightClass=compact" fixedFrame="YES">
+                                                                    <rect key="frame" x="76" y="0.0" width="100" height="30"/>
+                                                                </variation>
                                                                 <connections>
                                                                     <action selector="textFieldEditingDidEnd:" destination="v26-dR-kbc" eventType="editingDidEnd" id="t4D-hd-4y6"/>
                                                                 </connections>
@@ -214,9 +281,15 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=compact" fixedFrame="YES">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="52" height="30"/>
+                                                                </variation>
                                                             </label>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <variation key="heightClass=compact" fixedFrame="YES">
+                                                            <rect key="frame" x="0.0" y="8" width="190" height="30"/>
+                                                        </variation>
                                                     </view>
                                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cid-to-oQO" userLabel="text container view">
                                                         <rect key="frame" x="0.0" y="46" width="190" height="30"/>
@@ -226,6 +299,9 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=compact" fixedFrame="YES">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="52" height="30"/>
+                                                                </variation>
                                                             </label>
                                                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Loy-tu-XdG">
                                                                 <rect key="frame" x="135" y="0.0" width="28" height="28"/>
@@ -233,6 +309,9 @@
                                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <state key="selected" backgroundImage="tt_dream_gender_male_selected"/>
+                                                                <variation key="heightClass=compact" fixedFrame="YES">
+                                                                    <rect key="frame" x="130" y="2" width="28" height="28"/>
+                                                                </variation>
                                                                 <connections>
                                                                     <action selector="didTapOnGenderButton:" destination="v26-dR-kbc" eventType="touchUpInside" id="ks7-8d-XFs"/>
                                                                 </connections>
@@ -243,12 +322,18 @@
                                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <state key="selected" backgroundImage="tt_dream_gender_female_selected"/>
+                                                                <variation key="heightClass=compact" fixedFrame="YES">
+                                                                    <rect key="frame" x="86" y="1" width="28" height="28"/>
+                                                                </variation>
                                                                 <connections>
                                                                     <action selector="didTapOnGenderButton:" destination="v26-dR-kbc" eventType="touchUpInside" id="3ON-hi-p4J"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <variation key="heightClass=compact" fixedFrame="YES">
+                                                            <rect key="frame" x="0.0" y="46" width="190" height="30"/>
+                                                        </variation>
                                                     </view>
                                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Ef-Sb-aPt" userLabel="text container view">
                                                         <rect key="frame" x="3" y="84" width="190" height="30"/>
@@ -256,20 +341,32 @@
                                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vew-GO-PAI" userLabel="bottom line View">
                                                                 <rect key="frame" x="79" y="25" width="99" height="1"/>
                                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <variation key="heightClass=compact" fixedFrame="YES">
+                                                                    <rect key="frame" x="79" y="25" width="99" height="1"/>
+                                                                </variation>
                                                             </view>
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="点击输入生日" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oGC-gi-duU">
                                                                 <rect key="frame" x="76" y="0.0" width="100" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <variation key="heightClass=compact" fixedFrame="YES">
+                                                                    <rect key="frame" x="76" y="0.0" width="100" height="30"/>
+                                                                </variation>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="生 日" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhY-RL-OHj">
                                                                 <rect key="frame" x="0.0" y="0.0" width="52" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=compact" fixedFrame="YES">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="52" height="30"/>
+                                                                </variation>
                                                             </label>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <variation key="heightClass=compact" fixedFrame="YES">
+                                                            <rect key="frame" x="0.0" y="84" width="190" height="30"/>
+                                                        </variation>
                                                     </view>
                                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qaq-Pr-Mz1" userLabel="text container view">
                                                         <rect key="frame" x="0.0" y="122" width="190" height="30"/>
@@ -277,11 +374,17 @@
                                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Llq-G1-UYX" userLabel="bottom line View">
                                                                 <rect key="frame" x="79" y="25" width="99" height="1"/>
                                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <variation key="heightClass=compact" fixedFrame="YES">
+                                                                    <rect key="frame" x="79" y="25" width="99" height="1"/>
+                                                                </variation>
                                                             </view>
                                                             <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入学校" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bfK-q8-8Gh">
                                                                 <rect key="frame" x="76" y="0.0" width="100" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <variation key="heightClass=compact" fixedFrame="YES">
+                                                                    <rect key="frame" x="76" y="0.0" width="100" height="30"/>
+                                                                </variation>
                                                                 <connections>
                                                                     <action selector="textFieldEditingDidEnd:" destination="v26-dR-kbc" eventType="editingDidEnd" id="Dis-uG-TAu"/>
                                                                 </connections>
@@ -291,9 +394,15 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=compact" fixedFrame="YES">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="52" height="30"/>
+                                                                </variation>
                                                             </label>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <variation key="heightClass=compact" fixedFrame="YES">
+                                                            <rect key="frame" x="0.0" y="122" width="190" height="30"/>
+                                                        </variation>
                                                     </view>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -350,10 +459,14 @@
                                 </variation>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Co-Hx-KAg" userLabel="head container view">
-                                <rect key="frame" x="96" y="8" width="183" height="180"/>
+                                <rect key="frame" x="242" y="8" width="183" height="180"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y5V-bY-23A" customClass="TTRoundButton">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y5V-bY-23A" customClass="TTRoundButton">
                                         <rect key="frame" x="26" y="0.0" width="132" height="132"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="132" id="cVn-sy-Zqo"/>
+                                            <constraint firstAttribute="width" constant="132" id="nXz-0N-fCP"/>
+                                        </constraints>
                                         <state key="normal" image="ttt_dream_default_user">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -361,8 +474,12 @@
                                             <segue destination="SUT-gG-XTq" kind="show" id="Ppg-3W-M5L"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="点击修改头像" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TME-gF-7r3">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点击修改头像" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TME-gF-7r3">
                                         <rect key="frame" x="17" y="136" width="149" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="149" id="Hb3-iV-Jnc"/>
+                                            <constraint firstAttribute="height" constant="36" id="J83-o9-IgH"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -370,9 +487,13 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="TME-gF-7r3" secondAttribute="bottom" constant="8" id="86t-Kp-SUt"/>
+                                    <constraint firstItem="Y5V-bY-23A" firstAttribute="top" secondItem="0Co-Hx-KAg" secondAttribute="top" id="PQw-GJ-5K3"/>
                                     <constraint firstAttribute="height" constant="180" id="czd-VD-iQ2"/>
                                     <constraint firstAttribute="width" constant="183" id="k9W-AW-DUb"/>
                                     <constraint firstAttribute="height" constant="180" id="mIy-kW-VIS"/>
+                                    <constraint firstAttribute="centerX" secondItem="Y5V-bY-23A" secondAttribute="centerX" id="mgL-lz-lda"/>
+                                    <constraint firstAttribute="centerX" secondItem="TME-gF-7r3" secondAttribute="centerX" id="soJ-tt-0Kt"/>
                                     <constraint firstAttribute="width" constant="183" id="uSl-5C-ALs"/>
                                 </constraints>
                                 <variation key="default">
@@ -381,8 +502,7 @@
                                         <exclude reference="uSl-5C-ALs"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=compact" misplaced="YES">
-                                    <rect key="frame" x="-64" y="222" width="184" height="180"/>
+                                <variation key="heightClass=compact">
                                     <mask key="constraints">
                                         <include reference="czd-VD-iQ2"/>
                                         <exclude reference="k9W-AW-DUb"/>
@@ -482,7 +602,7 @@
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" title="我" id="K4S-B9-ZYp"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="667"/>
+                    <size key="freeformSize" width="667" height="667"/>
                     <connections>
                         <outlet property="nameTextField" destination="F9C-nW-uJ7" id="fxz-j4-Cjv"/>
                         <outlet property="schoolTextField" destination="bfK-q8-8Gh" id="ZVF-FM-OMo"/>
@@ -504,11 +624,11 @@
                         <viewControllerLayoutGuide type="bottom" id="Zj4-U1-Xz7"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="uXK-Tl-KN2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ax3-0e-ghs">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="667"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="4" minimumInteritemSpacing="4" id="jUe-Bz-SEm">
                                     <size key="itemSize" width="100" height="100"/>
@@ -574,11 +694,11 @@
                         <viewControllerLayoutGuide type="bottom" id="AIT-kZ-5ae"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hWp-jE-4xk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RjQ-hF-hrE">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="623"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="667" translatesAutoresizingMaskIntoConstraints="NO" id="HRU-sq-O5P" customClass="TTPhotoImageView">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -602,7 +722,7 @@
                                 </connections>
                             </scrollView>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5xJ-pf-sRz" userLabel="mask View" customClass="TTPhotoMaskView">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="623"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>

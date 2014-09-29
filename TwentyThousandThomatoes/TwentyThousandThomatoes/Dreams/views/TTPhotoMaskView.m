@@ -12,12 +12,6 @@
 static const CGFloat kWidthGap = 80;
 static const CGFloat kHeightGap = 40;
 
-@interface TTPhotoMaskView ()
-
-@property (nonatomic, assign) CGRect pickingFieldRect;
-
-@end
-
 @implementation TTPhotoMaskView
 
 -(void)drawRect:(CGRect)rect

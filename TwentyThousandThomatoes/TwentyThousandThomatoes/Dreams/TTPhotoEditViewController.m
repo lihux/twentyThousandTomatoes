@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (nonatomic, assign) BOOL needAdjustScrollViewZoomScale;
 @property (nonatomic, assign) CGRect pickingFieldRect;
+
 @end
 
 @implementation TTPhotoEditViewController
