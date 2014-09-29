@@ -23,5 +23,6 @@ typedef enum : NSUInteger {
 
 @property (nonatomic, weak) id <TTPhotoMaskViewDelegate> delegate;
 @property (nonatomic, assign) TTPhotoMaskViewMaskType maskType;
+@property (nonatomic, assign) CGRect pickingFieldRect;
 
 @end

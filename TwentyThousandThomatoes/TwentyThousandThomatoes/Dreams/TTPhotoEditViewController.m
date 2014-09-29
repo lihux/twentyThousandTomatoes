@@ -9,13 +9,15 @@
 #import "TTPhotoEditViewController.h"
 
 #import "TTPhotoMaskView.h"
+#import "TTDataSourceManager.h"
+#import "TTI.h"
 
 @interface TTPhotoEditViewController () <UIScrollViewDelegate, UIContentContainer, TTPhotoMaskViewDelegate>
 
 @property (weak, nonatomic) IBOutlet TTPhotoMaskView *maskView;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (nonatomic, assign) BOOL needAdjustScrollViewZoomScale;
-
+@property (nonatomic, assign) CGRect pickingFieldRect;
 @end
 
 @implementation TTPhotoEditViewController
@@ -25,12 +27,40 @@
     self.imageView.image = self.originImage;
     self.maskView.delegate = self;
     self.maskView.maskType = TTPhotoMaskViewMaskTypeCircle;
+    self.pickingFieldRect = CGRectZero;
     self.needAdjustScrollViewZoomScale = YES;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+- (CGRect)convertClipRectToImage
+{
+    CGRect clipedRect = self.pickingFieldRect;
+    CGFloat zoomScale = self.scrollView.zoomScale;
+    clipedRect.size.width = clipedRect.size.width / zoomScale;
+    clipedRect.size.height = clipedRect.size.height / zoomScale;
+    clipedRect.origin.x = (self.scrollView.contentOffset.x + clipedRect.origin.x) / zoomScale;
+    clipedRect.origin.y = (self.scrollView.contentOffset.y + clipedRect.origin.y) / zoomScale;
+    return clipedRect;
+}
+
+- (IBAction)didTapOnDoneButton:(id)sender
+{
+    NSLog(@"\n  lihux: %@", self.scrollView);
+    CGImageRef imageRef = CGImageCreateWithImageInRect(self.originImage.CGImage, [self convertClipRectToImage]);
+    UIImage *clipedImage = [UIImage imageWithCGImage:imageRef];
+    NSArray *iInfos = [[TTDataSourceManager sharedInstance] searchManagedObjectWithEntityName:NSStringFromClass([TTI class])];
+    if (iInfos.count > 0) {
+        TTI *i = iInfos[0];
+        i.headImage = clipedImage;
+        [[TTDataSourceManager sharedInstance] saveManagedObjectContext];
+    }
+
+    NSInteger currentIndex = [self.navigationController.viewControllers indexOfObject:self];
+    [self.navigationController popToViewController:self.navigationController.viewControllers[currentIndex - 2] animated:YES];
 }
 
 - (void)dealloc
@@ -41,8 +71,10 @@
 #pragma mark - TTPhotoMaskViewDelegate
 - (void)pickingFieldRectChangedTo:(CGRect)rect
 {
+    self.pickingFieldRect = rect;
     CGFloat topGap = rect.origin.y;
     CGFloat leftGap = rect.origin.x;
+    self.scrollView.scrollIndicatorInsets = UIEdgeInsetsMake(topGap, leftGap, topGap, leftGap);
     self.scrollView.contentInset = UIEdgeInsetsMake(topGap, leftGap, topGap, leftGap);
 
     CGFloat maskCircleWidth = rect.size.width;
@@ -73,6 +105,11 @@
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
 {
     return self.imageView;
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    NSLog(@"\n\n  scrollview info: %@, \n\nmaskview info = %@   %@\n\nzoomScale = %f", self.scrollView, self.maskView, [NSValue valueWithCGRect:self.maskView.pickingFieldRect], self.scrollView.zoomScale);
 }
 
 @end

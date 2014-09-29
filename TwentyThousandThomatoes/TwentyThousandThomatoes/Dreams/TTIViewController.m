@@ -25,7 +25,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self loadDataFromCoreData];
+    [self customUI];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -33,6 +33,19 @@
     [super viewWillDisappear:animated];
     [self saveSettingsToCoreData];
 }
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self loadDataFromCoreData];
+}
+
+- (void)customUI
+{
+    self.userHeadButton.clipsToBounds = YES;
+    self.userHeadButton.layer.cornerRadius = self.userHeadButton.bounds.size.width / 2;
+}
+
 
 - (void)loadDataFromCoreData
 {
@@ -46,8 +59,8 @@
         if (self.me.school) {
             self.schoolTextField.text = self.me.school;
         }
-        if (self.userHeadButton.imageView.image) {
-            self.userHeadButton.imageView.image = self.me.headImage;
+        if (self.me.headImage) {
+            [self.userHeadButton setImage:self.me.headImage forState:UIControlStateNormal];
         }
     } else {
         self.me = (TTI *)[[TTDataSourceManager sharedInstance] createManagedObjectWithEntityName:NSStringFromClass([TTI class])];
@@ -58,9 +71,6 @@
 {
     self.me.name = self.nameTextField.text;
     self.me.school = self.schoolTextField.text;
-    if (self.userHeadButton.imageView.image) {
-        self.me.headImage = self.userHeadButton.imageView.image;
-    }
     [[TTDataSourceManager sharedInstance] saveManagedObjectContext];
 }
 

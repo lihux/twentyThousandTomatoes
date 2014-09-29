@@ -105,8 +105,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fkk-8R-qbm">
-                                <rect key="frame" x="109" y="97" width="156" height="188"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fkk-8R-qbm" customClass="TTRoundButton">
+                                <rect key="frame" x="109" y="97" width="156" height="156"/>
                                 <state key="normal" image="ttt_dream_default_user">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -115,7 +115,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="who am i ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEg-yj-cHd">
-                                <rect key="frame" x="83" y="293" width="209" height="81"/>
+                                <rect key="frame" x="83" y="261" width="209" height="81"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="209" id="6oA-5q-8h5"/>
                                     <constraint firstAttribute="height" constant="81" id="QPw-hd-148"/>
@@ -352,8 +352,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Co-Hx-KAg" userLabel="head container view">
                                 <rect key="frame" x="96" y="8" width="183" height="180"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y5V-bY-23A">
-                                        <rect key="frame" x="26" y="0.0" width="131" height="152"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y5V-bY-23A" customClass="TTRoundButton">
+                                        <rect key="frame" x="26" y="0.0" width="132" height="132"/>
                                         <state key="normal" image="ttt_dream_default_user">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -633,7 +633,11 @@
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" title="移动和缩放" id="fqz-sE-MKH">
                         <barButtonItem key="backBarButtonItem" title="返回" id="eCy-Dr-cFj"/>
-                        <barButtonItem key="rightBarButtonItem" title="确定" id="jyJ-bx-iPH"/>
+                        <barButtonItem key="rightBarButtonItem" title="确定" id="jyJ-bx-iPH">
+                            <connections>
+                                <action selector="didTapOnDoneButton:" destination="A7L-5K-xKa" id="FAm-Cx-ykK"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="HRU-sq-O5P" id="v3J-nc-nJG"/>
@@ -729,6 +733,6 @@
         <image name="tt_tabbar_dream_unselected" width="30" height="30"/>
         <image name="tt_tabbar_statics_unselected" width="28" height="28"/>
         <image name="tt_tabbar_tomato_unselected" width="28" height="28"/>
-        <image name="ttt_dream_default_user" width="156" height="188"/>
+        <image name="ttt_dream_default_user" width="156" height="156"/>
     </resources>
 </document>

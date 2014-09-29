@@ -8,14 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol TTPhotoSelectViewControllerDelegate <NSObject>
-
-- (void)finishSelectImage:(UIImage *)image;
-
-@end
-
 @interface TTPhotoSelectViewController : UIViewController
-
-@property (nonatomic, weak) id<TTPhotoSelectViewControllerDelegate> delegate;
 
 @end
