@@ -8,14 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum : NSUInteger {
+    TTPhotoMaskViewMaskTypeCircle,
+    TTPhotoMaskViewMaskTypeRectangle,
+} TTPhotoMaskViewMaskType;
+
 @protocol TTPhotoMaskViewDelegate <NSObject>
 
-- (void)maskCircleRectChangedTo:(CGRect) rect;
+- (void)pickingFieldRectChangedTo:(CGRect) rect;
 
 @end
 
 @interface TTPhotoMaskView : UIView
 
 @property (nonatomic, weak) id <TTPhotoMaskViewDelegate> delegate;
+@property (nonatomic, assign) TTPhotoMaskViewMaskType maskType;
 
 @end

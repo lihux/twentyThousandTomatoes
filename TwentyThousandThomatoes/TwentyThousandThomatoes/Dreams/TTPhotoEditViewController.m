@@ -24,6 +24,7 @@
     [super viewDidLoad];
     self.imageView.image = self.originImage;
     self.maskView.delegate = self;
+    self.maskView.maskType = TTPhotoMaskViewMaskTypeCircle;
     self.needAdjustScrollViewZoomScale = YES;
 }
 
@@ -38,7 +39,7 @@
 }
 
 #pragma mark - TTPhotoMaskViewDelegate
-- (void)maskCircleRectChangedTo:(CGRect)rect
+- (void)pickingFieldRectChangedTo:(CGRect)rect
 {
     CGFloat topGap = rect.origin.y;
     CGFloat leftGap = rect.origin.x;
