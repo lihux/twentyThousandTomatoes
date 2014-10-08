@@ -102,11 +102,11 @@
                         <viewControllerLayoutGuide type="bottom" id="2pL-2f-5oo"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tma-XG-SMN">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="331"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fkk-8R-qbm" customClass="TTRoundButton">
-                                <rect key="frame" x="255" y="97" width="156" height="145"/>
+                                <rect key="frame" x="109" y="97" width="156" height="156"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="156" id="dEs-gd-ogx"/>
                                     <constraint firstAttribute="width" constant="156" id="dvS-s3-7W0"/>
@@ -131,7 +131,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="who am i ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEg-yj-cHd">
-                                <rect key="frame" x="229" y="250" width="209" height="81"/>
+                                <rect key="frame" x="83" y="261" width="209" height="81"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="209" id="6oA-5q-8h5"/>
                                     <constraint firstAttribute="height" constant="81" id="QPw-hd-148"/>
@@ -191,22 +191,22 @@
                                 <exclude reference="Loc-AQ-te3"/>
                                 <exclude reference="YRN-J4-lOY"/>
                                 <include reference="xhd-nQ-Hhh"/>
+                                <exclude reference="pXE-FC-BeX"/>
                                 <include reference="MBW-fv-oJD"/>
                                 <exclude reference="O50-5N-X8s"/>
                                 <include reference="OOY-Hc-eeK"/>
                                 <exclude reference="VJ9-Gr-Z7m"/>
-                                <exclude reference="pXE-FC-BeX"/>
                             </mask>
                         </variation>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" title="我是谁" id="9id-fd-ICJ"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="667" height="375"/>
+                    <size key="freeformSize" width="375" height="667"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SE6-I4-08K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1677.5" y="-539.25"/>
+            <point key="canvasLocation" x="1522.5" y="-642.5"/>
         </scene>
         <!--我-->
         <scene sceneID="CtF-q9-kOT">
@@ -217,7 +217,7 @@
                         <viewControllerLayoutGuide type="bottom" id="8Gu-jr-RCL"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="n6K-Ei-9On">
-                        <rect key="frame" x="0.0" y="44" width="667" height="623"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DzL-mi-7LP" userLabel="midle anchor view">
@@ -243,17 +243,17 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3GE-v2-EYe" userLabel="scroll anchor View">
-                                <rect key="frame" x="0.0" y="188" width="667" height="435"/>
+                                <rect key="frame" x="0.0" y="188" width="375" height="435"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bpQ-lE-otG">
-                                <rect key="frame" x="0.0" y="188" width="667" height="435"/>
+                                <rect key="frame" x="0.0" y="188" width="375" height="435"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wHt-9u-aw7" userLabel="scroll content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="667" height="435"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="435"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7bd-AL-N54">
-                                                <rect key="frame" x="235" y="21" width="196" height="250"/>
+                                                <rect key="frame" x="89" y="21" width="196" height="250"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Wd-wK-QHt" userLabel="text container view">
                                                         <rect key="frame" x="0.0" y="8" width="190" height="30"/>
@@ -459,7 +459,7 @@
                                 </variation>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Co-Hx-KAg" userLabel="head container view">
-                                <rect key="frame" x="242" y="8" width="183" height="180"/>
+                                <rect key="frame" x="96" y="8" width="183" height="180"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y5V-bY-23A" customClass="TTRoundButton">
                                         <rect key="frame" x="26" y="0.0" width="132" height="132"/>
@@ -552,15 +552,15 @@
                                 <exclude reference="Jpc-yq-uiQ"/>
                                 <exclude reference="Wzn-sr-3PC"/>
                                 <exclude reference="X3q-mZ-A7g"/>
-                                <exclude reference="Er5-wk-ctK"/>
-                                <exclude reference="tuy-XD-vVE"/>
-                                <exclude reference="xr0-Ym-tYG"/>
-                                <exclude reference="msr-CZ-I70"/>
                                 <exclude reference="rTa-Gc-hpL"/>
                                 <exclude reference="3bF-28-TJE"/>
                                 <exclude reference="M7i-Uw-74J"/>
                                 <exclude reference="GnX-Yj-8ge"/>
                                 <exclude reference="rLw-n0-k53"/>
+                                <exclude reference="Er5-wk-ctK"/>
+                                <exclude reference="tuy-XD-vVE"/>
+                                <exclude reference="xr0-Ym-tYG"/>
+                                <exclude reference="msr-CZ-I70"/>
                                 <exclude reference="MhQ-uC-6Og"/>
                             </mask>
                         </variation>
@@ -576,12 +576,6 @@
                                 <exclude reference="RZa-Gk-GGs"/>
                                 <include reference="Wzn-sr-3PC"/>
                                 <include reference="X3q-mZ-A7g"/>
-                                <include reference="Er5-wk-ctK"/>
-                                <include reference="tuy-XD-vVE"/>
-                                <include reference="xr0-Ym-tYG"/>
-                                <include reference="msr-CZ-I70"/>
-                                <exclude reference="sPx-tW-xOd"/>
-                                <exclude reference="x0h-sA-PSz"/>
                                 <exclude reference="ceH-wj-87p"/>
                                 <exclude reference="cyZ-iQ-8vZ"/>
                                 <include reference="rTa-Gc-hpL"/>
@@ -594,6 +588,12 @@
                                 <exclude reference="nRp-SC-gBz"/>
                                 <exclude reference="ob8-HN-6PX"/>
                                 <include reference="rLw-n0-k53"/>
+                                <include reference="Er5-wk-ctK"/>
+                                <include reference="tuy-XD-vVE"/>
+                                <include reference="xr0-Ym-tYG"/>
+                                <include reference="msr-CZ-I70"/>
+                                <exclude reference="sPx-tW-xOd"/>
+                                <exclude reference="x0h-sA-PSz"/>
                                 <exclude reference="HZO-63-TAA"/>
                                 <include reference="MhQ-uC-6Og"/>
                             </mask>
@@ -602,7 +602,7 @@
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" title="我" id="K4S-B9-ZYp"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="667" height="667"/>
+                    <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="nameTextField" destination="F9C-nW-uJ7" id="fxz-j4-Cjv"/>
                         <outlet property="schoolTextField" destination="bfK-q8-8Gh" id="ZVF-FM-OMo"/>
@@ -613,7 +613,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="161-aO-jxC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2280.5" y="-506.5"/>
+            <point key="canvasLocation" x="1987.5" y="-642.5"/>
         </scene>
         <!--选取照片-->
         <scene sceneID="JzT-8e-xM0">
@@ -624,11 +624,11 @@
                         <viewControllerLayoutGuide type="bottom" id="Zj4-U1-Xz7"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="uXK-Tl-KN2">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ax3-0e-ghs">
-                                <rect key="frame" x="0.0" y="0.0" width="667" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="4" minimumInteritemSpacing="4" id="jUe-Bz-SEm">
                                     <size key="itemSize" width="100" height="100"/>
@@ -683,7 +683,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yc1-Tn-GaU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2722.5" y="-506.5"/>
+            <point key="canvasLocation" x="2479.5" y="-642.5"/>
         </scene>
         <!--移动和缩放-->
         <scene sceneID="lgF-7i-AJm">
@@ -694,11 +694,11 @@
                         <viewControllerLayoutGuide type="bottom" id="AIT-kZ-5ae"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hWp-jE-4xk">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="623"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RjQ-hF-hrE">
-                                <rect key="frame" x="0.0" y="0.0" width="667" height="623"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="667" translatesAutoresizingMaskIntoConstraints="NO" id="HRU-sq-O5P" customClass="TTPhotoImageView">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -722,7 +722,7 @@
                                 </connections>
                             </scrollView>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5xJ-pf-sRz" userLabel="mask View" customClass="TTPhotoMaskView">
-                                <rect key="frame" x="0.0" y="0.0" width="667" height="623"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -767,7 +767,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ows-Zz-Weo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3202.5" y="-506.5"/>
+            <point key="canvasLocation" x="2894.5" y="-642.5"/>
         </scene>
         <!--Dream View Controller-->
         <scene sceneID="Tdt-cR-Bhg">
@@ -842,7 +842,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="btN-fo-zAX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1144.5" y="-287"/>
+            <point key="canvasLocation" x="982.5" y="-381"/>
         </scene>
     </scenes>
     <resources>
