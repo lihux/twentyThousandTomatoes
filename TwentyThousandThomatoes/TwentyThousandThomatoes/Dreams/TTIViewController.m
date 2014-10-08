@@ -9,6 +9,7 @@
 #import "TTIViewController.h"
 
 #import "TTDataSourceManager.h"
+#import "TTBottomLineTextField.h"
 #import "TTI.h"
 
 @interface TTIViewController ()
@@ -17,6 +18,8 @@
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *genderButtons;
 @property (weak, nonatomic) IBOutlet UITextField *schoolTextField;
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+@property (strong, nonatomic) IBOutletCollection(TTBottomLineTextField) NSArray *textFields;
+
 @property (nonatomic, strong) TTI *me;
 
 @end
@@ -32,12 +35,57 @@
 {
     [super viewWillDisappear:animated];
     [self saveSettingsToCoreData];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     [self loadDataFromCoreData];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardWillChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardWillhide:) name:UIKeyboardWillHideNotification object:nil];
+}
+
+- (void)keyBoardWillChangeFrame:(NSNotification *)notification
+{
+    CGRect keyBoardEndFrame = [[notification.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    CGFloat timeDuration = [[notification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] floatValue];
+    keyBoardEndFrame = [self.view convertRect:keyBoardEndFrame fromView:nil];
+    UITextField *responedTextField = [self respondedTextField];
+    if (responedTextField) {
+        CGRect textFieldFrame = [self.view convertRect:responedTextField.frame fromView:responedTextField.superview];
+        CGFloat gap = textFieldFrame.origin.y + textFieldFrame.size.height - keyBoardEndFrame.origin.y;
+        if (gap > 0) {
+            CGRect bounds = self.view.bounds;
+            bounds.origin.y += gap;
+            [UIView animateWithDuration:timeDuration animations:^{
+                self.view.bounds = bounds;
+            }];
+        }
+    }
+}
+
+- (void)keyBoardWillhide:(NSNotification *)notification
+{
+    CGFloat timeDuration = [[notification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] floatValue];
+    CGFloat boundsOffset = self.view.bounds.origin.y;
+    if (boundsOffset > 0) {
+        CGRect bounds = self.view.bounds;
+        bounds.origin.y = 0;
+        [UIView animateWithDuration:timeDuration animations:^{
+            self.view.bounds = bounds;
+        }];
+    }
+}
+
+- (UITextField *)respondedTextField
+{
+    for (UITextField *textField in self.textFields) {
+        if ([textField isFirstResponder]) {
+            return textField;
+        }
+    }
+    return nil;
 }
 
 - (void)customUI
@@ -100,6 +148,10 @@
     self.me.gender = [NSNumber numberWithInteger:selectedButton.tag];
 }
 
+- (IBAction)didTapToCancelEdit:(id)sender
+{
+    [[self respondedTextField] resignFirstResponder];
+}
 
 - (void)updateGenderButtonsWithTag:(NSInteger)tag
 {

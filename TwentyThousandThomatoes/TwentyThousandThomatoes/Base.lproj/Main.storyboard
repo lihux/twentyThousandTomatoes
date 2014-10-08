@@ -246,7 +246,7 @@
                                 <rect key="frame" x="0.0" y="188" width="375" height="435"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bpQ-lE-otG">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpQ-lE-otG">
                                 <rect key="frame" x="0.0" y="188" width="375" height="435"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wHt-9u-aw7" userLabel="scroll content View">
@@ -258,15 +258,8 @@
                                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Wd-wK-QHt" userLabel="text container view">
                                                         <rect key="frame" x="0.0" y="8" width="190" height="30"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f2r-bp-AOe" userLabel="bottom line View">
-                                                                <rect key="frame" x="79" y="25" width="99" height="1"/>
-                                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <variation key="heightClass=compact" fixedFrame="YES">
-                                                                    <rect key="frame" x="79" y="25" width="99" height="1"/>
-                                                                </variation>
-                                                            </view>
-                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入姓名" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F9C-nW-uJ7">
-                                                                <rect key="frame" x="76" y="0.0" width="100" height="30"/>
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="请输入姓名" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F9C-nW-uJ7" customClass="TTBottomLineTextField">
+                                                                <rect key="frame" x="60" y="0.0" width="130" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <variation key="heightClass=compact" fixedFrame="YES">
@@ -277,7 +270,7 @@
                                                                 </connections>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="姓 名" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3DN-aP-5OW">
-                                                                <rect key="frame" x="0.0" y="0.0" width="52" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="42" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -295,7 +288,7 @@
                                                         <rect key="frame" x="0.0" y="46" width="190" height="30"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="性 别" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDC-tN-5iw">
-                                                                <rect key="frame" x="0.0" y="0.0" width="52" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="42" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -304,7 +297,7 @@
                                                                 </variation>
                                                             </label>
                                                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Loy-tu-XdG">
-                                                                <rect key="frame" x="135" y="0.0" width="28" height="28"/>
+                                                                <rect key="frame" x="146" y="0.0" width="28" height="28"/>
                                                                 <state key="normal" backgroundImage="tt_dream_gender_male_unselected">
                                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
@@ -317,7 +310,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxe-oa-TSt">
-                                                                <rect key="frame" x="90" y="0.0" width="28" height="28"/>
+                                                                <rect key="frame" x="70" y="0.0" width="28" height="28"/>
                                                                 <state key="normal" backgroundImage="tt_dream_gender_female_unselected">
                                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
@@ -336,17 +329,10 @@
                                                         </variation>
                                                     </view>
                                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Ef-Sb-aPt" userLabel="text container view">
-                                                        <rect key="frame" x="3" y="84" width="190" height="30"/>
+                                                        <rect key="frame" x="0.0" y="84" width="190" height="30"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vew-GO-PAI" userLabel="bottom line View">
-                                                                <rect key="frame" x="79" y="25" width="99" height="1"/>
-                                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <variation key="heightClass=compact" fixedFrame="YES">
-                                                                    <rect key="frame" x="79" y="25" width="99" height="1"/>
-                                                                </variation>
-                                                            </view>
-                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="点击输入生日" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oGC-gi-duU">
-                                                                <rect key="frame" x="76" y="0.0" width="100" height="30"/>
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="点击输入生日" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oGC-gi-duU" customClass="TTBottomLineTextField">
+                                                                <rect key="frame" x="60" y="0.0" width="130" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <variation key="heightClass=compact" fixedFrame="YES">
@@ -354,7 +340,7 @@
                                                                 </variation>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="生 日" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhY-RL-OHj">
-                                                                <rect key="frame" x="0.0" y="0.0" width="52" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="42" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -371,15 +357,8 @@
                                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qaq-Pr-Mz1" userLabel="text container view">
                                                         <rect key="frame" x="0.0" y="122" width="190" height="30"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Llq-G1-UYX" userLabel="bottom line View">
-                                                                <rect key="frame" x="79" y="25" width="99" height="1"/>
-                                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <variation key="heightClass=compact" fixedFrame="YES">
-                                                                    <rect key="frame" x="79" y="25" width="99" height="1"/>
-                                                                </variation>
-                                                            </view>
-                                                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入学校" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bfK-q8-8Gh">
-                                                                <rect key="frame" x="76" y="0.0" width="100" height="30"/>
+                                                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="请输入学校" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bfK-q8-8Gh" customClass="TTBottomLineTextField">
+                                                                <rect key="frame" x="60" y="0.0" width="130" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <variation key="heightClass=compact" fixedFrame="YES">
@@ -390,7 +369,7 @@
                                                                 </connections>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="学 校" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vsp-BS-piz">
-                                                                <rect key="frame" x="0.0" y="0.0" width="52" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="42" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -405,7 +384,6 @@
                                                         </variation>
                                                     </view>
                                                 </subviews>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="250" id="FzR-Ka-NHb"/>
                                                     <constraint firstAttribute="width" constant="196" id="Go1-J0-ak3"/>
@@ -513,6 +491,7 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="bpQ-lE-otG" firstAttribute="leading" secondItem="DzL-mi-7LP" secondAttribute="trailing" id="3bF-28-TJE"/>
                             <constraint firstItem="3GE-v2-EYe" firstAttribute="top" secondItem="avV-o4-V0m" secondAttribute="bottom" id="9B3-wq-nIN"/>
@@ -598,6 +577,9 @@
                                 <include reference="MhQ-uC-6Og"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="CQD-bZ-LFl" appends="YES" id="LMg-xH-kei"/>
+                        </connections>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" title="我" id="K4S-B9-ZYp"/>
@@ -609,11 +591,19 @@
                         <outlet property="userHeadButton" destination="Y5V-bY-23A" id="T9N-JS-TuV"/>
                         <outletCollection property="genderButtons" destination="vxe-oa-TSt" id="Bb6-jZ-yGA"/>
                         <outletCollection property="genderButtons" destination="Loy-tu-XdG" id="bme-Pk-Cnq"/>
+                        <outletCollection property="textFields" destination="F9C-nW-uJ7" id="oe0-dw-C6g"/>
+                        <outletCollection property="textFields" destination="oGC-gi-duU" id="0IX-0T-gGG"/>
+                        <outletCollection property="textFields" destination="bfK-q8-8Gh" id="BQt-sb-hXV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="161-aO-jxC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="CQD-bZ-LFl">
+                    <connections>
+                        <action selector="didTapToCancelEdit:" destination="v26-dR-kbc" id="LPd-WY-woT"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1987.5" y="-642.5"/>
+            <point key="canvasLocation" x="2063.5" y="-642.5"/>
         </scene>
         <!--选取照片-->
         <scene sceneID="JzT-8e-xM0">
@@ -683,7 +673,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yc1-Tn-GaU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2479.5" y="-642.5"/>
+            <point key="canvasLocation" x="2627.5" y="-642.5"/>
         </scene>
         <!--移动和缩放-->
         <scene sceneID="lgF-7i-AJm">
