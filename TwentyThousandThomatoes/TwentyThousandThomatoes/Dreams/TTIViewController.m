@@ -19,8 +19,12 @@
 @property (weak, nonatomic) IBOutlet UITextField *schoolTextField;
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (strong, nonatomic) IBOutletCollection(TTBottomLineTextField) NSArray *textFields;
+@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
+@property (weak, nonatomic) IBOutlet UIButton *birthdayButton;
+@property (weak, nonatomic) IBOutlet UIView *pickerContainerView;
 
 @property (nonatomic, strong) TTI *me;
+@property (nonatomic, assign) BOOL hasShowPickerView;
 
 @end
 
@@ -28,6 +32,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.hasShowPickerView = NO;
     [self customUI];
 }
 
@@ -42,6 +47,7 @@
 {
     [super viewWillAppear:animated];
     [self loadDataFromCoreData];
+
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardWillChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardWillhide:) name:UIKeyboardWillHideNotification object:nil];
 }
@@ -92,8 +98,17 @@
 {
     self.userHeadButton.clipsToBounds = YES;
     self.userHeadButton.layer.cornerRadius = self.userHeadButton.bounds.size.width / 2;
+    [self replacePickerContainerViewTopConstraintWithConstant:self.view.frame.size.height];
 }
 
+- (void)replacePickerContainerViewTopConstraintWithConstant:(CGFloat)constant
+{
+    for (NSLayoutConstraint *constraint in self.pickerContainerView.superview.constraints) {
+        if (constraint.firstItem == self.pickerContainerView && constraint.firstAttribute == NSLayoutAttributeTop) {
+            constraint.constant = constant;
+        }
+    }
+}
 
 - (void)loadDataFromCoreData
 {
@@ -131,6 +146,47 @@
     }
 }
 
+- (IBAction)didTapOnDoneButton:(id)sender
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+    NSString *birthday = [dateFormatter stringFromDate:self.datePicker.date];
+    [self.birthdayButton setTitle:birthday forState:UIControlStateNormal];
+    self.me.birthday = self.datePicker.date;
+    [self didTapOnBirthdayButton:nil];
+}
+
+
+- (IBAction)didTapOnBirthdayButton:(id)sender
+{
+    self.hasShowPickerView = !self.hasShowPickerView;
+    if (self.hasShowPickerView) {
+        CGRect birthdayButtonFrame = self.birthdayButton.frame;
+        birthdayButtonFrame = [self.view convertRect:birthdayButtonFrame fromView:self.birthdayButton.superview];
+        CGFloat birthdayButtonYOffset = birthdayButtonFrame.origin.y + birthdayButtonFrame.size.height;
+        CGFloat gap = birthdayButtonYOffset - (self.view.frame.size.height - self.pickerContainerView.frame.size.height);
+        CGRect bounds = self.view.bounds;
+        if (gap > 0) {
+            bounds.origin.y = gap;
+        } else {
+            gap = 0;
+        }
+        [self replacePickerContainerViewTopConstraintWithConstant:birthdayButtonYOffset];
+        [UIView animateWithDuration:0.25 animations:^{
+            self.view.bounds = bounds;
+            [self.view layoutIfNeeded];
+        }];
+    } else {
+        [self replacePickerContainerViewTopConstraintWithConstant:self.view.frame.size.height];
+        CGRect bounds = self.view.bounds;
+        bounds.origin.y = 0;
+        [UIView animateWithDuration:0.25 animations:^{
+            self.view.bounds = bounds;
+            [self.view layoutIfNeeded];
+        }];
+    }
+}
+
 - (IBAction)textFieldEditingDidEnd:(id)sender
 {
     UITextField *textField = (UITextField *)sender;
@@ -153,6 +209,10 @@
     [[self respondedTextField] resignFirstResponder];
 }
 
+- (IBAction)datePickerValueChanged:(id)sender
+{
+}
+
 - (void)updateGenderButtonsWithTag:(NSInteger)tag
 {
     [self.genderButtons enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
@@ -164,15 +224,5 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
