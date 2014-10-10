@@ -98,13 +98,13 @@
 {
     self.userHeadButton.clipsToBounds = YES;
     self.userHeadButton.layer.cornerRadius = self.userHeadButton.bounds.size.width / 2;
-    [self replacePickerContainerViewTopConstraintWithConstant:self.view.frame.size.height];
+    [self replacePickerContainerViewTopConstraintWithConstant:-self.pickerContainerView.bounds.size.height];
 }
 
 - (void)replacePickerContainerViewTopConstraintWithConstant:(CGFloat)constant
 {
     for (NSLayoutConstraint *constraint in self.pickerContainerView.superview.constraints) {
-        if (constraint.firstItem == self.pickerContainerView && constraint.firstAttribute == NSLayoutAttributeTop) {
+        if (constraint.secondItem == self.pickerContainerView && constraint.secondAttribute == NSLayoutAttributeBottom) {
             constraint.constant = constant;
         }
     }
@@ -169,16 +169,17 @@
         CGRect bounds = self.view.bounds;
         if (gap > 0) {
             bounds.origin.y = gap;
+            NSLog(@"lihux: gap = %f, h = %f \n", gap, self.pickerContainerView.bounds.size.height);
         } else {
             gap = 0;
         }
-        [self replacePickerContainerViewTopConstraintWithConstant:birthdayButtonYOffset];
+        [self replacePickerContainerViewTopConstraintWithConstant:-gap];
         [UIView animateWithDuration:0.25 animations:^{
             self.view.bounds = bounds;
             [self.view layoutIfNeeded];
         }];
     } else {
-        [self replacePickerContainerViewTopConstraintWithConstant:self.view.frame.size.height];
+        [self replacePickerContainerViewTopConstraintWithConstant:-self.pickerContainerView.bounds.size.height];
         CGRect bounds = self.view.bounds;
         bounds.origin.y = 0;
         [UIView animateWithDuration:0.25 animations:^{
@@ -220,6 +221,14 @@
         UIButton *genderButton = (UIButton *)obj;
         genderButton.selected = tag == genderButton.tag ? YES : NO;
     }];
+}
+
+- (void)willTransitionToTraitCollection:(UITraitCollection *)newCollection withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
+{
+    [super willTransitionToTraitCollection:newCollection withTransitionCoordinator:coordinator];
+    if (self.hasShowPickerView) {
+        [self didTapOnBirthdayButton:nil];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
