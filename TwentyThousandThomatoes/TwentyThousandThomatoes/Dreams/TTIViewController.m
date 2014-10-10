@@ -12,6 +12,8 @@
 #import "TTBottomLineTextField.h"
 #import "TTI.h"
 
+static const NSString *kMinimumBirthdayYear = @"1894";
+
 @interface TTIViewController ()
 
 @property (weak, nonatomic) IBOutlet UIButton *userHeadButton;
@@ -213,6 +215,18 @@
 
 - (IBAction)datePickerValueChanged:(id)sender
 {
+    static NSDateFormatter *dateFormatter = nil;
+    dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+    if ([self.datePicker.date compare:[NSDate date]] == NSOrderedDescending) {
+        [self.datePicker setDate:[NSDate date] animated:YES];
+    }
+    NSString *currentDateString = [dateFormatter stringFromDate:[NSDate date]];
+    NSString *minimumDateString = [NSString stringWithFormat:@"%@%@", kMinimumBirthdayYear, [currentDateString substringFromIndex:4]];
+    NSDate *minimumDate = [dateFormatter dateFromString:minimumDateString];
+    if ([self.datePicker.date compare:minimumDate] == NSOrderedAscending) {
+        [self.datePicker setDate:minimumDate animated:YES];
+    }
 }
 
 - (void)updateGenderButtonsWithTag:(NSInteger)tag
