@@ -116,6 +116,7 @@
     if (iInfos.count > 0) {
         self.me = iInfos[0];
         [self updateGenderButtonsWithTag:self.me.gender.integerValue];
+        [self.birthdayButton setTitle:self.me.birthday forState:UIControlStateNormal];
         if (self.me.name) {
             self.nameTextField.text = self.me.name;
         }
@@ -152,7 +153,7 @@
     [dateFormatter setDateFormat:@"yyyy-MM-dd"];
     NSString *birthday = [dateFormatter stringFromDate:self.datePicker.date];
     [self.birthdayButton setTitle:birthday forState:UIControlStateNormal];
-    self.me.birthday = self.datePicker.date;
+    self.me.birthday = birthday;
     [self didTapOnBirthdayButton:nil];
 }
 

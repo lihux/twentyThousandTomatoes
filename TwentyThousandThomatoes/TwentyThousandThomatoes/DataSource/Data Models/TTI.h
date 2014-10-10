@@ -14,7 +14,7 @@
 @interface TTI : NSManagedObject
 
 @property (nonatomic, retain) NSNumber * age;
-@property (nonatomic, retain) NSDate * birthday;
+@property (nonatomic, retain) NSString * birthday;
 @property (nonatomic, retain) NSNumber * earnedTomatoes;
 @property (nonatomic, retain) id headImage;
 @property (nonatomic, retain) NSString * name;
