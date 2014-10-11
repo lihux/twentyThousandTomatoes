@@ -50,7 +50,6 @@
 
 - (IBAction)didTapOnDoneButton:(id)sender
 {
-    NSLog(@"\n  lihux: %@", self.scrollView);
     CGImageRef imageRef = CGImageCreateWithImageInRect(self.originImage.CGImage, [self convertClipRectToImage]);
     UIImage *clipedImage = [UIImage imageWithCGImage:imageRef];
     NSArray *iInfos = [[TTDataSourceManager sharedInstance] searchManagedObjectWithEntityName:NSStringFromClass([TTI class])];
@@ -110,7 +109,6 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    NSLog(@"\n\n  scrollview info: %@, \n\nmaskview info = %@   %@\n\nzoomScale = %f", self.scrollView, self.maskView, [NSValue valueWithCGRect:self.maskView.pickingFieldRect], self.scrollView.zoomScale);
 }
 
 @end

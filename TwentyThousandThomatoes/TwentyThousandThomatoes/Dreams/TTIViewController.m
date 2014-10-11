@@ -175,7 +175,6 @@ static const NSString *kMinimumBirthdayYear = @"1894";
         CGRect bounds = self.view.bounds;
         if (gap > 0) {
             bounds.origin.y = gap;
-            NSLog(@"lihux: gap = %f, h = %f \n", gap, self.pickerContainerView.bounds.size.height);
         } else {
             gap = 0;
         }
