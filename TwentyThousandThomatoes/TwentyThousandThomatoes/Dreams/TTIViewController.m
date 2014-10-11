@@ -119,6 +119,9 @@ static const NSString *kMinimumBirthdayYear = @"1894";
         self.me = iInfos[0];
         [self updateGenderButtonsWithTag:self.me.gender.integerValue];
         [self.birthdayButton setTitle:self.me.birthday forState:UIControlStateNormal];
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        dateFormatter.dateFormat = @"yyyy-MM-dd";
+        [self.datePicker setDate:[dateFormatter dateFromString:self.me.birthday] animated:NO];
         if (self.me.name) {
             self.nameTextField.text = self.me.name;
         }
@@ -162,6 +165,7 @@ static const NSString *kMinimumBirthdayYear = @"1894";
 
 - (IBAction)didTapOnBirthdayButton:(id)sender
 {
+    [[self respondedTextField] resignFirstResponder];
     self.hasShowPickerView = !self.hasShowPickerView;
     if (self.hasShowPickerView) {
         CGRect birthdayButtonFrame = self.birthdayButton.frame;
@@ -210,6 +214,9 @@ static const NSString *kMinimumBirthdayYear = @"1894";
 
 - (IBAction)didTapToCancelEdit:(id)sender
 {
+    if (self.hasShowPickerView) {
+        [self didTapOnBirthdayButton:nil];
+    }
     [[self respondedTextField] resignFirstResponder];
 }
 
