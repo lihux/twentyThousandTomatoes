@@ -239,12 +239,13 @@
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="请输入姓名" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F9C-nW-uJ7" customClass="TTBottomLineTextField">
                                                                 <rect key="frame" x="60" y="0.0" width="130" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                                 <variation key="heightClass=compact" fixedFrame="YES">
                                                                     <rect key="frame" x="76" y="0.0" width="100" height="30"/>
                                                                 </variation>
                                                                 <connections>
                                                                     <action selector="textFieldEditingDidEnd:" destination="v26-dR-kbc" eventType="editingDidEnd" id="t4D-hd-4y6"/>
+                                                                    <outlet property="delegate" destination="v26-dR-kbc" id="4cC-5E-e2D"/>
                                                                 </connections>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="姓 名" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3DN-aP-5OW">
@@ -339,12 +340,13 @@
                                                             <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="请输入学校" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bfK-q8-8Gh" customClass="TTBottomLineTextField">
                                                                 <rect key="frame" x="60" y="0.0" width="130" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                                 <variation key="heightClass=compact" fixedFrame="YES">
                                                                     <rect key="frame" x="76" y="0.0" width="100" height="30"/>
                                                                 </variation>
                                                                 <connections>
                                                                     <action selector="textFieldEditingDidEnd:" destination="v26-dR-kbc" eventType="editingDidEnd" id="Dis-uG-TAu"/>
+                                                                    <outlet property="delegate" destination="v26-dR-kbc" id="cWh-Oa-Vo9"/>
                                                                 </connections>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="学 校" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vsp-BS-piz">
@@ -493,7 +495,11 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pZz-E9-OpD" userLabel="data picker View">
                                 <rect key="frame" x="0.0" y="400" width="375" height="207"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AFx-q0-lau" userLabel="line View">
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wrj-ix-WJt">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AFx-q0-lau" userLabel="bottom line View">
                                         <rect key="frame" x="0.0" y="44" width="375" height="1"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -531,7 +537,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="oJx-dz-XmM" firstAttribute="top" secondItem="pZz-E9-OpD" secondAttribute="top" constant="45" id="BTK-EJ-ypP"/>
                                     <constraint firstAttribute="trailing" secondItem="oJx-dz-XmM" secondAttribute="trailing" id="OeG-v8-zGs"/>

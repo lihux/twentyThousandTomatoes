@@ -14,7 +14,7 @@
 
 static const NSString *kMinimumBirthdayYear = @"1894";
 
-@interface TTIViewController ()
+@interface TTIViewController () <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *userHeadButton;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *genderButtons;
@@ -247,6 +247,13 @@ static const NSString *kMinimumBirthdayYear = @"1894";
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+#pragma mark - UITextFieldDelegate
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
 }
 
 @end
