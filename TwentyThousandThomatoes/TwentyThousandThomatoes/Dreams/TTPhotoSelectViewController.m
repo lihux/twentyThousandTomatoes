@@ -76,6 +76,11 @@
     [super didReceiveMemoryWarning];
 }
 
+- (IBAction)didTapOnPhotoButton:(id)sender
+{
+}
+
+
 #pragma mark - UICollectionViewDataSource delegate
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {

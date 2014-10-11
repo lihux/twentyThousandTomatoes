@@ -750,6 +750,13 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Title" id="WRk-by-CaW">
+                        <barButtonItem key="rightBarButtonItem" image="tt_dream_photo" id="bkJ-d0-hR2">
+                            <connections>
+                                <action selector="didTapOnPhotoButton:" destination="SUT-gG-XTq" id="oKh-0t-62H"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="Ax3-0e-ghs" id="U3w-tL-lSe"/>
                         <segue destination="A7L-5K-xKa" kind="show" identifier="TTPhotoEditViewController" id="CQV-Nk-sF1"/>
@@ -841,7 +848,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ows-Zz-Weo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2894.5" y="-642.5"/>
+            <point key="canvasLocation" x="3060.5" y="-651.5"/>
         </scene>
         <!--Dream View Controller-->
         <scene sceneID="Tdt-cR-Bhg">
@@ -924,6 +931,7 @@
         <image name="tt_dream_gender_female_unselected" width="28" height="28"/>
         <image name="tt_dream_gender_male_selected" width="28" height="28"/>
         <image name="tt_dream_gender_male_unselected" width="28" height="28"/>
+        <image name="tt_dream_photo" width="61" height="61"/>
         <image name="tt_tabbar_dream_unselected" width="30" height="30"/>
         <image name="tt_tabbar_statics_unselected" width="28" height="28"/>
         <image name="tt_tabbar_tomato_unselected" width="28" height="28"/>
