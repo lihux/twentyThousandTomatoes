@@ -12,7 +12,7 @@
 #import "TTPhotoCollectionViewCell.h"
 #import "TTPhotoEditViewController.h"
 
-@interface TTPhotoSelectViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+@interface TTPhotoSelectViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIImagePickerControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
@@ -78,7 +78,14 @@
 
 - (IBAction)didTapOnPhotoButton:(id)sender
 {
-}
+    if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+//        [[TTTBlockAlertView alertWithTitle:@"当前相机不可用" message:@"" buttonTitle:@"确定" buttonBlock:nil] show];
+    } else {
+        UIImagePickerController *imagePickerController = [UIImagePickerController new];
+        imagePickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+        imagePickerController.delegate = self;
+        [self presentViewController:imagePickerController animated:YES completion:nil];
+    }}
 
 
 #pragma mark - UICollectionViewDataSource delegate
@@ -95,6 +102,16 @@
     return cell;
 }
 
+#pragma mark - UIImagePickerControllerDelegate
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo
+{
+    UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
+    [picker dismissViewControllerAnimated:YES completion:^{
+        [self performSegueWithIdentifier:@"TTPhotoEditViewController" sender:image];
+    }];
+}
+
 #pragma mark - UICollectionViewDelegate delegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -106,8 +123,16 @@
 {
     if ([segue.destinationViewController isKindOfClass:[TTPhotoEditViewController class]]) {
         TTPhotoEditViewController *photoEditViewController = (TTPhotoEditViewController *) segue.destinationViewController;
-        ALAsset *selectedAsset = self.photos[self.selectedIndex];
-        photoEditViewController.originImage = [UIImage imageWithCGImage:[[selectedAsset defaultRepresentation] fullResolutionImage]];
+        if (sender) {
+            photoEditViewController.originImage = (UIImage *)sender;
+        } else {
+            ALAsset *selectedAsset = self.photos[self.selectedIndex];
+            ALAssetRepresentation *representation = [selectedAsset defaultRepresentation];
+            UIImageOrientation orientation = UIImageOrientationUp;
+            NSInteger orientationCount = representation.orientation;
+            orientation = orientationCount;
+            photoEditViewController.originImage = [UIImage imageWithCGImage:[[selectedAsset defaultRepresentation] fullResolutionImage] scale:1.0 orientation:orientationCount];
+        }
     }
 }
 
