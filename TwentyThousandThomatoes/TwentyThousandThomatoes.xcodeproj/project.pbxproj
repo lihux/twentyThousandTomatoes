@@ -16,6 +16,8 @@
 		6D6FEEE019BE82AE003C0535 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D6FEEDF19BE82AE003C0535 /* Images.xcassets */; };
 		6D6FEEEC19BE82AE003C0535 /* TwentyThousandThomatoesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6FEEEB19BE82AE003C0535 /* TwentyThousandThomatoesTests.m */; };
 		6D766FA319C98880006ED70B /* TTI.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D766FA219C98880006ED70B /* TTI.m */; };
+		6D7C5FC519ECADFD005C0A96 /* TTRoundCornerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7C5FC419ECADFD005C0A96 /* TTRoundCornerButton.m */; };
+		6D7C5FC819ECB0E8005C0A96 /* TTWhatDreamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7C5FC719ECB0E8005C0A96 /* TTWhatDreamViewController.m */; };
 		6D97E32319CA868100ED2212 /* TTTomatoes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6D97E32119CA868100ED2212 /* TTTomatoes.xcdatamodeld */; };
 		6D97E32719CA869900ED2212 /* UIImageValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D97E32619CA869900ED2212 /* UIImageValueTransformer.m */; };
 		6D97E33019CAB04900ED2212 /* TTPhotoSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D97E32F19CAB04900ED2212 /* TTPhotoSelectViewController.m */; };
@@ -71,6 +73,10 @@
 		6D6FEEEB19BE82AE003C0535 /* TwentyThousandThomatoesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwentyThousandThomatoesTests.m; sourceTree = "<group>"; };
 		6D766FA119C98880006ED70B /* TTI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTI.h; sourceTree = "<group>"; };
 		6D766FA219C98880006ED70B /* TTI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTI.m; sourceTree = "<group>"; };
+		6D7C5FC319ECADFD005C0A96 /* TTRoundCornerButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRoundCornerButton.h; sourceTree = "<group>"; };
+		6D7C5FC419ECADFD005C0A96 /* TTRoundCornerButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTRoundCornerButton.m; sourceTree = "<group>"; };
+		6D7C5FC619ECB0E8005C0A96 /* TTWhatDreamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTWhatDreamViewController.h; sourceTree = "<group>"; };
+		6D7C5FC719ECB0E8005C0A96 /* TTWhatDreamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTWhatDreamViewController.m; sourceTree = "<group>"; };
 		6D97E32219CA868100ED2212 /* TTTomatoes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TTTomatoes.xcdatamodel; sourceTree = "<group>"; };
 		6D97E32519CA869900ED2212 /* UIImageValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageValueTransformer.h; sourceTree = "<group>"; };
 		6D97E32619CA869900ED2212 /* UIImageValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageValueTransformer.m; sourceTree = "<group>"; };
@@ -228,6 +234,8 @@
 				6D318A3819D948A5007BCD61 /* TTRoundButton.m */,
 				6DFCC0F819E4DB0B002169D8 /* TTBottomLineTextField.h */,
 				6DFCC0F919E4DB0B002169D8 /* TTBottomLineTextField.m */,
+				6D7C5FC319ECADFD005C0A96 /* TTRoundCornerButton.h */,
+				6D7C5FC419ECADFD005C0A96 /* TTRoundCornerButton.m */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -257,6 +265,8 @@
 				6D97E32F19CAB04900ED2212 /* TTPhotoSelectViewController.m */,
 				6DC40FF819CBBD52004AD6C9 /* TTPhotoEditViewController.h */,
 				6DC40FF919CBBD52004AD6C9 /* TTPhotoEditViewController.m */,
+				6D7C5FC619ECB0E8005C0A96 /* TTWhatDreamViewController.h */,
+				6D7C5FC719ECB0E8005C0A96 /* TTWhatDreamViewController.m */,
 			);
 			path = Dreams;
 			sourceTree = "<group>";
@@ -425,6 +435,7 @@
 				6D97E32719CA869900ED2212 /* UIImageValueTransformer.m in Sources */,
 				6DADCF4819C12BA400266708 /* TTLifeGoal.m in Sources */,
 				6D97E32319CA868100ED2212 /* TTTomatoes.xcdatamodeld in Sources */,
+				6D7C5FC819ECB0E8005C0A96 /* TTWhatDreamViewController.m in Sources */,
 				6DADCF4519C12BA400266708 /* TTTomato.m in Sources */,
 				6DADCF4219C12BA400266708 /* TTGoal.m in Sources */,
 				6DC4CBC219D2EFD200AD8E3A /* TTPhotoMaskView.m in Sources */,
@@ -433,6 +444,7 @@
 				6DFDB82019BEE94300183FB4 /* UIViewController+GetInstanceFromStoryBoard.m in Sources */,
 				6DFDB82419BEF26600183FB4 /* TTDataSourceManager.m in Sources */,
 				6D3537C819C3E87700570DB4 /* TTWhoAmIViewController.m in Sources */,
+				6D7C5FC519ECADFD005C0A96 /* TTRoundCornerButton.m in Sources */,
 				6DADCF3319C12BA300266708 /* TTLongTermGoal.m in Sources */,
 				6DFDB81819BEE58000183FB4 /* TTTomatoMasterViewController.m in Sources */,
 				6D97E33719CAC02000ED2212 /* TTPhotoCollectionViewCell.m in Sources */,

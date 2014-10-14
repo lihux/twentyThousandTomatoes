@@ -206,7 +206,119 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SE6-I4-08K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1522.5" y="-642.5"/>
+            <point key="canvasLocation" x="1530.5" y="-642.5"/>
+        </scene>
+        <!--我是谁-->
+        <scene sceneID="D5k-Ea-yIe">
+            <objects>
+                <viewController storyboardIdentifier="TTWhatDreamViewController" title="我是谁" id="pS8-AJ-3xo" customClass="TTWhatDreamViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="v1i-1j-uRi"/>
+                        <viewControllerLayoutGuide type="bottom" id="fMg-D8-Ham"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Bx0-MD-iY4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Jv-gC-N0O" customClass="TTRoundButton">
+                                <rect key="frame" x="109" y="97" width="156" height="156"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="156" id="Jzz-oy-LOm"/>
+                                    <constraint firstAttribute="width" constant="156" id="iVU-KQ-qB3"/>
+                                </constraints>
+                                <state key="normal" image="ttt_dream_dream">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Jzz-oy-LOm"/>
+                                        <exclude reference="iVU-KQ-qB3"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Jzz-oy-LOm"/>
+                                        <include reference="iVU-KQ-qB3"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's My Dream ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6gP-FM-kjv">
+                                <rect key="frame" x="38" y="261" width="300" height="81"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="81" id="7ht-Nb-D3e"/>
+                                    <constraint firstAttribute="width" constant="209" id="lpn-eU-DH4"/>
+                                    <constraint firstAttribute="height" constant="81" id="nSm-vV-cGw">
+                                        <variation key="heightClass=compact" constant="43"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="300" id="vLS-5M-fmf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="lpn-eU-DH4"/>
+                                        <exclude reference="nSm-vV-cGw"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="7ht-Nb-D3e"/>
+                                        <include reference="lpn-eU-DH4"/>
+                                        <include reference="nSm-vV-cGw"/>
+                                        <exclude reference="vLS-5M-fmf"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="9Jv-gC-N0O" secondAttribute="centerX" id="2VR-vI-9un"/>
+                            <constraint firstItem="9Jv-gC-N0O" firstAttribute="top" secondItem="v1i-1j-uRi" secondAttribute="bottom" constant="8" id="4pp-5b-uJE"/>
+                            <constraint firstItem="fMg-D8-Ham" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6gP-FM-kjv" secondAttribute="bottom" id="DUD-IF-Ehs"/>
+                            <constraint firstItem="9Jv-gC-N0O" firstAttribute="top" secondItem="v1i-1j-uRi" secondAttribute="bottom" constant="97" id="DyJ-q2-kg4">
+                                <variation key="heightClass=compact" constant="-15"/>
+                            </constraint>
+                            <constraint firstAttribute="centerX" secondItem="6gP-FM-kjv" secondAttribute="centerX" id="MtI-Nc-cGD"/>
+                            <constraint firstAttribute="centerX" secondItem="9Jv-gC-N0O" secondAttribute="centerX" id="PXM-pG-iVv"/>
+                            <constraint firstAttribute="centerX" secondItem="6gP-FM-kjv" secondAttribute="centerX" id="Vf8-HM-Fxr"/>
+                            <constraint firstItem="6gP-FM-kjv" firstAttribute="top" secondItem="9Jv-gC-N0O" secondAttribute="bottom" constant="8" id="pd3-Mq-Cy8">
+                                <variation key="heightClass=compact" constant="-35"/>
+                            </constraint>
+                            <constraint firstItem="6gP-FM-kjv" firstAttribute="top" secondItem="9Jv-gC-N0O" secondAttribute="bottom" constant="8" id="t93-t2-zZT">
+                                <variation key="heightClass=compact" constant="5"/>
+                            </constraint>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="2VR-vI-9un"/>
+                                <exclude reference="4pp-5b-uJE"/>
+                                <exclude reference="Vf8-HM-Fxr"/>
+                                <exclude reference="t93-t2-zZT"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="2VR-vI-9un"/>
+                                <include reference="4pp-5b-uJE"/>
+                                <exclude reference="DyJ-q2-kg4"/>
+                                <exclude reference="PXM-pG-iVv"/>
+                                <exclude reference="MtI-Nc-cGD"/>
+                                <include reference="Vf8-HM-Fxr"/>
+                                <exclude reference="pd3-Mq-Cy8"/>
+                                <include reference="t93-t2-zZT"/>
+                                <exclude reference="DUD-IF-Ehs"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" title="梦想......" id="r6W-a2-gpB"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vdj-gI-i1a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2063.5" y="165.5"/>
         </scene>
         <!--我-->
         <scene sceneID="CtF-q9-kOT">
@@ -224,14 +336,14 @@
                                 <rect key="frame" x="0.0" y="188" width="375" height="435"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpQ-lE-otG">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpQ-lE-otG">
                                 <rect key="frame" x="0.0" y="188" width="375" height="435"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wHt-9u-aw7" userLabel="scroll content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="435"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7bd-AL-N54">
-                                                <rect key="frame" x="89" y="21" width="196" height="250"/>
+                                                <rect key="frame" x="89" y="0.0" width="196" height="220"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Wd-wK-QHt" userLabel="text container view">
                                                         <rect key="frame" x="0.0" y="8" width="190" height="30"/>
@@ -276,7 +388,7 @@
                                                                 </variation>
                                                             </label>
                                                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Loy-tu-XdG">
-                                                                <rect key="frame" x="146" y="0.0" width="28" height="28"/>
+                                                                <rect key="frame" x="136" y="0.0" width="28" height="28"/>
                                                                 <state key="normal" backgroundImage="tt_dream_gender_male_unselected">
                                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
@@ -289,7 +401,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxe-oa-TSt">
-                                                                <rect key="frame" x="70" y="0.0" width="28" height="28"/>
+                                                                <rect key="frame" x="80" y="0.0" width="28" height="28"/>
                                                                 <state key="normal" backgroundImage="tt_dream_gender_female_unselected">
                                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
@@ -364,9 +476,20 @@
                                                             <rect key="frame" x="0.0" y="122" width="190" height="30"/>
                                                         </variation>
                                                     </view>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0NM-Nv-6vK" userLabel="done Button" customClass="TTRoundCornerButton">
+                                                        <rect key="frame" x="9" y="159" width="181" height="44"/>
+                                                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <state key="normal" title="说好的梦想呢？">
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <segue destination="pS8-AJ-3xo" kind="show" id="9Ok-nV-kYw"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="250" id="FzR-Ka-NHb"/>
+                                                    <constraint firstAttribute="height" constant="220" id="FzR-Ka-NHb"/>
                                                     <constraint firstAttribute="width" constant="196" id="Go1-J0-ak3"/>
                                                 </constraints>
                                             </view>
@@ -374,8 +497,9 @@
                                         <constraints>
                                             <constraint firstItem="7bd-AL-N54" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wHt-9u-aw7" secondAttribute="leading" constant="10" id="JsI-6k-2LJ"/>
                                             <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="7bd-AL-N54" secondAttribute="trailing" priority="800" constant="10" id="UJ7-Bl-I9j"/>
-                                            <constraint firstItem="7bd-AL-N54" firstAttribute="top" secondItem="wHt-9u-aw7" secondAttribute="top" constant="21" id="XsN-P3-fRj"/>
+                                            <constraint firstItem="7bd-AL-N54" firstAttribute="top" secondItem="wHt-9u-aw7" secondAttribute="top" id="XsN-P3-fRj"/>
                                             <constraint firstAttribute="centerX" secondItem="7bd-AL-N54" secondAttribute="centerX" id="e2t-KY-Q99"/>
+                                            <constraint firstItem="7bd-AL-N54" firstAttribute="height" secondItem="wHt-9u-aw7" secondAttribute="height" constant="-30" id="y1Y-NW-5qt"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -585,7 +709,7 @@
                             <constraint firstItem="3GE-v2-EYe" firstAttribute="width" secondItem="bpQ-lE-otG" secondAttribute="width" id="cyZ-iQ-8vZ"/>
                             <constraint firstAttribute="centerY" secondItem="0Co-Hx-KAg" secondAttribute="centerY" id="msr-CZ-I70"/>
                             <constraint firstItem="wHt-9u-aw7" firstAttribute="width" secondItem="3GE-v2-EYe" secondAttribute="width" id="nRp-SC-gBz"/>
-                            <constraint firstItem="wHt-9u-aw7" firstAttribute="height" secondItem="3GE-v2-EYe" secondAttribute="height" id="ob8-HN-6PX"/>
+                            <constraint firstItem="wHt-9u-aw7" firstAttribute="height" secondItem="3GE-v2-EYe" secondAttribute="height" priority="999" id="ob8-HN-6PX"/>
                             <constraint firstItem="pZz-E9-OpD" firstAttribute="top" secondItem="avV-o4-V0m" secondAttribute="bottom" constant="400" id="pge-VX-Lna"/>
                             <constraint firstItem="3GE-v2-EYe" firstAttribute="width" secondItem="pZz-E9-OpD" secondAttribute="width" id="qLl-TA-BNg"/>
                             <constraint firstItem="wHt-9u-aw7" firstAttribute="width" secondItem="3GE-v2-EYe" secondAttribute="width" id="rLw-n0-k53"/>
@@ -936,5 +1060,6 @@
         <image name="tt_tabbar_statics_unselected" width="28" height="28"/>
         <image name="tt_tabbar_tomato_unselected" width="28" height="28"/>
         <image name="ttt_dream_default_user" width="156" height="156"/>
+        <image name="ttt_dream_dream" width="156" height="156"/>
     </resources>
 </document>
