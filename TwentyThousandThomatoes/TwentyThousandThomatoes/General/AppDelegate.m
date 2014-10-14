@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 
 #import "UIImageValueTransformer.h"
+#import <TencentOpenAPI/TencentOAuth.h>
 
 @interface AppDelegate ()
 
@@ -22,6 +23,11 @@
     UIImageValueTransformer *imageTransformer = [[UIImageValueTransformer alloc] init];
     [UIImageValueTransformer setValueTransformer:imageTransformer forName:@"UIImageValueTransformer"];
     return YES;
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    return [TencentOAuth HandleOpenURL:url];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
