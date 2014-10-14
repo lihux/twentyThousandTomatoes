@@ -246,7 +246,7 @@
                                 <rect key="frame" x="38" y="261" width="300" height="81"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="81" id="7ht-Nb-D3e"/>
-                                    <constraint firstAttribute="width" constant="209" id="lpn-eU-DH4"/>
+                                    <constraint firstAttribute="width" constant="300" id="lpn-eU-DH4"/>
                                     <constraint firstAttribute="height" constant="81" id="nSm-vV-cGw">
                                         <variation key="heightClass=compact" constant="43"/>
                                     </constraint>
@@ -340,10 +340,10 @@
                                 <rect key="frame" x="0.0" y="188" width="375" height="435"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wHt-9u-aw7" userLabel="scroll content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="236"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7bd-AL-N54">
-                                                <rect key="frame" x="89" y="0.0" width="196" height="220"/>
+                                                <rect key="frame" x="89" y="0.0" width="196" height="206"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Wd-wK-QHt" userLabel="text container view">
                                                         <rect key="frame" x="0.0" y="8" width="190" height="30"/>
@@ -489,9 +489,12 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="220" id="FzR-Ka-NHb"/>
+                                                    <constraint firstAttribute="height" constant="206" id="FzR-Ka-NHb"/>
                                                     <constraint firstAttribute="width" constant="196" id="Go1-J0-ak3"/>
                                                 </constraints>
+                                                <variation key="heightClass=compact" misplaced="YES">
+                                                    <rect key="frame" x="-8" y="0.0" width="196" height="220"/>
+                                                </variation>
                                             </view>
                                         </subviews>
                                         <constraints>
@@ -553,6 +556,9 @@
                                         <state key="normal" image="ttt_dream_default_user">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <variation key="heightClass=compact" misplaced="YES">
+                                            <rect key="frame" x="26" y="0.0" width="133" height="132"/>
+                                        </variation>
                                         <connections>
                                             <segue destination="SUT-gG-XTq" kind="show" id="Ppg-3W-M5L"/>
                                         </connections>
@@ -566,6 +572,9 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=compact" misplaced="YES">
+                                            <rect key="frame" x="17" y="136" width="150" height="36"/>
+                                        </variation>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -585,7 +594,8 @@
                                         <exclude reference="uSl-5C-ALs"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=compact">
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="-64" y="222" width="184" height="180"/>
                                     <mask key="constraints">
                                         <include reference="czd-VD-iQ2"/>
                                         <exclude reference="k9W-AW-DUb"/>
@@ -740,6 +750,7 @@
                                 <exclude reference="3bF-28-TJE"/>
                                 <exclude reference="M7i-Uw-74J"/>
                                 <exclude reference="GnX-Yj-8ge"/>
+                                <exclude reference="ob8-HN-6PX"/>
                                 <exclude reference="rLw-n0-k53"/>
                                 <exclude reference="pge-VX-Lna"/>
                                 <exclude reference="D6T-wV-cOR"/>
