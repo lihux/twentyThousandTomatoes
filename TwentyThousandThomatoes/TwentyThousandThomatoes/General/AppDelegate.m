@@ -10,6 +10,7 @@
 
 #import "UIImageValueTransformer.h"
 #import <TencentOpenAPI/TencentOAuth.h>
+#import "RennSDK/RennSDK.h"
 
 @interface AppDelegate ()
 
@@ -27,7 +28,17 @@
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
-    return [TencentOAuth HandleOpenURL:url];
+    return [self handleURL:url];
+}
+
+- (BOOL)handleURL:(NSURL *)url
+{
+    if ([url.absoluteString hasPrefix:@"rm"]) {
+        return [RennClient handleOpenURL:url];
+    } else if ([url.absoluteString hasPrefix:@"tencent"]){
+        return [TencentOAuth HandleOpenURL:url];
+    }
+    return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

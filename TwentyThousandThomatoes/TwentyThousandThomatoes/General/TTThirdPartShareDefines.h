@@ -12,4 +12,8 @@
 #define kDefaultQQAppID @"1103303932"
 #define kDefaultQQAppKey @"XrtZFaufKt7prJCG"
 
+#define kDefaultRenrenAppID @"272469"
+#define kDefaultRenrenAppKey @"cf02fffb4e1744e4af8c9fd1b2a1444f"
+#define kDefaultRenrenSecretKey @"2d6d761d52a84c8ebbeded2b116ed9b9"
+
 #endif

@@ -9,7 +9,7 @@
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>lihux.$(PRODUCT_NAME:rfc1034identifier)</string>
+	<string>tttomatoes.net.lihux</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -30,6 +30,16 @@
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>tencent1103303932</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>renrensso</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>rm272469tttomatoes.net.lihux</string>
 			</array>
 		</dict>
 	</array>

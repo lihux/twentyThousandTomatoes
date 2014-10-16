@@ -8,7 +8,12 @@
 
 #import "TTRenrenShareViewController.h"
 
-@interface TTRenrenShareViewController ()
+#import "TTThirdPartShareDefines.h"
+#import "RennSDK/RennSDK.h"
+
+@interface TTRenrenShareViewController () <RennLoginDelegate>
+
+@property (weak, nonatomic) IBOutlet UITextView *infoTextView;
 
 @end
 
@@ -16,22 +21,63 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [RennClient initWithAppId:kDefaultRenrenAppID apiKey:kDefaultRenrenAppKey secretKey:kDefaultRenrenSecretKey];
+    [RennClient setScope:@"read_user_album read_user_status publish_feed"];
+    [RennClient setTokenType:@"mac"];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)didTapOnLoginButton:(id)sender
+{
+    [RennClient loginWithDelegate:self];
 }
-*/
+
+- (IBAction)didTapOnGetUserInfoButton:(id)sender
+{
+    PutFeedParam *param = [[PutFeedParam alloc] init];
+    param.title = @"新鲜事Title";
+    param.description = @"新鲜事Description";
+    param.message = @"这是一条新鲜事";
+    param.targetUrl = @"http://www.56.com/u72/v_OTAyNTkxMDk.html";
+
+    [RennClient sendAsynRequest:param delegate:self];
+}
+
+#pragma mark - RennLoginDelegate
+- (void)rennLoginSuccess
+{
+    self.infoTextView.text = @"登陆成功";
+}
+
+- (void)rennLogoutSuccess
+{
+    
+}
+- (void)rennLoginCancelded
+{
+    
+}
+
+- (void)rennLoginDidFailWithError:(NSError *)error
+{
+    
+}
+
+- (void)rennLoginAccessTokenInvalidOrExpired:(NSError *)error
+{
+    
+}
+
+- (void)rennService:(RennService *)service requestSuccessWithResponse:(id)response
+{
+    self.infoTextView.text = [NSString stringWithFormat:@"成功了：%@", response];
+}
+- (void)rennService:(RennService *)service requestFailWithError:(NSError*)error
+{
+    self.infoTextView.text = [NSString stringWithFormat:@"失败了：%@", error];
+}
 
 @end
