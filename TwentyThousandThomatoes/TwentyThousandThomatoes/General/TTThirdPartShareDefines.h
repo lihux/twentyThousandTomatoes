@@ -16,4 +16,7 @@
 #define kDefaultRenrenAppKey @"cf02fffb4e1744e4af8c9fd1b2a1444f"
 #define kDefaultRenrenSecretKey @"2d6d761d52a84c8ebbeded2b116ed9b9"
 
+#define kDefaultWeiboAppID @"2753922380"
+#define kDefaultWeiboSecretKey @"f6b190dce6eaa54369194419b03e3a71"
+#define kDefaultWeiboRedirectURL @"https://api.weibo.com/oauth2/default.html"
 #endif

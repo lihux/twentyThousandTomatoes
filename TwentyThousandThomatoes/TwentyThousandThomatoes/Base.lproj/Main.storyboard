@@ -169,8 +169,63 @@
                     <view key="view" contentMode="scaleToFill" id="MqI-XR-GlO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6JD-30-lGB">
+                                <rect key="frame" x="38" y="184" width="300" height="300"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8qG-dY-ukk" customClass="TTRoundCornerButton">
+                                        <rect key="frame" x="84" y="86" width="132" height="44"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="获取用户信息">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapOnGetUserInfoButton:" destination="V8M-fV-ixB" eventType="touchUpInside" id="STO-4m-c72"/>
+                                        </connections>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9kd-O2-Wvt">
+                                        <rect key="frame" x="13" y="143" width="279" height="149"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Lg-Pu-NPq" customClass="TTRoundCornerButton">
+                                        <rect key="frame" x="84" y="34" width="132" height="44"/>
+                                        <color key="backgroundColor" red="0.47127016129999999" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="授权微博sso登陆">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapOnLoginButton:" destination="V8M-fV-ixB" eventType="touchUpInside" id="TJc-7C-V9b"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="0UL-xb-yiI"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="GIW-Uk-Toh"/>
+                                    <constraint firstAttribute="height" constant="300" id="nPF-wq-rXc"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="ni0-GM-YAb"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="oCv-Nx-Suc"/>
+                                    <constraint firstAttribute="width" constant="300" id="vjo-Sc-Aco"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0UL-xb-yiI"/>
+                                        <exclude reference="ni0-GM-YAb"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="6JD-30-lGB" secondAttribute="centerY" id="Lxi-oP-Pa3"/>
+                            <constraint firstAttribute="centerX" secondItem="6JD-30-lGB" secondAttribute="centerX" id="XdT-WH-vMO"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="infoTextView" destination="9kd-O2-Wvt" id="W5G-2q-cjh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lnx-zs-xLM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

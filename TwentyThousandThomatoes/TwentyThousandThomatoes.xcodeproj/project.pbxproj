@@ -42,6 +42,8 @@
 		6DADCF4A19C12ED500266708 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DADCF4919C12ED500266708 /* CoreData.framework */; };
 		6DB0B02619C549D9004A2192 /* TTDreamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB0B02519C549D9004A2192 /* TTDreamViewController.m */; };
 		6DB5C98519EF74FD00D6AF91 /* RennSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DB5C98419EF74FD00D6AF91 /* RennSDK.framework */; };
+		6DB5C98B19EFB55D00D6AF91 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DB5C98819EFB55D00D6AF91 /* libWeiboSDK.a */; };
+		6DB5C98C19EFB55E00D6AF91 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6DB5C98919EFB55D00D6AF91 /* WeiboSDK.bundle */; };
 		6DC15D2119D1A1CB008784F9 /* TTImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC15D2019D1A1CB008784F9 /* TTImageScrollView.m */; };
 		6DC40FFA19CBBD52004AD6C9 /* TTPhotoEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC40FF919CBBD52004AD6C9 /* TTPhotoEditViewController.m */; };
 		6DC4CBC219D2EFD200AD8E3A /* TTPhotoMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC4CBC119D2EFD200AD8E3A /* TTPhotoMaskView.m */; };
@@ -127,6 +129,9 @@
 		6DB0B02419C549D9004A2192 /* TTDreamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTDreamViewController.h; sourceTree = "<group>"; };
 		6DB0B02519C549D9004A2192 /* TTDreamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTDreamViewController.m; sourceTree = "<group>"; };
 		6DB5C98419EF74FD00D6AF91 /* RennSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RennSDK.framework; path = renren/RennSDK.framework; sourceTree = "<group>"; };
+		6DB5C98819EFB55D00D6AF91 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
+		6DB5C98919EFB55D00D6AF91 /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
+		6DB5C98A19EFB55D00D6AF91 /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
 		6DC15D1F19D1A1CB008784F9 /* TTImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTImageScrollView.h; sourceTree = "<group>"; };
 		6DC15D2019D1A1CB008784F9 /* TTImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTImageScrollView.m; sourceTree = "<group>"; };
 		6DC40FF819CBBD52004AD6C9 /* TTPhotoEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTPhotoEditViewController.h; sourceTree = "<group>"; };
@@ -170,6 +175,7 @@
 				6D73F8E319ED55B500506CF1 /* libsqlite3.dylib in Frameworks */,
 				6D73F8E119ED55A800506CF1 /* CoreGraphics.framework in Frameworks */,
 				6D73F8DF19ED559C00506CF1 /* SystemConfiguration.framework in Frameworks */,
+				6DB5C98B19EFB55D00D6AF91 /* libWeiboSDK.a in Frameworks */,
 				6D73F8DD19ED559500506CF1 /* libiconv.dylib in Frameworks */,
 				6D73F8DB19ED558700506CF1 /* Security.framework in Frameworks */,
 				6DADCF4A19C12ED500266708 /* CoreData.framework in Frameworks */,
@@ -209,6 +215,7 @@
 		6D6FEECE19BE82AE003C0535 /* TwentyThousandThomatoes */ = {
 			isa = PBXGroup;
 			children = (
+				6DB5C98619EFB55D00D6AF91 /* SDKs */,
 				6DFDB82119BEF20600183FB4 /* DataSource */,
 				6DFDB81919BEE74A00183FB4 /* General */,
 				6D6FEEF819BE8A0B003C0535 /* UI */,
@@ -304,6 +311,25 @@
 				6D7C5FC419ECADFD005C0A96 /* TTRoundCornerButton.m */,
 			);
 			path = views;
+			sourceTree = "<group>";
+		};
+		6DB5C98619EFB55D00D6AF91 /* SDKs */ = {
+			isa = PBXGroup;
+			children = (
+				6DB5C98719EFB55D00D6AF91 /* weibo */,
+			);
+			name = SDKs;
+			path = share/SDKs;
+			sourceTree = "<group>";
+		};
+		6DB5C98719EFB55D00D6AF91 /* weibo */ = {
+			isa = PBXGroup;
+			children = (
+				6DB5C98819EFB55D00D6AF91 /* libWeiboSDK.a */,
+				6DB5C98919EFB55D00D6AF91 /* WeiboSDK.bundle */,
+				6DB5C98A19EFB55D00D6AF91 /* WeiboSDK.h */,
+			);
+			path = weibo;
 			sourceTree = "<group>";
 		};
 		6DD5445819EE557500E4E1BB /* share */ = {
@@ -525,6 +551,7 @@
 				6D73F8D919ED54D500506CF1 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				6D6FEEDE19BE82AE003C0535 /* Main.storyboard in Resources */,
 				6D6FEEE019BE82AE003C0535 /* Images.xcassets in Resources */,
+				6DB5C98C19EFB55E00D6AF91 /* WeiboSDK.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -706,6 +733,11 @@
 				GCC_PREFIX_HEADER = TwentyThousandThomatoes/General/TTTwentythousandTomatoes.pch;
 				INFOPLIST_FILE = TwentyThousandThomatoes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TwentyThousandThomatoes/share/SDKs/weibo",
+				);
+				OTHER_LDFLAGS = "";
 				"OTHER_LDFLAGS[arch=*]" = "-fobjc-arc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -726,6 +758,11 @@
 				GCC_PREFIX_HEADER = TwentyThousandThomatoes/General/TTTwentythousandTomatoes.pch;
 				INFOPLIST_FILE = TwentyThousandThomatoes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TwentyThousandThomatoes/share/SDKs/weibo",
+				);
+				OTHER_LDFLAGS = "";
 				"OTHER_LDFLAGS[arch=*]" = "-fobjc-arc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

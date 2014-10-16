@@ -11,8 +11,9 @@
 #import "UIImageValueTransformer.h"
 #import <TencentOpenAPI/TencentOAuth.h>
 #import "RennSDK/RennSDK.h"
+#import "WeiboSDK.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () <WeiboSDKDelegate>
 
 @end
 
@@ -37,6 +38,8 @@
         return [RennClient handleOpenURL:url];
     } else if ([url.absoluteString hasPrefix:@"tencent"]){
         return [TencentOAuth HandleOpenURL:url];
+    } else if ([url.absoluteString hasPrefix:@"wb"]) {
+        return [WeiboSDK handleOpenURL:url delegate:self];
     }
     return YES;
 }
@@ -62,5 +65,12 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+#pragma mark - WeiboSDKDelegate
+- (void)didReceiveWeiboRequest:(WBBaseRequest *)request
+{}
+
+- (void)didReceiveWeiboResponse:(WBBaseResponse *)response
+{}
 
 @end
