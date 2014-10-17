@@ -15,6 +15,16 @@
 		6D6FEEDE19BE82AE003C0535 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D6FEEDC19BE82AE003C0535 /* Main.storyboard */; };
 		6D6FEEE019BE82AE003C0535 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D6FEEDF19BE82AE003C0535 /* Images.xcassets */; };
 		6D6FEEEC19BE82AE003C0535 /* TwentyThousandThomatoesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6FEEEB19BE82AE003C0535 /* TwentyThousandThomatoesTests.m */; };
+		6D73F8D819ED54D500506CF1 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D73F8D619ED54D500506CF1 /* TencentOpenAPI.framework */; };
+		6D73F8D919ED54D500506CF1 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6D73F8D719ED54D500506CF1 /* TencentOpenApi_IOS_Bundle.bundle */; };
+		6D73F8DB19ED558700506CF1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D73F8DA19ED558700506CF1 /* Security.framework */; };
+		6D73F8DD19ED559500506CF1 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D73F8DC19ED559500506CF1 /* libiconv.dylib */; };
+		6D73F8DF19ED559C00506CF1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D73F8DE19ED559C00506CF1 /* SystemConfiguration.framework */; };
+		6D73F8E119ED55A800506CF1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D73F8E019ED55A800506CF1 /* CoreGraphics.framework */; };
+		6D73F8E319ED55B500506CF1 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D73F8E219ED55B500506CF1 /* libsqlite3.dylib */; };
+		6D73F8E519ED55BD00506CF1 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D73F8E419ED55BD00506CF1 /* CoreTelephony.framework */; };
+		6D73F8E719ED55CB00506CF1 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D73F8E619ED55CB00506CF1 /* libstdc++.dylib */; };
+		6D73F8E919ED55D200506CF1 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D73F8E819ED55D200506CF1 /* libz.dylib */; };
 		6D766FA319C98880006ED70B /* TTI.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D766FA219C98880006ED70B /* TTI.m */; };
 		6D7C5FC519ECADFD005C0A96 /* TTRoundCornerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7C5FC419ECADFD005C0A96 /* TTRoundCornerButton.m */; };
 		6D7C5FC819ECB0E8005C0A96 /* TTWhatDreamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7C5FC719ECB0E8005C0A96 /* TTWhatDreamViewController.m */; };
@@ -31,9 +41,16 @@
 		6DADCF4819C12BA400266708 /* TTLifeGoal.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DADCF4719C12BA400266708 /* TTLifeGoal.m */; };
 		6DADCF4A19C12ED500266708 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DADCF4919C12ED500266708 /* CoreData.framework */; };
 		6DB0B02619C549D9004A2192 /* TTDreamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB0B02519C549D9004A2192 /* TTDreamViewController.m */; };
+		6DB5C98519EF74FD00D6AF91 /* RennSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DB5C98419EF74FD00D6AF91 /* RennSDK.framework */; };
+		6DB5C98B19EFB55D00D6AF91 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DB5C98819EFB55D00D6AF91 /* libWeiboSDK.a */; };
+		6DB5C98C19EFB55E00D6AF91 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6DB5C98919EFB55D00D6AF91 /* WeiboSDK.bundle */; };
 		6DC15D2119D1A1CB008784F9 /* TTImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC15D2019D1A1CB008784F9 /* TTImageScrollView.m */; };
 		6DC40FFA19CBBD52004AD6C9 /* TTPhotoEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC40FF919CBBD52004AD6C9 /* TTPhotoEditViewController.m */; };
 		6DC4CBC219D2EFD200AD8E3A /* TTPhotoMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC4CBC119D2EFD200AD8E3A /* TTPhotoMaskView.m */; };
+		6DD5445F19EE559900E4E1BB /* TTQQShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD5445E19EE559900E4E1BB /* TTQQShareViewController.m */; };
+		6DD5446E19EE56D100E4E1BB /* TTRenrenShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD5446D19EE56D100E4E1BB /* TTRenrenShareViewController.m */; };
+		6DD5447119EE56F800E4E1BB /* TTWeiboShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD5447019EE56F800E4E1BB /* TTWeiboShareViewController.m */; };
+		6DD5447419EE570400E4E1BB /* TTWeichatShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD5447319EE570400E4E1BB /* TTWeichatShareViewController.m */; };
 		6DFCC0FA19E4DB0B002169D8 /* TTBottomLineTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFCC0F919E4DB0B002169D8 /* TTBottomLineTextField.m */; };
 		6DFDB81019BEE56000183FB4 /* TTAchivementMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFDB80F19BEE56000183FB4 /* TTAchivementMasterViewController.m */; };
 		6DFDB81419BEE56800183FB4 /* TTDreamMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFDB81319BEE56800183FB4 /* TTDreamMasterViewController.m */; };
@@ -71,6 +88,16 @@
 		6D6FEEE519BE82AE003C0535 /* TwentyThousandThomatoesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwentyThousandThomatoesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D6FEEEA19BE82AE003C0535 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D6FEEEB19BE82AE003C0535 /* TwentyThousandThomatoesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwentyThousandThomatoesTests.m; sourceTree = "<group>"; };
+		6D73F8D619ED54D500506CF1 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TencentOpenAPI.framework; path = qq/TencentOpenAPI.framework; sourceTree = "<group>"; };
+		6D73F8D719ED54D500506CF1 /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TencentOpenApi_IOS_Bundle.bundle; path = qq/TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
+		6D73F8DA19ED558700506CF1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		6D73F8DC19ED559500506CF1 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		6D73F8DE19ED559C00506CF1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		6D73F8E019ED55A800506CF1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6D73F8E219ED55B500506CF1 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		6D73F8E419ED55BD00506CF1 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		6D73F8E619ED55CB00506CF1 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+		6D73F8E819ED55D200506CF1 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		6D766FA119C98880006ED70B /* TTI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTI.h; sourceTree = "<group>"; };
 		6D766FA219C98880006ED70B /* TTI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTI.m; sourceTree = "<group>"; };
 		6D7C5FC319ECADFD005C0A96 /* TTRoundCornerButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRoundCornerButton.h; sourceTree = "<group>"; };
@@ -101,12 +128,25 @@
 		6DADCF4919C12ED500266708 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		6DB0B02419C549D9004A2192 /* TTDreamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTDreamViewController.h; sourceTree = "<group>"; };
 		6DB0B02519C549D9004A2192 /* TTDreamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTDreamViewController.m; sourceTree = "<group>"; };
+		6DB5C98419EF74FD00D6AF91 /* RennSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RennSDK.framework; path = renren/RennSDK.framework; sourceTree = "<group>"; };
+		6DB5C98819EFB55D00D6AF91 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
+		6DB5C98919EFB55D00D6AF91 /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
+		6DB5C98A19EFB55D00D6AF91 /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
 		6DC15D1F19D1A1CB008784F9 /* TTImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTImageScrollView.h; sourceTree = "<group>"; };
 		6DC15D2019D1A1CB008784F9 /* TTImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTImageScrollView.m; sourceTree = "<group>"; };
 		6DC40FF819CBBD52004AD6C9 /* TTPhotoEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTPhotoEditViewController.h; sourceTree = "<group>"; };
 		6DC40FF919CBBD52004AD6C9 /* TTPhotoEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTPhotoEditViewController.m; sourceTree = "<group>"; };
 		6DC4CBC019D2EFD200AD8E3A /* TTPhotoMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTPhotoMaskView.h; sourceTree = "<group>"; };
 		6DC4CBC119D2EFD200AD8E3A /* TTPhotoMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTPhotoMaskView.m; sourceTree = "<group>"; };
+		6DD5445D19EE559900E4E1BB /* TTQQShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTQQShareViewController.h; sourceTree = "<group>"; };
+		6DD5445E19EE559900E4E1BB /* TTQQShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTQQShareViewController.m; sourceTree = "<group>"; };
+		6DD5446C19EE56D100E4E1BB /* TTRenrenShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRenrenShareViewController.h; sourceTree = "<group>"; };
+		6DD5446D19EE56D100E4E1BB /* TTRenrenShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTRenrenShareViewController.m; sourceTree = "<group>"; };
+		6DD5446F19EE56F800E4E1BB /* TTWeiboShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTWeiboShareViewController.h; sourceTree = "<group>"; };
+		6DD5447019EE56F800E4E1BB /* TTWeiboShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTWeiboShareViewController.m; sourceTree = "<group>"; };
+		6DD5447219EE570400E4E1BB /* TTWeichatShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTWeichatShareViewController.h; sourceTree = "<group>"; };
+		6DD5447319EE570400E4E1BB /* TTWeichatShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTWeichatShareViewController.m; sourceTree = "<group>"; };
+		6DD5447619EE639F00E4E1BB /* TTThirdPartShareDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTThirdPartShareDefines.h; sourceTree = "<group>"; };
 		6DFCC0F819E4DB0B002169D8 /* TTBottomLineTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTBottomLineTextField.h; sourceTree = "<group>"; };
 		6DFCC0F919E4DB0B002169D8 /* TTBottomLineTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTBottomLineTextField.m; sourceTree = "<group>"; };
 		6DFDB80E19BEE56000183FB4 /* TTAchivementMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTAchivementMasterViewController.h; sourceTree = "<group>"; };
@@ -128,7 +168,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D73F8E919ED55D200506CF1 /* libz.dylib in Frameworks */,
+				6DB5C98519EF74FD00D6AF91 /* RennSDK.framework in Frameworks */,
+				6D73F8E719ED55CB00506CF1 /* libstdc++.dylib in Frameworks */,
+				6D73F8E519ED55BD00506CF1 /* CoreTelephony.framework in Frameworks */,
+				6D73F8E319ED55B500506CF1 /* libsqlite3.dylib in Frameworks */,
+				6D73F8E119ED55A800506CF1 /* CoreGraphics.framework in Frameworks */,
+				6D73F8DF19ED559C00506CF1 /* SystemConfiguration.framework in Frameworks */,
+				6DB5C98B19EFB55D00D6AF91 /* libWeiboSDK.a in Frameworks */,
+				6D73F8DD19ED559500506CF1 /* libiconv.dylib in Frameworks */,
+				6D73F8DB19ED558700506CF1 /* Security.framework in Frameworks */,
 				6DADCF4A19C12ED500266708 /* CoreData.framework in Frameworks */,
+				6D73F8D819ED54D500506CF1 /* TencentOpenAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,10 +196,10 @@
 		6D6FEEC319BE82AE003C0535 = {
 			isa = PBXGroup;
 			children = (
-				6DADCF4919C12ED500266708 /* CoreData.framework */,
 				6D6FEECE19BE82AE003C0535 /* TwentyThousandThomatoes */,
 				6D6FEEE819BE82AE003C0535 /* TwentyThousandThomatoesTests */,
 				6D6FEECD19BE82AE003C0535 /* Products */,
+				6D73F8D419ED54D500506CF1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -164,6 +215,7 @@
 		6D6FEECE19BE82AE003C0535 /* TwentyThousandThomatoes */ = {
 			isa = PBXGroup;
 			children = (
+				6DB5C98619EFB55D00D6AF91 /* SDKs */,
 				6DFDB82119BEF20600183FB4 /* DataSource */,
 				6DFDB81919BEE74A00183FB4 /* General */,
 				6D6FEEF819BE8A0B003C0535 /* UI */,
@@ -203,11 +255,32 @@
 		6D6FEEF819BE8A0B003C0535 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				6DD5445819EE557500E4E1BB /* share */,
 				6DFDB81519BEE56C00183FB4 /* Tomatoes */,
 				6DFDB81119BEE56800183FB4 /* Dreams */,
 				6DFDB80D19BEE56000183FB4 /* Achivements */,
 			);
 			name = UI;
+			sourceTree = "<group>";
+		};
+		6D73F8D419ED54D500506CF1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6DB5C98419EF74FD00D6AF91 /* RennSDK.framework */,
+				6D73F8E819ED55D200506CF1 /* libz.dylib */,
+				6D73F8E619ED55CB00506CF1 /* libstdc++.dylib */,
+				6D73F8E419ED55BD00506CF1 /* CoreTelephony.framework */,
+				6D73F8E219ED55B500506CF1 /* libsqlite3.dylib */,
+				6D73F8E019ED55A800506CF1 /* CoreGraphics.framework */,
+				6D73F8DE19ED559C00506CF1 /* SystemConfiguration.framework */,
+				6D73F8DC19ED559500506CF1 /* libiconv.dylib */,
+				6D73F8DA19ED558700506CF1 /* Security.framework */,
+				6D73F8D619ED54D500506CF1 /* TencentOpenAPI.framework */,
+				6D73F8D719ED54D500506CF1 /* TencentOpenApi_IOS_Bundle.bundle */,
+				6DADCF4919C12ED500266708 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			path = TwentyThousandThomatoes/Frameworks;
 			sourceTree = "<group>";
 		};
 		6D97E32419CA869900ED2212 /* value transformer */ = {
@@ -238,6 +311,72 @@
 				6D7C5FC419ECADFD005C0A96 /* TTRoundCornerButton.m */,
 			);
 			path = views;
+			sourceTree = "<group>";
+		};
+		6DB5C98619EFB55D00D6AF91 /* SDKs */ = {
+			isa = PBXGroup;
+			children = (
+				6DB5C98719EFB55D00D6AF91 /* weibo */,
+			);
+			name = SDKs;
+			path = share/SDKs;
+			sourceTree = "<group>";
+		};
+		6DB5C98719EFB55D00D6AF91 /* weibo */ = {
+			isa = PBXGroup;
+			children = (
+				6DB5C98819EFB55D00D6AF91 /* libWeiboSDK.a */,
+				6DB5C98919EFB55D00D6AF91 /* WeiboSDK.bundle */,
+				6DB5C98A19EFB55D00D6AF91 /* WeiboSDK.h */,
+			);
+			path = weibo;
+			sourceTree = "<group>";
+		};
+		6DD5445819EE557500E4E1BB /* share */ = {
+			isa = PBXGroup;
+			children = (
+				6DD5446919EE56C500E4E1BB /* renren */,
+				6DD5446A19EE56C500E4E1BB /* weibo */,
+				6DD5446B19EE56C500E4E1BB /* weichat */,
+				6DD5445919EE557500E4E1BB /* qq */,
+			);
+			path = share;
+			sourceTree = "<group>";
+		};
+		6DD5445919EE557500E4E1BB /* qq */ = {
+			isa = PBXGroup;
+			children = (
+				6DD5445D19EE559900E4E1BB /* TTQQShareViewController.h */,
+				6DD5445E19EE559900E4E1BB /* TTQQShareViewController.m */,
+			);
+			path = qq;
+			sourceTree = "<group>";
+		};
+		6DD5446919EE56C500E4E1BB /* renren */ = {
+			isa = PBXGroup;
+			children = (
+				6DD5446C19EE56D100E4E1BB /* TTRenrenShareViewController.h */,
+				6DD5446D19EE56D100E4E1BB /* TTRenrenShareViewController.m */,
+			);
+			path = renren;
+			sourceTree = "<group>";
+		};
+		6DD5446A19EE56C500E4E1BB /* weibo */ = {
+			isa = PBXGroup;
+			children = (
+				6DD5446F19EE56F800E4E1BB /* TTWeiboShareViewController.h */,
+				6DD5447019EE56F800E4E1BB /* TTWeiboShareViewController.m */,
+			);
+			path = weibo;
+			sourceTree = "<group>";
+		};
+		6DD5446B19EE56C500E4E1BB /* weichat */ = {
+			isa = PBXGroup;
+			children = (
+				6DD5447219EE570400E4E1BB /* TTWeichatShareViewController.h */,
+				6DD5447319EE570400E4E1BB /* TTWeichatShareViewController.m */,
+			);
+			path = weichat;
 			sourceTree = "<group>";
 		};
 		6DFDB80D19BEE56000183FB4 /* Achivements */ = {
@@ -285,6 +424,7 @@
 			children = (
 				6DFDB81A19BEE74A00183FB4 /* AppDelegate.h */,
 				6DFDB81B19BEE74A00183FB4 /* AppDelegate.m */,
+				6DD5447619EE639F00E4E1BB /* TTThirdPartShareDefines.h */,
 				6DFDB81E19BEE94300183FB4 /* UIViewController+GetInstanceFromStoryBoard.h */,
 				6DFDB81F19BEE94300183FB4 /* UIViewController+GetInstanceFromStoryBoard.m */,
 				6D3537C919C4442200570DB4 /* TTTwentythousandTomatoes.pch */,
@@ -408,8 +548,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D73F8D919ED54D500506CF1 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				6D6FEEDE19BE82AE003C0535 /* Main.storyboard in Resources */,
 				6D6FEEE019BE82AE003C0535 /* Images.xcassets in Resources */,
+				6DB5C98C19EFB55E00D6AF91 /* WeiboSDK.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +578,9 @@
 				6DADCF4819C12BA400266708 /* TTLifeGoal.m in Sources */,
 				6D97E32319CA868100ED2212 /* TTTomatoes.xcdatamodeld in Sources */,
 				6D7C5FC819ECB0E8005C0A96 /* TTWhatDreamViewController.m in Sources */,
+				6DD5445F19EE559900E4E1BB /* TTQQShareViewController.m in Sources */,
+				6DD5447419EE570400E4E1BB /* TTWeichatShareViewController.m in Sources */,
+				6DD5447119EE56F800E4E1BB /* TTWeiboShareViewController.m in Sources */,
 				6DADCF4519C12BA400266708 /* TTTomato.m in Sources */,
 				6DADCF4219C12BA400266708 /* TTGoal.m in Sources */,
 				6DC4CBC219D2EFD200AD8E3A /* TTPhotoMaskView.m in Sources */,
@@ -454,6 +599,7 @@
 				6DC15D2119D1A1CB008784F9 /* TTImageScrollView.m in Sources */,
 				6D318A3919D948A5007BCD61 /* TTRoundButton.m in Sources */,
 				6D2D692519C58CFF00304CF5 /* TTIViewController.m in Sources */,
+				6DD5446E19EE56D100E4E1BB /* TTRenrenShareViewController.m in Sources */,
 				6DFDB81C19BEE74A00183FB4 /* AppDelegate.m in Sources */,
 				6DB0B02619C549D9004A2192 /* TTDreamViewController.m in Sources */,
 				6DADCF3F19C12BA400266708 /* TTMidleTermGoal.m in Sources */,
@@ -494,6 +640,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -537,6 +684,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -576,10 +724,21 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TwentyThousandThomatoes/Frameworks/qq",
+					"$(PROJECT_DIR)/TwentyThousandThomatoes/Frameworks/renren",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = TwentyThousandThomatoes/General/TTTwentythousandTomatoes.pch;
 				INFOPLIST_FILE = TwentyThousandThomatoes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TwentyThousandThomatoes/share/SDKs/weibo",
+				);
+				OTHER_LDFLAGS = "";
+				"OTHER_LDFLAGS[arch=*]" = "-fobjc-arc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -590,10 +749,21 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TwentyThousandThomatoes/Frameworks/qq",
+					"$(PROJECT_DIR)/TwentyThousandThomatoes/Frameworks/renren",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = TwentyThousandThomatoes/General/TTTwentythousandTomatoes.pch;
 				INFOPLIST_FILE = TwentyThousandThomatoes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TwentyThousandThomatoes/share/SDKs/weibo",
+				);
+				OTHER_LDFLAGS = "";
+				"OTHER_LDFLAGS[arch=*]" = "-fobjc-arc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

@@ -9,8 +9,11 @@
 #import "AppDelegate.h"
 
 #import "UIImageValueTransformer.h"
+#import <TencentOpenAPI/TencentOAuth.h>
+#import "RennSDK/RennSDK.h"
+#import "WeiboSDK.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () <WeiboSDKDelegate>
 
 @end
 
@@ -21,6 +24,23 @@
     [[UITabBar appearance] setTintColor:[UIColor redColor]];
     UIImageValueTransformer *imageTransformer = [[UIImageValueTransformer alloc] init];
     [UIImageValueTransformer setValueTransformer:imageTransformer forName:@"UIImageValueTransformer"];
+    return YES;
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    return [self handleURL:url];
+}
+
+- (BOOL)handleURL:(NSURL *)url
+{
+    if ([url.absoluteString hasPrefix:@"rm"]) {
+        return [RennClient handleOpenURL:url];
+    } else if ([url.absoluteString hasPrefix:@"tencent"]){
+        return [TencentOAuth HandleOpenURL:url];
+    } else if ([url.absoluteString hasPrefix:@"wb"]) {
+        return [WeiboSDK handleOpenURL:url delegate:self];
+    }
     return YES;
 }
 
@@ -45,5 +65,12 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+#pragma mark - WeiboSDKDelegate
+- (void)didReceiveWeiboRequest:(WBBaseRequest *)request
+{}
+
+- (void)didReceiveWeiboResponse:(WBBaseResponse *)response
+{}
 
 @end

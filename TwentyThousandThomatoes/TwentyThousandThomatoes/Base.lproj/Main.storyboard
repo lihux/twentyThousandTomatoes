@@ -18,7 +18,7 @@
                         <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Xmr-Oc-wdB" kind="relationship" relationship="viewControllers" id="tjp-Y7-vUK"/>
+                        <segue destination="2Bg-Cg-hQF" kind="relationship" relationship="viewControllers" id="tjp-Y7-vUK"/>
                         <segue destination="Wax-dP-ff4" kind="relationship" relationship="viewControllers" id="5CL-vd-eRo"/>
                         <segue destination="Qvw-Mi-prI" kind="relationship" relationship="viewControllers" id="29h-PL-5M1"/>
                     </connections>
@@ -27,7 +27,7 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--我的番茄-->
+        <!--Tomato Master View Controller-->
         <scene sceneID="uQe-Hp-PMe">
             <objects>
                 <viewController storyboardIdentifier="TTTomatoMasterViewController" id="Xmr-Oc-wdB" customClass="TTTomatoMasterViewController" sceneMemberID="viewController">
@@ -38,13 +38,332 @@
                     <view key="view" contentMode="scaleToFill" id="IIX-fJ-gKo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0L-dt-Zjg" customClass="TTRoundCornerButton">
+                                <rect key="frame" x="47" y="312" width="280" height="44"/>
+                                <color key="backgroundColor" red="1" green="0.43921568630000002" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="LZk-mL-29p"/>
+                                    <constraint firstAttribute="height" constant="44" id="gaf-3H-aEE"/>
+                                </constraints>
+                                <state key="normal" title="点击进入第三方登陆、分享页面">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="zvt-wa-s4H" kind="show" id="yeC-Vd-96O"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="P0L-dt-Zjg" secondAttribute="centerY" id="W8I-pL-rZ5"/>
+                            <constraint firstAttribute="centerX" secondItem="P0L-dt-Zjg" secondAttribute="centerX" id="lUi-m6-DxM"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="我的番茄" image="tt_tabbar_tomato_unselected" id="9IL-Ag-lzL"/>
+                    <navigationItem key="navigationItem" id="8uM-kO-Jkg"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2VY-VB-QhH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="633.5" y="-684.5"/>
+            <point key="canvasLocation" x="1220.5" y="-684.5"/>
+        </scene>
+        <!--第三方登陆和分享总入口-->
+        <scene sceneID="Fjl-so-tIl">
+            <objects>
+                <viewController title="第三方登陆和分享总入口" id="zvt-wa-s4H" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DTW-BM-eUP"/>
+                        <viewControllerLayoutGuide type="bottom" id="FTW-oX-Tur"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tOd-4G-UmX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9gk-q7-uBV">
+                                <rect key="frame" x="88" y="234" width="199" height="200"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qi8-0K-nbs" customClass="TTRoundCornerButton">
+                                        <rect key="frame" x="50" y="0.0" width="100" height="44"/>
+                                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="qq">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="dir-42-XBN" kind="show" id="JgM-lP-aBk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukb-H2-NGm" customClass="TTRoundCornerButton">
+                                        <rect key="frame" x="50" y="52" width="100" height="44"/>
+                                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="微信">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="dIR-4m-1dd" kind="show" id="LAK-wh-tN7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8n-ug-o6c" customClass="TTRoundCornerButton">
+                                        <rect key="frame" x="50" y="104" width="100" height="44"/>
+                                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="微博">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="V8M-fV-ixB" kind="show" id="RL8-EH-eb1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ef-gZ-Gi4" customClass="TTRoundCornerButton">
+                                        <rect key="frame" x="50" y="156" width="100" height="44"/>
+                                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="人人网">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="fMo-A4-b7j" kind="show" id="VVV-5L-Fwi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="199" id="4Mj-sl-h3c"/>
+                                    <constraint firstAttribute="height" constant="200" id="nm7-YE-kmt"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="9gk-q7-uBV" secondAttribute="centerY" id="sdn-j1-PEA"/>
+                            <constraint firstAttribute="centerX" secondItem="9gk-q7-uBV" secondAttribute="centerX" id="yjs-hO-Qry"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AgL-4F-r4g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113.5" y="-2038.5"/>
+        </scene>
+        <!--Weichat Share View Controller-->
+        <scene sceneID="cOY-Jf-MfJ">
+            <objects>
+                <viewController storyboardIdentifier="TTWeichatShareViewController" id="dIR-4m-1dd" customClass="TTWeichatShareViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UjV-vf-Fdc"/>
+                        <viewControllerLayoutGuide type="bottom" id="qcC-Ff-ScX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GYo-Rz-dxb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="frB-rG-JFh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1067.5" y="-2515.5"/>
+        </scene>
+        <!--Weibo Share View Controller-->
+        <scene sceneID="3Hw-E3-KGU">
+            <objects>
+                <viewController storyboardIdentifier="TTWeiboShareViewController" id="V8M-fV-ixB" customClass="TTWeiboShareViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IbM-NH-FSD"/>
+                        <viewControllerLayoutGuide type="bottom" id="G7N-rK-iuM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MqI-XR-GlO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6JD-30-lGB">
+                                <rect key="frame" x="38" y="184" width="300" height="300"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8qG-dY-ukk" customClass="TTRoundCornerButton">
+                                        <rect key="frame" x="84" y="86" width="132" height="44"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="获取用户信息">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapOnGetUserInfoButton:" destination="V8M-fV-ixB" eventType="touchUpInside" id="STO-4m-c72"/>
+                                        </connections>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9kd-O2-Wvt">
+                                        <rect key="frame" x="13" y="143" width="279" height="149"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Lg-Pu-NPq" customClass="TTRoundCornerButton">
+                                        <rect key="frame" x="84" y="34" width="132" height="44"/>
+                                        <color key="backgroundColor" red="0.47127016129999999" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="授权微博sso登陆">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapOnLoginButton:" destination="V8M-fV-ixB" eventType="touchUpInside" id="TJc-7C-V9b"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="0UL-xb-yiI"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="GIW-Uk-Toh"/>
+                                    <constraint firstAttribute="height" constant="300" id="nPF-wq-rXc"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="ni0-GM-YAb"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="oCv-Nx-Suc"/>
+                                    <constraint firstAttribute="width" constant="300" id="vjo-Sc-Aco"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0UL-xb-yiI"/>
+                                        <exclude reference="ni0-GM-YAb"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="6JD-30-lGB" secondAttribute="centerY" id="Lxi-oP-Pa3"/>
+                            <constraint firstAttribute="centerX" secondItem="6JD-30-lGB" secondAttribute="centerX" id="XdT-WH-vMO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="infoTextView" destination="9kd-O2-Wvt" id="W5G-2q-cjh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lnx-zs-xLM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="647.5" y="-1762.5"/>
+        </scene>
+        <!--Renren Share View Controller-->
+        <scene sceneID="FvD-eH-hlO">
+            <objects>
+                <viewController storyboardIdentifier="TTRenrenShareViewController" id="fMo-A4-b7j" customClass="TTRenrenShareViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9Is-LC-c19"/>
+                        <viewControllerLayoutGuide type="bottom" id="GUk-YK-a3F"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ud2-X0-8A1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NlN-7y-dyg">
+                                <rect key="frame" x="37" y="184" width="300" height="300"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qUG-bt-7fe" customClass="TTRoundCornerButton">
+                                        <rect key="frame" x="84" y="86" width="132" height="44"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="获取用户信息">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapOnGetUserInfoButton:" destination="fMo-A4-b7j" eventType="touchUpInside" id="jVU-Qq-T0F"/>
+                                        </connections>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VPa-Dx-19b">
+                                        <rect key="frame" x="13" y="143" width="279" height="149"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e86-Dg-mMc" customClass="TTRoundCornerButton">
+                                        <rect key="frame" x="84" y="34" width="132" height="44"/>
+                                        <color key="backgroundColor" red="0.47127016129032256" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="授权renrensso登陆">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapOnLoginButton:" destination="fMo-A4-b7j" eventType="touchUpInside" id="jrq-53-1W3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="C0W-z4-Zx8"/>
+                                    <constraint firstAttribute="height" constant="300" id="PJ7-3Z-9jA"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="RSn-lC-3Mg"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="bB8-6c-4PR"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="RSn-lC-3Mg"/>
+                                        <exclude reference="bB8-6c-4PR"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="NlN-7y-dyg" secondAttribute="centerY" id="HZ4-8D-BPs"/>
+                            <constraint firstAttribute="centerX" secondItem="NlN-7y-dyg" secondAttribute="centerX" id="xSm-Cp-7dB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="infoTextView" destination="VPa-Dx-19b" id="1gJ-is-QS2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZZm-DP-7sN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1067.5" y="-1762.5"/>
+        </scene>
+        <!--QQ Share View Controller-->
+        <scene sceneID="uzI-6F-h3I">
+            <objects>
+                <viewController storyboardIdentifier="TTQQShareViewController" id="dir-42-XBN" userLabel="QQ Share View Controller" customClass="TTQQShareViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ve6-SP-dRN"/>
+                        <viewControllerLayoutGuide type="bottom" id="Y3f-iY-wvE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ebm-hc-o5a">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uaX-QG-iTP">
+                                <rect key="frame" x="37" y="184" width="300" height="300"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tid-lP-L7x" customClass="TTRoundCornerButton">
+                                        <rect key="frame" x="100" y="28" width="100" height="44"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="授权qq登陆">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapOnLoginQQButton:" destination="dir-42-XBN" eventType="touchUpInside" id="FvE-8w-dIO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6MS-CI-LJY" customClass="TTRoundCornerButton">
+                                        <rect key="frame" x="100" y="86" width="100" height="44"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="获取用户信息">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapOnGetInfoButton:" destination="dir-42-XBN" eventType="touchUpInside" id="DRh-pS-cMo"/>
+                                        </connections>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rHe-om-B53">
+                                        <rect key="frame" x="13" y="143" width="279" height="149"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="gBV-8x-fIj"/>
+                                    <constraint firstAttribute="height" constant="300" id="lKX-3a-Tyg"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="uaX-QG-iTP" secondAttribute="centerY" id="Svb-7P-RKn"/>
+                            <constraint firstAttribute="centerX" secondItem="uaX-QG-iTP" secondAttribute="centerX" id="ifP-wr-Yq4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="infoTextView" destination="rHe-om-B53" id="ZL7-uh-FPC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jvg-i0-OJU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="647.5" y="-2515.5"/>
         </scene>
         <!--我的梦想-->
         <scene sceneID="Wa8-xS-QSN">
@@ -206,7 +525,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SE6-I4-08K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1530.5" y="-642.5"/>
+            <point key="canvasLocation" x="2117.5" y="-642.5"/>
         </scene>
         <!--我是谁-->
         <scene sceneID="D5k-Ea-yIe">
@@ -822,7 +1141,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2063.5" y="-642.5"/>
+            <point key="canvasLocation" x="2650.5" y="-642.5"/>
         </scene>
         <!--选取照片-->
         <scene sceneID="JzT-8e-xM0">
@@ -899,7 +1218,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yc1-Tn-GaU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2627.5" y="-642.5"/>
+            <point key="canvasLocation" x="3214.5" y="-642.5"/>
         </scene>
         <!--移动和缩放-->
         <scene sceneID="lgF-7i-AJm">
@@ -983,7 +1302,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ows-Zz-Weo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3060.5" y="-651.5"/>
+            <point key="canvasLocation" x="3647.5" y="-651.5"/>
         </scene>
         <!--Dream View Controller-->
         <scene sceneID="Tdt-cR-Bhg">
@@ -1058,7 +1377,26 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="btN-fo-zAX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="982.5" y="-381"/>
+            <point key="canvasLocation" x="1674.5" y="-456"/>
+        </scene>
+        <!--我的番茄-->
+        <scene sceneID="hvm-1x-uUw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2Bg-Cg-hQF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="我的番茄" image="tt_tabbar_tomato_unselected" id="9IL-Ag-lzL"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eYv-dh-ekE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Xmr-Oc-wdB" kind="relationship" relationship="rootViewController" id="Mzh-3K-r48"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ecy-z2-Jfo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="633.5" y="-684.5"/>
         </scene>
     </scenes>
     <resources>
